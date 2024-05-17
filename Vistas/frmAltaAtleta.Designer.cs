@@ -239,6 +239,7 @@
             this.btnRegistrar.TabIndex = 27;
             this.btnRegistrar.Text = "Registrar Atleta";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // frmAltaAtleta
             // 
