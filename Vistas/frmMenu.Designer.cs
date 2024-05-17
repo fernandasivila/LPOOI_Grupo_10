@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disciplinasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,16 +43,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 35);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(975, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
             // menuStrip2
             // 
             this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(160)))), ((int)(((byte)(63)))));
@@ -67,7 +56,7 @@
             this.eventosToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(975, 35);
+            this.menuStrip2.Size = new System.Drawing.Size(975, 33);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -84,7 +73,7 @@
             this.disciplinasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarNuevaDisciplinaToolStripMenuItem});
             this.disciplinasToolStripMenuItem.Name = "disciplinasToolStripMenuItem";
-            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(216, 34);
+            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.disciplinasToolStripMenuItem.Text = "Disciplinas";
             // 
             // registrarNuevaDisciplinaToolStripMenuItem
@@ -92,6 +81,7 @@
             this.registrarNuevaDisciplinaToolStripMenuItem.Name = "registrarNuevaDisciplinaToolStripMenuItem";
             this.registrarNuevaDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(373, 34);
             this.registrarNuevaDisciplinaToolStripMenuItem.Text = "Registrar nueva Disciplina";
+            this.registrarNuevaDisciplinaToolStripMenuItem.Click += new System.EventHandler(this.registrarNuevaDisciplinaToolStripMenuItem_Click);
             // 
             // atletasToolStripMenuItem
             // 
@@ -106,6 +96,7 @@
             this.registrarNuevoAtletaToolStripMenuItem.Name = "registrarNuevoAtletaToolStripMenuItem";
             this.registrarNuevoAtletaToolStripMenuItem.Size = new System.Drawing.Size(340, 34);
             this.registrarNuevoAtletaToolStripMenuItem.Text = "Registrar nuevo Atleta";
+            this.registrarNuevoAtletaToolStripMenuItem.Click += new System.EventHandler(this.registrarNuevoAtletaToolStripMenuItem_Click);
             // 
             // competenciasToolStripMenuItem
             // 
@@ -120,6 +111,7 @@
             this.registrarNuevaCompetenciaToolStripMenuItem.Name = "registrarNuevaCompetenciaToolStripMenuItem";
             this.registrarNuevaCompetenciaToolStripMenuItem.Size = new System.Drawing.Size(410, 34);
             this.registrarNuevaCompetenciaToolStripMenuItem.Text = "Registrar nueva Competencia";
+            this.registrarNuevaCompetenciaToolStripMenuItem.Click += new System.EventHandler(this.registrarNuevaCompetenciaToolStripMenuItem_Click);
             // 
             // eventosToolStripMenuItem
             // 
@@ -130,7 +122,7 @@
             // img
             // 
             this.img.Image = ((System.Drawing.Image)(resources.GetObject("img.Image")));
-            this.img.Location = new System.Drawing.Point(119, 47);
+            this.img.Location = new System.Drawing.Point(113, 36);
             this.img.Name = "img";
             this.img.Size = new System.Drawing.Size(729, 410);
             this.img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -144,9 +136,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(247)))), ((int)(((byte)(202)))));
             this.ClientSize = new System.Drawing.Size(975, 449);
             this.Controls.Add(this.img);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMenu";
             this.Text = "Menu Principal";
@@ -159,8 +149,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem sistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem disciplinasToolStripMenuItem;
