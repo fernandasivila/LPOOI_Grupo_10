@@ -76,6 +76,7 @@
             this.btnRegistrar.TabIndex = 51;
             this.btnRegistrar.Text = "Registrar Competencia";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // frmAltaDisciplina
             // 
