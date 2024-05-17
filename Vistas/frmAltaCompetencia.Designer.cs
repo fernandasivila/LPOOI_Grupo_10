@@ -49,6 +49,7 @@
             this.cmbDisciplina = new System.Windows.Forms.ComboBox();
             this.lblDisciplina = new System.Windows.Forms.Label();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRegistrar
@@ -62,7 +63,7 @@
             this.btnRegistrar.Size = new System.Drawing.Size(231, 35);
             this.btnRegistrar.TabIndex = 50;
             this.btnRegistrar.Text = "Registrar Competencia";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // lblUbicacion
@@ -271,12 +272,27 @@
             this.cmbCategoria.Size = new System.Drawing.Size(180, 33);
             this.cmbCategoria.TabIndex = 60;
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
+            this.btnVolver.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.btnVolver.Location = new System.Drawing.Point(202, 628);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(231, 35);
+            this.btnVolver.TabIndex = 61;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // frmAltaCompetencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(247)))), ((int)(((byte)(202)))));
             this.ClientSize = new System.Drawing.Size(714, 682);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.cmbDisciplina);
             this.Controls.Add(this.lblDisciplina);
@@ -329,5 +345,6 @@
         private System.Windows.Forms.ComboBox cmbDisciplina;
         private System.Windows.Forms.Label lblDisciplina;
         private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

@@ -33,6 +33,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDescripcion
@@ -87,8 +88,22 @@
             this.btnRegistrar.Size = new System.Drawing.Size(231, 35);
             this.btnRegistrar.TabIndex = 51;
             this.btnRegistrar.Text = "Registrar Competencia";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
+            this.btnVolver.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.btnVolver.Location = new System.Drawing.Point(121, 229);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(231, 35);
+            this.btnVolver.TabIndex = 62;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmAltaDisciplina
             // 
@@ -96,6 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(247)))), ((int)(((byte)(202)))));
             this.ClientSize = new System.Drawing.Size(627, 283);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblDescripcion);
@@ -116,5 +132,6 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

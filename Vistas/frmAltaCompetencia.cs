@@ -41,5 +41,13 @@ namespace Vistas
                 + " Organizacion: "+ oCompetencia.Com_Organizador + "\n"
                 + " Sponsors: "+ oCompetencia.Com_Sponsors);
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            this.Hide();
+            menu.ShowDialog();
+            this.Close();
+        }
     }
 }

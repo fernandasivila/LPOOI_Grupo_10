@@ -28,5 +28,13 @@ namespace Vistas
                 + " Nombre: " + oDisciplina.Dis_Nombre + "\n"
                 + " Descripcion: " + oDisciplina.Dis_Descripcion);
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            this.Hide();
+            menu.ShowDialog();
+            this.Close();
+        }
     }
 }

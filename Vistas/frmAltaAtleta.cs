@@ -39,5 +39,13 @@ namespace Vistas
             + "Direccion: " + oAtleta.Atl_Direccion + "\n"
             + "CorreoElectronico: " + oAtleta.Atl_Email);
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            this.Hide();
+            menu.ShowDialog();
+            this.Close();
+        }
     }
 }
