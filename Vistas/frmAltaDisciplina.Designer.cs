@@ -37,56 +37,70 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(125, 44);
+            this.txtDescripcion.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(188, 70);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(180, 72);
+            this.txtDescripcion.Size = new System.Drawing.Size(268, 109);
             this.txtDescripcion.TabIndex = 35;
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(55, 47);
+            this.lblDescripcion.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(36, 70);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
+            this.lblDescripcion.Size = new System.Drawing.Size(144, 25);
             this.lblDescripcion.TabIndex = 34;
             this.lblDescripcion.Text = "Descripción";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(125, 18);
+            this.txtNombre.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(188, 28);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(180, 20);
+            this.txtNombre.Size = new System.Drawing.Size(268, 32);
             this.txtNombre.TabIndex = 33;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(75, 21);
+            this.lblNombre.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(79, 28);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(101, 25);
             this.lblNombre.TabIndex = 32;
             this.lblNombre.Text = "Nombre";
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(252, 149);
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(160)))), ((int)(((byte)(63)))));
+            this.btnRegistrar.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRegistrar.Location = new System.Drawing.Point(378, 229);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(154, 23);
+            this.btnRegistrar.Size = new System.Drawing.Size(231, 35);
             this.btnRegistrar.TabIndex = 51;
             this.btnRegistrar.Text = "Registrar Competencia";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.UseVisualStyleBackColor = false;
             // 
             // frmAltaDisciplina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 184);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(247)))), ((int)(((byte)(202)))));
+            this.ClientSize = new System.Drawing.Size(627, 283);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAltaDisciplina";
             this.Text = "Alta Disciplina";
             this.ResumeLayout(false);
