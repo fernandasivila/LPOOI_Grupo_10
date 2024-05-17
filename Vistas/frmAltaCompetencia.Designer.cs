@@ -62,7 +62,8 @@
             this.btnRegistrar.Size = new System.Drawing.Size(231, 35);
             this.btnRegistrar.TabIndex = 50;
             this.btnRegistrar.Text = "Registrar Competencia";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // lblUbicacion
             // 

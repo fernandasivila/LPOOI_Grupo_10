@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAltaAtleta));
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -56,195 +57,235 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(85, 29);
+            this.lblNombre.Location = new System.Drawing.Point(396, 79);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(56, 16);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(135, 26);
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
+            this.txtNombre.Location = new System.Drawing.Point(462, 76);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(180, 20);
+            this.txtNombre.Size = new System.Drawing.Size(239, 23);
             this.txtNombre.TabIndex = 1;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(135, 52);
+            this.txtApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
+            this.txtApellido.Location = new System.Drawing.Point(462, 108);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(180, 20);
+            this.txtApellido.Size = new System.Drawing.Size(239, 23);
             this.txtApellido.TabIndex = 3;
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(85, 55);
+            this.lblApellido.Location = new System.Drawing.Point(396, 111);
+            this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.Size = new System.Drawing.Size(57, 16);
             this.lblApellido.TabIndex = 2;
             this.lblApellido.Text = "Apellido";
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(135, 78);
+            this.txtDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
+            this.txtDNI.Location = new System.Drawing.Point(462, 140);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(120, 20);
+            this.txtDNI.Size = new System.Drawing.Size(159, 23);
             this.txtDNI.TabIndex = 6;
             // 
             // lblDNI
             // 
             this.lblDNI.AutoSize = true;
-            this.lblDNI.Location = new System.Drawing.Point(103, 81);
+            this.lblDNI.Location = new System.Drawing.Point(420, 143);
+            this.lblDNI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(26, 13);
+            this.lblDNI.Size = new System.Drawing.Size(30, 16);
             this.lblDNI.TabIndex = 5;
             this.lblDNI.Text = "DNI";
             // 
             // txtNacionalidad
             // 
-            this.txtNacionalidad.Location = new System.Drawing.Point(135, 130);
+            this.txtNacionalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
+            this.txtNacionalidad.Location = new System.Drawing.Point(462, 204);
+            this.txtNacionalidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNacionalidad.Name = "txtNacionalidad";
-            this.txtNacionalidad.Size = new System.Drawing.Size(120, 20);
+            this.txtNacionalidad.Size = new System.Drawing.Size(159, 23);
             this.txtNacionalidad.TabIndex = 10;
             // 
             // lblNacionalidad
             // 
             this.lblNacionalidad.AutoSize = true;
-            this.lblNacionalidad.Location = new System.Drawing.Point(60, 133);
+            this.lblNacionalidad.Location = new System.Drawing.Point(362, 207);
+            this.lblNacionalidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNacionalidad.Name = "lblNacionalidad";
-            this.lblNacionalidad.Size = new System.Drawing.Size(69, 13);
+            this.lblNacionalidad.Size = new System.Drawing.Size(89, 16);
             this.lblNacionalidad.TabIndex = 9;
             this.lblNacionalidad.Text = "Nacionalidad";
             // 
             // lblGenero
             // 
             this.lblGenero.AutoSize = true;
-            this.lblGenero.Location = new System.Drawing.Point(87, 159);
+            this.lblGenero.Location = new System.Drawing.Point(398, 239);
+            this.lblGenero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(42, 13);
+            this.lblGenero.Size = new System.Drawing.Size(53, 16);
             this.lblGenero.TabIndex = 11;
             this.lblGenero.Text = "Genero";
             // 
             // cmbGenero
             // 
+            this.cmbGenero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Location = new System.Drawing.Point(135, 156);
+            this.cmbGenero.Location = new System.Drawing.Point(462, 236);
+            this.cmbGenero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(120, 21);
+            this.cmbGenero.Size = new System.Drawing.Size(159, 24);
             this.cmbGenero.TabIndex = 12;
             // 
             // lblAltura
             // 
             this.lblAltura.AutoSize = true;
-            this.lblAltura.Location = new System.Drawing.Point(95, 185);
+            this.lblAltura.Location = new System.Drawing.Point(409, 271);
+            this.lblAltura.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAltura.Name = "lblAltura";
-            this.lblAltura.Size = new System.Drawing.Size(34, 13);
+            this.lblAltura.Size = new System.Drawing.Size(46, 16);
             this.lblAltura.TabIndex = 13;
             this.lblAltura.Text = "Altura";
             // 
             // txtAltura
             // 
-            this.txtAltura.Location = new System.Drawing.Point(135, 182);
+            this.txtAltura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
+            this.txtAltura.Location = new System.Drawing.Point(462, 268);
+            this.txtAltura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAltura.Name = "txtAltura";
-            this.txtAltura.Size = new System.Drawing.Size(100, 20);
+            this.txtAltura.Size = new System.Drawing.Size(132, 23);
             this.txtAltura.TabIndex = 14;
             // 
             // txtPeso
             // 
-            this.txtPeso.Location = new System.Drawing.Point(287, 182);
+            this.txtPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
+            this.txtPeso.Location = new System.Drawing.Point(665, 268);
+            this.txtPeso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(100, 20);
+            this.txtPeso.Size = new System.Drawing.Size(132, 23);
             this.txtPeso.TabIndex = 16;
             // 
             // lblPeso
             // 
             this.lblPeso.AutoSize = true;
-            this.lblPeso.Location = new System.Drawing.Point(247, 185);
+            this.lblPeso.Location = new System.Drawing.Point(612, 271);
+            this.lblPeso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(31, 13);
+            this.lblPeso.Size = new System.Drawing.Size(38, 16);
             this.lblPeso.TabIndex = 15;
             this.lblPeso.Text = "Peso";
             // 
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(50, 211);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(349, 303);
+            this.lblFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(78, 13);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(103, 16);
             this.lblFechaNacimiento.TabIndex = 17;
             this.lblFechaNacimiento.Text = "Fecha de Nac.";
             // 
             // dtpFechaNacimiento
             // 
+            this.dtpFechaNacimiento.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
+            this.dtpFechaNacimiento.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(135, 208);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(462, 300);
+            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(100, 20);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(132, 23);
             this.dtpFechaNacimiento.TabIndex = 18;
             // 
             // txtEntrenador
             // 
-            this.txtEntrenador.Location = new System.Drawing.Point(135, 260);
+            this.txtEntrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
+            this.txtEntrenador.Location = new System.Drawing.Point(462, 364);
+            this.txtEntrenador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEntrenador.Name = "txtEntrenador";
-            this.txtEntrenador.Size = new System.Drawing.Size(180, 20);
+            this.txtEntrenador.Size = new System.Drawing.Size(239, 23);
             this.txtEntrenador.TabIndex = 21;
             // 
             // lblEntrenador
             // 
             this.lblEntrenador.AutoSize = true;
-            this.lblEntrenador.Location = new System.Drawing.Point(70, 263);
+            this.lblEntrenador.Location = new System.Drawing.Point(376, 367);
+            this.lblEntrenador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEntrenador.Name = "lblEntrenador";
-            this.lblEntrenador.Size = new System.Drawing.Size(59, 13);
+            this.lblEntrenador.Size = new System.Drawing.Size(79, 16);
             this.lblEntrenador.TabIndex = 22;
             this.lblEntrenador.Text = "Entrenador";
             // 
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(77, 289);
+            this.lblDireccion.Location = new System.Drawing.Point(385, 399);
+            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(52, 13);
+            this.lblDireccion.Size = new System.Drawing.Size(67, 16);
             this.lblDireccion.TabIndex = 24;
             this.lblDireccion.Text = "Dirección";
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(135, 286);
+            this.txtDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
+            this.txtDireccion.Location = new System.Drawing.Point(462, 396);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(180, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(239, 23);
             this.txtDireccion.TabIndex = 23;
             // 
             // lblCorreoElectronico
             // 
             this.lblCorreoElectronico.AutoSize = true;
-            this.lblCorreoElectronico.Location = new System.Drawing.Point(35, 315);
+            this.lblCorreoElectronico.Location = new System.Drawing.Point(329, 431);
+            this.lblCorreoElectronico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreoElectronico.Name = "lblCorreoElectronico";
-            this.lblCorreoElectronico.Size = new System.Drawing.Size(94, 13);
+            this.lblCorreoElectronico.Size = new System.Drawing.Size(128, 16);
             this.lblCorreoElectronico.TabIndex = 26;
             this.lblCorreoElectronico.Text = "Correo Electrónico";
             // 
             // txtCorreoElectronico
             // 
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(135, 312);
+            this.txtCorreoElectronico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(462, 428);
+            this.txtCorreoElectronico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
-            this.txtCorreoElectronico.Size = new System.Drawing.Size(180, 20);
+            this.txtCorreoElectronico.Size = new System.Drawing.Size(239, 23);
             this.txtCorreoElectronico.TabIndex = 25;
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(287, 369);
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(160)))), ((int)(((byte)(63)))));
+            this.btnRegistrar.Location = new System.Drawing.Point(830, 492);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(135, 23);
+            this.btnRegistrar.Size = new System.Drawing.Size(237, 71);
             this.btnRegistrar.TabIndex = 27;
             this.btnRegistrar.Text = "Registrar Atleta";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // frmAltaAtleta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 404);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(239)))), ((int)(((byte)(177)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1140, 595);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.lblCorreoElectronico);
             this.Controls.Add(this.txtCorreoElectronico);
@@ -268,6 +309,8 @@
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAltaAtleta";
             this.Text = "Alta de Atleta";
             this.ResumeLayout(false);
