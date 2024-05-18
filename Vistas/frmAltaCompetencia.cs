@@ -21,6 +21,8 @@ namespace Vistas
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            int indice1 = cmbCategoria.SelectedIndex;
+            int indice2 = cmbDisciplina.SelectedIndex;
             Competencia oCompetencia = new Competencia();
             oCompetencia.Com_Nombre = txtNombre.Text;
             oCompetencia.Com_Descripcion = txtDescripcion.Text;
@@ -30,6 +32,8 @@ namespace Vistas
             oCompetencia.Com_Ubicacion = txtUbicacion.Text;
             oCompetencia.Com_Organizador = txtOrganizacion.Text;
             oCompetencia.Com_Sponsors = txtSponsors.Text;
+            oCompetencia.Cat_ID = indice1;
+            oCompetencia.Dis_ID = indice2;
 
             MessageBox.Show("Objeto guardado: " + "\n"
                 + " Nombre: " + oCompetencia.Com_Nombre + "\n"
@@ -38,8 +42,10 @@ namespace Vistas
                 + " FechaFin: " + oCompetencia.Com_FechaFin + "\n"
                 + " Estado : " + oCompetencia.Com_Estado + "\n"
                 + " Ubicacion: " + oCompetencia.Com_Ubicacion + "\n"
-                + " Organizacion: "+ oCompetencia.Com_Organizador + "\n"
-                + " Sponsors: "+ oCompetencia.Com_Sponsors);
+                + " Organizacion: " + oCompetencia.Com_Organizador + "\n"
+                + " Sponsors: " + oCompetencia.Com_Sponsors + "\n"
+                + " Categoria: " + cmbCategoria.Items[oCompetencia.Cat_ID].ToString() + "\n"
+                + " Disciplina: " + cmbDisciplina.Items[oCompetencia.Dis_ID].ToString());
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
