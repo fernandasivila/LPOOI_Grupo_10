@@ -23,19 +23,17 @@ namespace Vistas
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            string username = txtUsuario.Text;
-            string password = txtContraseña.Text;
-
-            if (ValidarCampos(username, password))
+            string usernameVista = txtUsuario.Text;
+            string passwordVista = txtContraseña.Text;
+            if ( ValidarCampos(usernameVista,passwordVista) )
             {
                 MessageBox.Show("Ningun campo puede estar vacio", "Campos Obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                usuarios = usuariosLogIn.ObtenerUsuarios();
-                Usuario usuarioValido = usuarios.FirstOrDefault(usuario => usuario.Usu_NombreUsuario == username && usuario.Usu_Contrasenia == password);
+                bool login = TrabajoUsuario.login(usernameVista,passwordVista);
 
-                if (usuarioValido != null)
+                if (login)
                 {
                     frmMenu menu = new frmMenu();
                     this.Hide();

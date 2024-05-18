@@ -16,64 +16,74 @@ namespace Vistas
         public frmUpdateUsuario()
         {
             InitializeComponent();
+            load_combo_usuarios();
         }
         private void btnActualizarUsuario_Click(object sender, EventArgs e)
         {
-            if (txtIdUser == null)
-            {
-                MessageBox.Show("Debe ingresar id");
-            }else
+            if (TrabajoUsuario.comprobarDisponibilidadNombre(txtUsuario.Text))
             {
                 Usuario user = new Usuario
                 {
-                    Usu_ID = Convert.ToInt32(txtIdUser.Text),
+                    Usu_ID = Convert.ToInt32(cmbDbUsuario.SelectedValue),
                     Usu_NombreUsuario = txtUsuario.Text,
                     Usu_ApellidoNombre = txtApellidoNombre.Text,
                     Usu_Contrasenia = txtContraseña.Text,
                     Rol_Codigo = Convert.ToInt32(cmbRoles.SelectedValue)
                 };
-
-                TrabajarUsuario.update_user(user);
-
+                TrabajoUsuario.update_user(user);
                 MessageBox.Show("Usuario actualizado con éxito.");
-            }
-        }
-
-        private void btnBuscarUser_Click(object sender, EventArgs e)
-        {   if (txtIdUser.Text == "")
-            {
-                MessageBox.Show("Dato Erroneo");
+                volver_al_menu();
             }
             else
             {
-                int idUser = Convert.ToInt32(txtIdUser.Text);
-                Usuario user = TrabajarUsuario.GetUserById(idUser);
-                if (user != null)
-                {
-                    txtUsuario.Text = user.Usu_NombreUsuario;
-                    txtApellidoNombre.Text = user.Usu_ApellidoNombre;
-                    txtContraseña.Text = user.Usu_Contrasenia;
-                    cmbRoles.SelectedValue = user.Rol_Codigo;
-                }
-                else
-                {
-                    MessageBox.Show("INGRESO INCORRECTO");
-                }
+                MessageBox.Show($"El nombre de usuario {txtUsuario.Text} no se encuentra disponible.","Nombre no disponible",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
 
+        private void btnBuscarUser_Click(object sender, EventArgs e)
+        {
+            int idUser = Convert.ToInt32(cmbDbUsuario.SelectedValue);
+            cmbDbUsuario.Enabled = false;
+            btnBuscarUser.Enabled = false;
+            Usuario user = TrabajoUsuario.GetUserById(idUser);
+
+            txtUsuario.Text = user.Usu_NombreUsuario;
+            txtApellidoNombre.Text = user.Usu_ApellidoNombre;
+            txtContraseña.Text = user.Usu_Contrasenia;
+            cmbRoles.SelectedValue = user.Rol_Codigo;
+
+            pnlDatosUsuario.Visible = true;
+        }
+        private void volver_al_menu()
+        {
+            frmMenu menu = new frmMenu();
+            this.Hide();
+            menu.ShowDialog();
+            this.Close();
+        }
+        private void load_combo_usuarios()
+        {
+            cmbDbUsuario.DisplayMember = "Usu_NombreUsuario";
+            cmbDbUsuario.ValueMember = "Usu_ID";
+            cmbDbUsuario.DataSource = TrabajoUsuario.list_usuarios();
+        }
         private void load_combo_roles()
         {
             cmbRoles.DisplayMember = "Rol_Descripcion";
             cmbRoles.ValueMember = "Rol_Codigo";
-            cmbRoles.DataSource = TrabajarUsuario.list_roles();
+            cmbRoles.DataSource = TrabajoUsuario.list_roles();
 
         }
 
         private void frmUpdateUsuario_Load(object sender, EventArgs e)
         {
             load_combo_roles();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            volver_al_menu();
         }
     }
 }

@@ -21,7 +21,6 @@ namespace Vistas
         {
             string nombreUsuario = txtNombre.Text;
 
-            TrabajarUsuario.delete_user(nombreUsuario);
         }
     }
 }

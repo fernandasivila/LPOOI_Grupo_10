@@ -39,9 +39,8 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.cmbRoles = new System.Windows.Forms.ComboBox();
             this.btnRegistrarUsuario = new System.Windows.Forms.Button();
-            this.comdepDataSet = new Vistas.comdepDataSet();
             this.comdepDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.comdepDataSet)).BeginInit();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.comdepDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,6 +107,7 @@
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.txtContraseña.Location = new System.Drawing.Point(330, 193);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(143, 21);
             this.txtContraseña.TabIndex = 10;
             // 
@@ -138,21 +138,22 @@
             this.btnRegistrarUsuario.UseVisualStyleBackColor = true;
             this.btnRegistrarUsuario.Click += new System.EventHandler(this.btnRegistrarUsuario_Click);
             // 
-            // comdepDataSet
+            // btnVolver
             // 
-            this.comdepDataSet.DataSetName = "comdepDataSet";
-            this.comdepDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // comdepDataSetBindingSource
-            // 
-            this.comdepDataSetBindingSource.DataSource = this.comdepDataSet;
-            this.comdepDataSetBindingSource.Position = 0;
+            this.btnVolver.Location = new System.Drawing.Point(12, 29);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 15;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 366);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnRegistrarUsuario);
             this.Controls.Add(this.cmbRoles);
             this.Controls.Add(this.txtUsuario);
@@ -166,7 +167,6 @@
             this.Name = "frmUsuario";
             this.Text = "Añadir Usuario";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.comdepDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comdepDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -185,7 +185,7 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.ComboBox cmbRoles;
         private System.Windows.Forms.Button btnRegistrarUsuario;
-        private comdepDataSet comdepDataSet;
         private System.Windows.Forms.BindingSource comdepDataSetBindingSource;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
