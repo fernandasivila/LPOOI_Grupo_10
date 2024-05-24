@@ -20,13 +20,39 @@ namespace Vistas
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Disciplina oDisciplina = new Disciplina();
-            oDisciplina.Dis_Nombre = txtNombre.Text;
-            oDisciplina.Dis_Descripcion = txtDescripcion.Text;
-            oDisciplina.Dis_ID = 1;
-            MessageBox.Show("Objeto Guardado: " + "\n"
-                + " Nombre: " + oDisciplina.Dis_Nombre + "\n"
-                + " Descripcion: " + oDisciplina.Dis_Descripcion);
+            if (!validarCampos())
+            {
+                MessageBox.Show("Ningun campo puede estar vacio", "Campos Obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else { 
+                Disciplina oDisciplina = new Disciplina();
+                oDisciplina.Dis_Nombre = txtNombre.Text;
+                oDisciplina.Dis_Descripcion = txtDescripcion.Text;
+                oDisciplina.Dis_ID = 1;
+                MessageBox.Show("Objeto Guardado: " + "\n"
+                    + " Nombre: " + oDisciplina.Dis_Nombre + "\n"
+                    + " Descripcion: " + oDisciplina.Dis_Descripcion);
+            }
+            
+        }
+
+        private bool validarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                string.IsNullOrWhiteSpace(txtDescripcion.Text))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            this.Hide();
+            menu.ShowDialog();
+            this.Close();
         }
     }
 }

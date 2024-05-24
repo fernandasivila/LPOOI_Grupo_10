@@ -16,5 +16,29 @@ namespace Vistas
         {
             InitializeComponent();
         }
+
+        private void registrarNuevaDisciplinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAltaDisciplina altaDisciplina = new frmAltaDisciplina();
+            this.Hide();
+            altaDisciplina.ShowDialog();
+            this.Close();
+        }
+
+        private void registrarNuevoAtletaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAltaAtleta altaAtleta = new frmAltaAtleta();
+            this.Hide();
+            altaAtleta.ShowDialog();
+            this.Close();
+        }
+
+        private void registrarNuevaCompetenciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAltaCompetencia altaCompetencia = new frmAltaCompetencia();
+            this.Hide();
+            altaCompetencia.ShowDialog();
+            this.Close();
+        }
     }
 }

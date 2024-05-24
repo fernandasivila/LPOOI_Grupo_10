@@ -52,6 +52,7 @@
             this.lblCorreoElectronico = new System.Windows.Forms.Label();
             this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -68,7 +69,7 @@
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.txtNombre.Location = new System.Drawing.Point(462, 76);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(239, 23);
             this.txtNombre.TabIndex = 1;
@@ -77,7 +78,7 @@
             // 
             this.txtApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.txtApellido.Location = new System.Drawing.Point(462, 108);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(239, 23);
             this.txtApellido.TabIndex = 3;
@@ -96,7 +97,7 @@
             // 
             this.txtDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.txtDNI.Location = new System.Drawing.Point(462, 140);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(159, 23);
             this.txtDNI.TabIndex = 6;
@@ -115,7 +116,7 @@
             // 
             this.txtNacionalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.txtNacionalidad.Location = new System.Drawing.Point(462, 204);
-            this.txtNacionalidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNacionalidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtNacionalidad.Name = "txtNacionalidad";
             this.txtNacionalidad.Size = new System.Drawing.Size(159, 23);
             this.txtNacionalidad.TabIndex = 10;
@@ -144,8 +145,11 @@
             // 
             this.cmbGenero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Items.AddRange(new object[] {
+            "M",
+            "F"});
             this.cmbGenero.Location = new System.Drawing.Point(462, 236);
-            this.cmbGenero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(159, 24);
             this.cmbGenero.TabIndex = 12;
@@ -164,7 +168,7 @@
             // 
             this.txtAltura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.txtAltura.Location = new System.Drawing.Point(462, 268);
-            this.txtAltura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAltura.Margin = new System.Windows.Forms.Padding(4);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(132, 23);
             this.txtAltura.TabIndex = 14;
@@ -173,7 +177,7 @@
             // 
             this.txtPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.txtPeso.Location = new System.Drawing.Point(665, 268);
-            this.txtPeso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPeso.Margin = new System.Windows.Forms.Padding(4);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(132, 23);
             this.txtPeso.TabIndex = 16;
@@ -204,7 +208,7 @@
             this.dtpFechaNacimiento.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(462, 300);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(132, 23);
             this.dtpFechaNacimiento.TabIndex = 18;
@@ -213,7 +217,7 @@
             // 
             this.txtEntrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.txtEntrenador.Location = new System.Drawing.Point(462, 364);
-            this.txtEntrenador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEntrenador.Margin = new System.Windows.Forms.Padding(4);
             this.txtEntrenador.Name = "txtEntrenador";
             this.txtEntrenador.Size = new System.Drawing.Size(239, 23);
             this.txtEntrenador.TabIndex = 21;
@@ -242,7 +246,7 @@
             // 
             this.txtDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.txtDireccion.Location = new System.Drawing.Point(462, 396);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(239, 23);
             this.txtDireccion.TabIndex = 23;
@@ -261,7 +265,7 @@
             // 
             this.txtCorreoElectronico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.txtCorreoElectronico.Location = new System.Drawing.Point(462, 428);
-            this.txtCorreoElectronico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreoElectronico.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(239, 23);
             this.txtCorreoElectronico.TabIndex = 25;
@@ -270,13 +274,27 @@
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(160)))), ((int)(((byte)(63)))));
             this.btnRegistrar.Location = new System.Drawing.Point(830, 492);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(237, 71);
             this.btnRegistrar.TabIndex = 27;
             this.btnRegistrar.Text = "Registrar Atleta";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
+            this.btnVolver.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.btnVolver.Location = new System.Drawing.Point(566, 492);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(231, 71);
+            this.btnVolver.TabIndex = 62;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmAltaAtleta
             // 
@@ -286,6 +304,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1140, 595);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.lblCorreoElectronico);
             this.Controls.Add(this.txtCorreoElectronico);
@@ -310,7 +329,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAltaAtleta";
             this.Text = "Alta de Atleta";
             this.ResumeLayout(false);
@@ -343,5 +362,6 @@
         private System.Windows.Forms.Label lblCorreoElectronico;
         private System.Windows.Forms.TextBox txtCorreoElectronico;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
