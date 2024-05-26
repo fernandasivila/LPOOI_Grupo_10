@@ -46,10 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDeleteUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteUsuario.Designer.cs">
+      <DependentUpon>frmDeleteUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateUsuario.Designer.cs">
+      <DependentUpon>frmUpdateUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrabajarUsuario.cs" />
     <Compile Include="comdepDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>comdepDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAltaAtleta.cs">
       <SubType>Form</SubType>
@@ -83,6 +102,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDeleteUsuario.resx">
+      <DependentUpon>frmDeleteUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateUsuario.resx">
+      <DependentUpon>frmUpdateUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAltaAtleta.resx">
       <DependentUpon>frmAltaAtleta.cs</DependentUpon>
     </EmbeddedResource>
