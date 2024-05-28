@@ -15,6 +15,7 @@ namespace Vistas
     {
         private readonly Usuarios usuariosLogIn = new Usuarios();
         private List<Usuario> usuarios;
+        
 
         public frmLogIn()
         {
@@ -36,7 +37,8 @@ namespace Vistas
                 if (user.Rows.Count > 0)
                 {
                     frmMenu menu = new frmMenu();
-                    menu.rolUser = int.Parse(user.Rows[0]["Rol_Codigo"].ToString());
+                    int rolUser = int.Parse(user.Rows[0]["Rol_Codigo"].ToString());
+                    menu.rolUser = rolUser;
                     this.Hide();
                     menu.ShowDialog();
                     this.Close();
