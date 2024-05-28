@@ -1,6 +1,6 @@
 ﻿namespace Vistas
 {
-    partial class frmAltaAtleta
+    partial class frmAtleta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAltaAtleta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAtleta));
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -53,12 +53,15 @@
             this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.lblID = new System.Windows.Forms.Label();
+            this.btnObtener = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(396, 79);
+            this.lblNombre.Location = new System.Drawing.Point(593, 90);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(56, 16);
@@ -68,7 +71,7 @@
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
-            this.txtNombre.Location = new System.Drawing.Point(462, 76);
+            this.txtNombre.Location = new System.Drawing.Point(659, 87);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(239, 23);
@@ -77,7 +80,7 @@
             // txtApellido
             // 
             this.txtApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
-            this.txtApellido.Location = new System.Drawing.Point(462, 108);
+            this.txtApellido.Location = new System.Drawing.Point(659, 119);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(239, 23);
@@ -86,7 +89,7 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(396, 111);
+            this.lblApellido.Location = new System.Drawing.Point(593, 122);
             this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(57, 16);
@@ -96,7 +99,7 @@
             // txtDNI
             // 
             this.txtDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
-            this.txtDNI.Location = new System.Drawing.Point(462, 140);
+            this.txtDNI.Location = new System.Drawing.Point(659, 151);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(159, 23);
@@ -105,7 +108,7 @@
             // lblDNI
             // 
             this.lblDNI.AutoSize = true;
-            this.lblDNI.Location = new System.Drawing.Point(420, 143);
+            this.lblDNI.Location = new System.Drawing.Point(617, 154);
             this.lblDNI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDNI.Name = "lblDNI";
             this.lblDNI.Size = new System.Drawing.Size(30, 16);
@@ -115,7 +118,7 @@
             // txtNacionalidad
             // 
             this.txtNacionalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
-            this.txtNacionalidad.Location = new System.Drawing.Point(462, 204);
+            this.txtNacionalidad.Location = new System.Drawing.Point(659, 215);
             this.txtNacionalidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtNacionalidad.Name = "txtNacionalidad";
             this.txtNacionalidad.Size = new System.Drawing.Size(159, 23);
@@ -124,7 +127,7 @@
             // lblNacionalidad
             // 
             this.lblNacionalidad.AutoSize = true;
-            this.lblNacionalidad.Location = new System.Drawing.Point(362, 207);
+            this.lblNacionalidad.Location = new System.Drawing.Point(559, 218);
             this.lblNacionalidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNacionalidad.Name = "lblNacionalidad";
             this.lblNacionalidad.Size = new System.Drawing.Size(89, 16);
@@ -134,7 +137,7 @@
             // lblGenero
             // 
             this.lblGenero.AutoSize = true;
-            this.lblGenero.Location = new System.Drawing.Point(398, 239);
+            this.lblGenero.Location = new System.Drawing.Point(595, 250);
             this.lblGenero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(53, 16);
@@ -148,7 +151,7 @@
             this.cmbGenero.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.cmbGenero.Location = new System.Drawing.Point(462, 236);
+            this.cmbGenero.Location = new System.Drawing.Point(659, 247);
             this.cmbGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(159, 24);
@@ -157,7 +160,7 @@
             // lblAltura
             // 
             this.lblAltura.AutoSize = true;
-            this.lblAltura.Location = new System.Drawing.Point(409, 271);
+            this.lblAltura.Location = new System.Drawing.Point(606, 282);
             this.lblAltura.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAltura.Name = "lblAltura";
             this.lblAltura.Size = new System.Drawing.Size(46, 16);
@@ -167,7 +170,7 @@
             // txtAltura
             // 
             this.txtAltura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
-            this.txtAltura.Location = new System.Drawing.Point(462, 268);
+            this.txtAltura.Location = new System.Drawing.Point(659, 279);
             this.txtAltura.Margin = new System.Windows.Forms.Padding(4);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(132, 23);
@@ -176,7 +179,7 @@
             // txtPeso
             // 
             this.txtPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
-            this.txtPeso.Location = new System.Drawing.Point(665, 268);
+            this.txtPeso.Location = new System.Drawing.Point(862, 279);
             this.txtPeso.Margin = new System.Windows.Forms.Padding(4);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(132, 23);
@@ -185,7 +188,7 @@
             // lblPeso
             // 
             this.lblPeso.AutoSize = true;
-            this.lblPeso.Location = new System.Drawing.Point(612, 271);
+            this.lblPeso.Location = new System.Drawing.Point(809, 282);
             this.lblPeso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPeso.Name = "lblPeso";
             this.lblPeso.Size = new System.Drawing.Size(38, 16);
@@ -195,7 +198,7 @@
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(349, 303);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(546, 314);
             this.lblFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(103, 16);
@@ -207,7 +210,7 @@
             this.dtpFechaNacimiento.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.dtpFechaNacimiento.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(462, 300);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(659, 311);
             this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(132, 23);
@@ -216,7 +219,7 @@
             // txtEntrenador
             // 
             this.txtEntrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
-            this.txtEntrenador.Location = new System.Drawing.Point(462, 364);
+            this.txtEntrenador.Location = new System.Drawing.Point(659, 375);
             this.txtEntrenador.Margin = new System.Windows.Forms.Padding(4);
             this.txtEntrenador.Name = "txtEntrenador";
             this.txtEntrenador.Size = new System.Drawing.Size(239, 23);
@@ -225,7 +228,7 @@
             // lblEntrenador
             // 
             this.lblEntrenador.AutoSize = true;
-            this.lblEntrenador.Location = new System.Drawing.Point(376, 367);
+            this.lblEntrenador.Location = new System.Drawing.Point(573, 378);
             this.lblEntrenador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEntrenador.Name = "lblEntrenador";
             this.lblEntrenador.Size = new System.Drawing.Size(79, 16);
@@ -235,7 +238,7 @@
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(385, 399);
+            this.lblDireccion.Location = new System.Drawing.Point(582, 410);
             this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(67, 16);
@@ -245,7 +248,7 @@
             // txtDireccion
             // 
             this.txtDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
-            this.txtDireccion.Location = new System.Drawing.Point(462, 396);
+            this.txtDireccion.Location = new System.Drawing.Point(659, 407);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(239, 23);
@@ -254,7 +257,7 @@
             // lblCorreoElectronico
             // 
             this.lblCorreoElectronico.AutoSize = true;
-            this.lblCorreoElectronico.Location = new System.Drawing.Point(329, 431);
+            this.lblCorreoElectronico.Location = new System.Drawing.Point(526, 442);
             this.lblCorreoElectronico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreoElectronico.Name = "lblCorreoElectronico";
             this.lblCorreoElectronico.Size = new System.Drawing.Size(128, 16);
@@ -264,7 +267,7 @@
             // txtCorreoElectronico
             // 
             this.txtCorreoElectronico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(462, 428);
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(659, 439);
             this.txtCorreoElectronico.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(239, 23);
@@ -273,7 +276,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(160)))), ((int)(((byte)(63)))));
-            this.btnRegistrar.Location = new System.Drawing.Point(830, 492);
+            this.btnRegistrar.Location = new System.Drawing.Point(285, 279);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(237, 71);
@@ -287,7 +290,7 @@
             this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(212)))), ((int)(((byte)(136)))));
             this.btnVolver.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.btnVolver.Location = new System.Drawing.Point(566, 492);
+            this.btnVolver.Location = new System.Drawing.Point(21, 279);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(231, 71);
@@ -295,6 +298,33 @@
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(145, 115);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(255, 23);
+            this.txtID.TabIndex = 63;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(58, 118);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(81, 16);
+            this.lblID.TabIndex = 64;
+            this.lblID.Text = "Ingrese ID:";
+            // 
+            // btnObtener
+            // 
+            this.btnObtener.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnObtener.Location = new System.Drawing.Point(190, 154);
+            this.btnObtener.Name = "btnObtener";
+            this.btnObtener.Size = new System.Drawing.Size(139, 43);
+            this.btnObtener.TabIndex = 65;
+            this.btnObtener.Text = "ObtenerAtleta";
+            this.btnObtener.UseVisualStyleBackColor = false;
+            this.btnObtener.Click += new System.EventHandler(this.btnObtener_Click);
             // 
             // frmAltaAtleta
             // 
@@ -304,6 +334,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1140, 595);
+            this.Controls.Add(this.btnObtener);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.lblCorreoElectronico);
@@ -332,6 +365,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAltaAtleta";
             this.Text = "Alta de Atleta";
+            this.Load += new System.EventHandler(this.frmAltaAtleta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,5 +397,8 @@
         private System.Windows.Forms.TextBox txtCorreoElectronico;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Button btnObtener;
     }
 }

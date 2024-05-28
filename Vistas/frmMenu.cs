@@ -66,9 +66,32 @@ namespace Vistas
 
         private void registrarNuevoAtletaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAltaAtleta altaAtleta = new frmAltaAtleta();
+            frmAtleta altaAtleta = new frmAtleta("registrar");
             this.Hide();
             altaAtleta.ShowDialog();
+            this.Close();
+        }
+        private void modificarAtletaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAtleta altaAtleta = new frmAtleta("modificar");
+            this.Hide();
+            altaAtleta.ShowDialog();
+            this.Close();
+        }
+
+        private void borrarAtletaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAtleta altaAtleta = new frmAtleta("borrar");
+            this.Hide();
+            altaAtleta.ShowDialog();
+            this.Close();
+        }
+
+        private void mostrarAtletaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMostrarAtleta mostrarAtleta = new frmMostrarAtleta();
+            this.Hide();
+            mostrarAtleta.ShowDialog();
             this.Close();
         }
 
@@ -103,7 +126,5 @@ namespace Vistas
             updateUsuario.ShowDialog();
             this.Close();
         }
-
-       
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="frmDeleteUsuario.Designer.cs">
       <DependentUpon>frmDeleteUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMostrarAtleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMostrarAtleta.Designer.cs">
+      <DependentUpon>frmMostrarAtleta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUpdateUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,11 +71,11 @@
     <Compile Include="frmUsuario.Designer.cs">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAltaAtleta.cs">
+    <Compile Include="frmAtleta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAltaAtleta.Designer.cs">
-      <DependentUpon>frmAltaAtleta.cs</DependentUpon>
+    <Compile Include="frmAtleta.Designer.cs">
+      <DependentUpon>frmAtleta.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAltaCompetencia.cs">
       <SubType>Form</SubType>
@@ -106,8 +112,8 @@
     <EmbeddedResource Include="frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAltaAtleta.resx">
-      <DependentUpon>frmAltaAtleta.cs</DependentUpon>
+    <EmbeddedResource Include="frmAtleta.resx">
+      <DependentUpon>frmAtleta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltaCompetencia.resx">
       <DependentUpon>frmAltaCompetencia.cs</DependentUpon>

@@ -43,6 +43,9 @@
             this.borrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.img = new System.Windows.Forms.PictureBox();
+            this.modificarAtletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrarAtletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarAtletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +94,10 @@
             // atletasToolStripMenuItem
             // 
             this.atletasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarNuevoAtletaToolStripMenuItem});
+            this.registrarNuevoAtletaToolStripMenuItem,
+            this.modificarAtletaToolStripMenuItem,
+            this.borrarAtletaToolStripMenuItem,
+            this.mostrarAtletaToolStripMenuItem});
             this.atletasToolStripMenuItem.Name = "atletasToolStripMenuItem";
             this.atletasToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
             this.atletasToolStripMenuItem.Text = "Atletas";
@@ -102,6 +108,27 @@
             this.registrarNuevoAtletaToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.registrarNuevoAtletaToolStripMenuItem.Text = "Registrar nuevo Atleta";
             this.registrarNuevoAtletaToolStripMenuItem.Click += new System.EventHandler(this.registrarNuevoAtletaToolStripMenuItem_Click);
+            // 
+            // modificarAtletaToolStripMenuItem
+            // 
+            this.modificarAtletaToolStripMenuItem.Name = "modificarAtletaToolStripMenuItem";
+            this.modificarAtletaToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.modificarAtletaToolStripMenuItem.Text = "Modificar Atleta";
+            this.modificarAtletaToolStripMenuItem.Click += new System.EventHandler(this.modificarAtletaToolStripMenuItem_Click);
+            // 
+            // borrarAtletaToolStripMenuItem
+            // 
+            this.borrarAtletaToolStripMenuItem.Name = "borrarAtletaToolStripMenuItem";
+            this.borrarAtletaToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.borrarAtletaToolStripMenuItem.Text = "Borrar Atleta";
+            this.borrarAtletaToolStripMenuItem.Click += new System.EventHandler(this.borrarAtletaToolStripMenuItem_Click);
+            // 
+            // mostrarAtletaToolStripMenuItem
+            // 
+            this.mostrarAtletaToolStripMenuItem.Name = "mostrarAtletaToolStripMenuItem";
+            this.mostrarAtletaToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.mostrarAtletaToolStripMenuItem.Text = "Mostrar Atleta";
+            this.mostrarAtletaToolStripMenuItem.Click += new System.EventHandler(this.mostrarAtletaToolStripMenuItem_Click);
             // 
             // competenciasToolStripMenuItem
             // 
@@ -200,5 +227,8 @@
         private System.Windows.Forms.ToolStripMenuItem ingresarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem borrarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarAtletaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem borrarAtletaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarAtletaToolStripMenuItem;
     }
 }
