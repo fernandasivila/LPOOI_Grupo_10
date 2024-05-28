@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClasesBase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,16 @@ namespace Vistas
 {
     public partial class frmMenu : Form
     {
-        public int rolUser;
+        
         public frmMenu()
         {
             InitializeComponent();
         }
         private void frmMenu_Load(object sender, EventArgs e)
         {
+            Usuario usuario = UsuarioLogIn.Instance.Usuario;
+            int rolUser = usuario.Rol_Codigo;
+
             switch (rolUser)
             {
 

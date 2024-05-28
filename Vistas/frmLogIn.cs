@@ -36,9 +36,18 @@ namespace Vistas
 
                 if (user.Rows.Count > 0)
                 {
+                    Usuario usuario = new Usuario
+                    {
+                        Usu_ID = int.Parse(user.Rows[0]["Usu_ID"].ToString()),
+                        Usu_NombreUsuario = user.Rows[0]["Usu_NombreUsuario"].ToString(),
+                        Usu_Contrasenia = user.Rows[0]["Usu_Contraseña"].ToString(),
+                        Usu_ApellidoNombre = user.Rows[0]["Usu_ApellidoNombre"].ToString(),
+                        Rol_Codigo = int.Parse(user.Rows[0]["Rol_Codigo"].ToString())
+                    };
+
+                    UsuarioLogIn.Instance.Usuario = usuario;
+
                     frmMenu menu = new frmMenu();
-                    int rolUser = int.Parse(user.Rows[0]["Rol_Codigo"].ToString());
-                    menu.rolUser = rolUser;
                     this.Hide();
                     menu.ShowDialog();
                     this.Close();
