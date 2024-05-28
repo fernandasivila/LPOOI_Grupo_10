@@ -38,7 +38,7 @@
             this.competenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarNuevaCompetenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.GestionUsuariosMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +57,7 @@
             this.atletasToolStripMenuItem,
             this.competenciasToolStripMenuItem,
             this.eventosToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.GestionUsuariosMenuItem1});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
@@ -124,15 +124,15 @@
             this.eventosToolStripMenuItem.Size = new System.Drawing.Size(76, 22);
             this.eventosToolStripMenuItem.Text = "Eventos";
             // 
-            // toolStripMenuItem1
+            // GestionUsuariosMenuItem1
             // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.GestionUsuariosMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ingresarUsuarioToolStripMenuItem,
             this.borrarUsuarioToolStripMenuItem,
             this.modificarUsuarioToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(73, 22);
-            this.toolStripMenuItem1.Text = "Usuario";
+            this.GestionUsuariosMenuItem1.Name = "GestionUsuariosMenuItem1";
+            this.GestionUsuariosMenuItem1.Size = new System.Drawing.Size(73, 22);
+            this.GestionUsuariosMenuItem1.Text = "Usuario";
             // 
             // ingresarUsuarioToolStripMenuItem
             // 
@@ -176,6 +176,7 @@
             this.Controls.Add(this.menuStrip2);
             this.Name = "frmMenu";
             this.Text = "Menu Principal";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
@@ -195,7 +196,7 @@
         private System.Windows.Forms.ToolStripMenuItem registrarNuevaCompetenciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eventosToolStripMenuItem;
         private System.Windows.Forms.PictureBox img;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem GestionUsuariosMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ingresarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem borrarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarUsuarioToolStripMenuItem;

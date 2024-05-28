@@ -26,6 +26,8 @@ namespace ClasesBase
 
             return dt.Rows.Count == 0;
         }
+
+        /*
         public static bool login(string nombreUsuario, string passwrd)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
@@ -41,6 +43,24 @@ namespace ClasesBase
 
             return dt.Rows.Count > 0;
         }
+        */
+
+        public static DataTable login(string nombreUsuario, string passwrd)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = $"SELECT * FROM Usuario WHERE Usu_NombreUsuario='{nombreUsuario}' AND Usu_Contraseña='{passwrd}'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
         public static DataTable list_roles()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
