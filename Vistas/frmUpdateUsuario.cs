@@ -13,6 +13,7 @@ namespace Vistas
 {
     public partial class frmUpdateUsuario : Form
     {
+        private static string nombreUsuarioActual;
         public frmUpdateUsuario()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace Vistas
         }
         private void btnActualizarUsuario_Click(object sender, EventArgs e)
         {
-            if (TrabajoUsuario.comprobarDisponibilidadNombre(txtUsuario.Text))
+            if (nombreUsuarioActual == txtUsuario.Text ||TrabajoUsuario.comprobarDisponibilidadNombre(txtUsuario.Text))
             {
                 Usuario user = new Usuario
                 {
@@ -47,6 +48,8 @@ namespace Vistas
             cmbDbUsuario.Enabled = false;
             btnBuscarUser.Enabled = false;
             Usuario user = TrabajoUsuario.GetUserById(idUser);
+
+            nombreUsuarioActual = user.Usu_NombreUsuario;
 
             txtUsuario.Text = user.Usu_NombreUsuario;
             txtApellidoNombre.Text = user.Usu_ApellidoNombre;
