@@ -31,11 +31,12 @@ namespace Vistas
             }
             else
             {
-                bool login = TrabajoUsuario.login(usernameVista,passwordVista);
+                DataTable user = TrabajoUsuario.login(usernameVista, passwordVista);
 
-                if (login)
+                if (user.Rows.Count > 0)
                 {
                     frmMenu menu = new frmMenu();
+                    menu.rolUser = int.Parse(user.Rows[0]["Rol_Codigo"].ToString());
                     this.Hide();
                     menu.ShowDialog();
                     this.Close();
