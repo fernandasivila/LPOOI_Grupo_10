@@ -112,6 +112,21 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
+        public static void delete_user(string nombreUsuario)
+        {
+           SqlConnection cnn = new SqlConnection (ClasesBase.Properties.Settings.Default.comdepConnectionString);
+           SqlCommand cmd = new SqlCommand();
+           cmd.CommandText = "DELETE FROM Usuario WHERE Usu_NombreUsuario = @nombreUsuario";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
+
         public static Usuario GetUserById(int userId)
         {
             Usuario user = null;

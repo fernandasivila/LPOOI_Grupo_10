@@ -58,6 +58,7 @@ namespace Vistas
         private void volver_al_menu()
         {
             frmMenu menu = new frmMenu();
+            
             this.Hide();
             menu.ShowDialog();
             this.Close();

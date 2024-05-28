@@ -49,11 +49,11 @@ namespace Vistas
                     competenciasToolStripMenuItem.Enabled = true;
                     eventosToolStripMenuItem.Enabled = true;
                     break;
-
+/*
                 default:
                     MessageBox.Show("Rol desconocido.");
                     this.Close();
-                    break;
+                    break;*/
             }
         }
         private void registrarNuevaDisciplinaToolStripMenuItem_Click(object sender, EventArgs e)
