@@ -12,11 +12,50 @@ namespace Vistas
 {
     public partial class frmMenu : Form
     {
+        public int rolUser;
         public frmMenu()
         {
             InitializeComponent();
         }
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            switch (rolUser)
+            {
 
+                //administrador:  acceso al módulo de gestión de Usuarios
+                case 1:
+                    GestionUsuariosMenuItem1.Visible = true;
+                    sistemaToolStripMenuItem.Visible = false;
+                    atletasToolStripMenuItem.Visible = false;
+                    competenciasToolStripMenuItem.Visible = false;
+                    eventosToolStripMenuItem.Visible = false;
+                    break;
+
+                //operador:  acceso al módulo Atletas y Competiciones
+                case 2:
+                    atletasToolStripMenuItem.Visible = true;
+                    competenciasToolStripMenuItem.Visible = true;
+                    GestionUsuariosMenuItem1.Visible = false;
+                    sistemaToolStripMenuItem.Visible = false;
+                    eventosToolStripMenuItem.Visible = false;
+                    break;
+
+                //auditor:  sin restricción de acceso.
+
+                case 3:
+                    GestionUsuariosMenuItem1.Enabled = true;
+                    sistemaToolStripMenuItem.Enabled = true;
+                    atletasToolStripMenuItem.Enabled = true;
+                    competenciasToolStripMenuItem.Enabled = true;
+                    eventosToolStripMenuItem.Enabled = true;
+                    break;
+
+                default:
+                    MessageBox.Show("Rol desconocido.");
+                    this.Close();
+                    break;
+            }
+        }
         private void registrarNuevaDisciplinaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAltaDisciplina altaDisciplina = new frmAltaDisciplina();
@@ -64,5 +103,7 @@ namespace Vistas
             updateUsuario.ShowDialog();
             this.Close();
         }
+
+       
     }
 }
