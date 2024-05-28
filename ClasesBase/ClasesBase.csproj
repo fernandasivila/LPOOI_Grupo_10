@@ -63,6 +63,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>comdepDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TrabajoAtleta.cs" />
     <Compile Include="TrabajoUsuario.cs" />
     <Compile Include="Competencia.cs" />
     <Compile Include="Disciplina.cs" />
