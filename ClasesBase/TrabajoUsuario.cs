@@ -11,6 +11,7 @@ namespace ClasesBase
 {
     public class TrabajoUsuario
     {
+
         public static bool comprobarDisponibilidadNombre(string nombreUsuario)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);

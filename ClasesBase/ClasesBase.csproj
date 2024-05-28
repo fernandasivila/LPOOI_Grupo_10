@@ -76,6 +76,7 @@
     </Compile>
     <Compile Include="Roles.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioLogIn.cs" />
     <Compile Include="Usuarios.cs" />
   </ItemGroup>
   <ItemGroup>
