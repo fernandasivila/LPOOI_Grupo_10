@@ -46,48 +46,108 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmDeleteUsuario.cs">
+    <Compile Include="Disciplina\frmDisciplinas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDeleteUsuario.Designer.cs">
+    <Compile Include="Disciplina\frmDisciplinas.Designer.cs">
+      <DependentUpon>frmDisciplinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Disciplina\frmDeleteDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Disciplina\frmDeleteDisciplina.Designer.cs">
+      <DependentUpon>frmDeleteDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Disciplina\frmUpdateDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Disciplina\frmUpdateDisciplina.Designer.cs">
+      <DependentUpon>frmUpdateDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Disciplina\frmCreateDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Disciplina\frmCreateDisciplina.Designer.cs">
+      <DependentUpon>frmCreateDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Competencia\frmUpdateCompetencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Competencia\frmUpdateCompetencia.Designer.cs">
+      <DependentUpon>frmUpdateCompetencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Competencia\frmDeleteCompetencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Competencia\frmDeleteCompetencia.Designer.cs">
+      <DependentUpon>frmDeleteCompetencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atleta\frmDeleteAtleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atleta\frmDeleteAtleta.Designer.cs">
+      <DependentUpon>frmDeleteAtleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categoria\frmCreateCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categoria\frmCreateCategoria.Designer.cs">
+      <DependentUpon>frmCreateCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categoria\frmDeleteCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categoria\frmDeleteCategoria.Designer.cs">
+      <DependentUpon>frmDeleteCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmDeleteUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmDeleteUsuario.Designer.cs">
       <DependentUpon>frmDeleteUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMostrarAtleta.cs">
+    <Compile Include="Atleta\frmAtletas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMostrarAtleta.Designer.cs">
-      <DependentUpon>frmMostrarAtleta.cs</DependentUpon>
+    <Compile Include="Atleta\frmAtletas.Designer.cs">
+      <DependentUpon>frmAtletas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUpdateUsuario.cs">
+    <Compile Include="Categoria\frmUpdateCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUpdateUsuario.Designer.cs">
+    <Compile Include="Categoria\frmUpdateCategoria.Designer.cs">
+      <DependentUpon>frmUpdateCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmUpdateUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmUpdateUsuario.Designer.cs">
       <DependentUpon>frmUpdateUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Principal.Designer.cs">
+      <DependentUpon>Frm_Principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrabajarUsuarioOld.cs" />
-    <Compile Include="frmUsuario.cs">
+    <Compile Include="Usuario\frmCreateUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUsuario.Designer.cs">
-      <DependentUpon>frmUsuario.cs</DependentUpon>
+    <Compile Include="Usuario\frmCreateUsuario.Designer.cs">
+      <DependentUpon>frmCreateUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAtleta.cs">
+    <Compile Include="Atleta\frmCreateAtleta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAtleta.Designer.cs">
-      <DependentUpon>frmAtleta.cs</DependentUpon>
+    <Compile Include="Atleta\frmCreateAtleta.Designer.cs">
+      <DependentUpon>frmCreateAtleta.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAltaCompetencia.cs">
+    <Compile Include="Competencia\frmCreateCompetencia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAltaCompetencia.Designer.cs">
-      <DependentUpon>frmAltaCompetencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAltaDisciplina.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAltaDisciplina.Designer.cs">
-      <DependentUpon>frmAltaDisciplina.cs</DependentUpon>
+    <Compile Include="Competencia\frmCreateCompetencia.Designer.cs">
+      <DependentUpon>frmCreateCompetencia.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogIn.cs">
       <SubType>Form</SubType>
@@ -95,37 +155,79 @@
     <Compile Include="frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMenu.Designer.cs">
-      <DependentUpon>frmMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmDeleteUsuario.resx">
+    <Compile Include="Competencia\frmCompetencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Competencia\frmCompetencias.Designer.cs">
+      <DependentUpon>frmCompetencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categoria\frmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categoria\frmCategorias.Designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Atleta\frmAtletas.resx">
+      <DependentUpon>frmAtletas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Disciplina\frmDisciplinas.resx">
+      <DependentUpon>frmDisciplinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Disciplina\frmDeleteDisciplina.resx">
+      <DependentUpon>frmDeleteDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Disciplina\frmUpdateDisciplina.resx">
+      <DependentUpon>frmUpdateDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Disciplina\frmCreateDisciplina.resx">
+      <DependentUpon>frmCreateDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Competencia\frmUpdateCompetencia.resx">
+      <DependentUpon>frmUpdateCompetencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Competencia\frmDeleteCompetencia.resx">
+      <DependentUpon>frmDeleteCompetencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atleta\frmDeleteAtleta.resx">
+      <DependentUpon>frmDeleteAtleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categoria\frmCreateCategoria.resx">
+      <DependentUpon>frmCreateCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categoria\frmDeleteCategoria.resx">
+      <DependentUpon>frmDeleteCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmDeleteUsuario.resx">
       <DependentUpon>frmDeleteUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdateUsuario.resx">
+    <EmbeddedResource Include="Categoria\frmUpdateCategoria.resx">
+      <DependentUpon>frmUpdateCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmUpdateUsuario.resx">
       <DependentUpon>frmUpdateUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUsuario.resx">
-      <DependentUpon>frmUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Usuario\frmCreateUsuario.resx">
+      <DependentUpon>frmCreateUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAtleta.resx">
-      <DependentUpon>frmAtleta.cs</DependentUpon>
+    <EmbeddedResource Include="Atleta\frmCreateAtleta.resx">
+      <DependentUpon>frmCreateAtleta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAltaCompetencia.resx">
-      <DependentUpon>frmAltaCompetencia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAltaDisciplina.resx">
-      <DependentUpon>frmAltaDisciplina.cs</DependentUpon>
+    <EmbeddedResource Include="Competencia\frmCreateCompetencia.resx">
+      <DependentUpon>frmCreateCompetencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenu.resx">
-      <DependentUpon>frmMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Principal.resx">
+      <DependentUpon>Frm_Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,7 +237,18 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Competencia\frmCompetencias.resx">
+      <DependentUpon>frmCompetencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categoria\frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -156,7 +269,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="img\" />
+    <None Include="img\silueta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
