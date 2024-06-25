@@ -1,0 +1,187 @@
+﻿namespace Vistas
+{
+    partial class frmAtletas
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dataGridViewAtleta = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rbtnListarApellido = new System.Windows.Forms.RadioButton();
+            this.rbtnListarDNI = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAtleta)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // dataGridViewAtleta
+            // 
+            this.dataGridViewAtleta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewAtleta.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewAtleta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewAtleta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(185)))), ((int)(((byte)(190)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(185)))), ((int)(((byte)(190)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAtleta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewAtleta.ColumnHeadersHeight = 34;
+            this.dataGridViewAtleta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewAtleta.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewAtleta.EnableHeadersVisualStyles = false;
+            this.dataGridViewAtleta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.dataGridViewAtleta.Location = new System.Drawing.Point(34, 102);
+            this.dataGridViewAtleta.MultiSelect = false;
+            this.dataGridViewAtleta.Name = "dataGridViewAtleta";
+            this.dataGridViewAtleta.ReadOnly = true;
+            this.dataGridViewAtleta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(131)))), ((int)(((byte)(129)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAtleta.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewAtleta.RowHeadersVisible = false;
+            this.dataGridViewAtleta.RowHeadersWidth = 62;
+            this.dataGridViewAtleta.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewAtleta.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewAtleta.RowTemplate.Height = 28;
+            this.dataGridViewAtleta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewAtleta.Size = new System.Drawing.Size(979, 406);
+            this.dataGridViewAtleta.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 32);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "ATLETAS";
+            // 
+            // rbtnListarApellido
+            // 
+            this.rbtnListarApellido.AutoSize = true;
+            this.rbtnListarApellido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnListarApellido.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.rbtnListarApellido.Location = new System.Drawing.Point(352, 9);
+            this.rbtnListarApellido.Name = "rbtnListarApellido";
+            this.rbtnListarApellido.Size = new System.Drawing.Size(109, 32);
+            this.rbtnListarApellido.TabIndex = 38;
+            this.rbtnListarApellido.Text = "Apellido";
+            this.rbtnListarApellido.UseVisualStyleBackColor = true;
+            // 
+            // rbtnListarDNI
+            // 
+            this.rbtnListarDNI.AutoSize = true;
+            this.rbtnListarDNI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbtnListarDNI.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.rbtnListarDNI.Location = new System.Drawing.Point(231, 9);
+            this.rbtnListarDNI.Name = "rbtnListarDNI";
+            this.rbtnListarDNI.Size = new System.Drawing.Size(69, 32);
+            this.rbtnListarDNI.TabIndex = 39;
+            this.rbtnListarDNI.Text = "DNI";
+            this.rbtnListarDNI.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(211)))), ((int)(((byte)(82)))));
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.label2.Location = new System.Drawing.Point(20, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 28);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Ordenar por:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(211)))), ((int)(((byte)(82)))));
+            this.panel1.Controls.Add(this.rbtnListarApellido);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.rbtnListarDNI);
+            this.panel1.Location = new System.Drawing.Point(494, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(519, 53);
+            this.panel1.TabIndex = 41;
+            // 
+            // frmAtletas
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.ClientSize = new System.Drawing.Size(1058, 542);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridViewAtleta);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "frmAtletas";
+            this.Text = "frmMostrarAtleta";
+            this.Load += new System.EventHandler(this.frmMostrarAtleta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAtleta)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.DataGridView dataGridViewAtleta;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton rbtnListarApellido;
+        private System.Windows.Forms.RadioButton rbtnListarDNI;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+    }
+}
