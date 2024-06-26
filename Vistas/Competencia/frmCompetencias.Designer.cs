@@ -140,6 +140,7 @@
             this.Controls.Add(this.btnBuscarUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCompetencias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCompetencias";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCompetencias)).EndInit();
             this.ResumeLayout(false);

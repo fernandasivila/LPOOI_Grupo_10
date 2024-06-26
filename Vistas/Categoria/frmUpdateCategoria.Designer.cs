@@ -1,4 +1,4 @@
-﻿namespace Vistas
+﻿namespace Vistas.Categoria
 {
     partial class frmUpdateCategoria
     {
@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.lblDbUsuario = new System.Windows.Forms.Label();
-            this.cmbDbUsuario = new System.Windows.Forms.ComboBox();
             this.pnlDatos = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -38,43 +35,11 @@
             this.lblApellidoNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.cmbDbUsuario = new System.Windows.Forms.ComboBox();
+            this.lblDbUsuario = new System.Windows.Forms.Label();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.pnlDatos.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Segoe UI Historic", 8F, System.Drawing.FontStyle.Bold);
-            this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(418, 410);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(208, 57);
-            this.btnActualizar.TabIndex = 24;
-            this.btnActualizar.Text = "ACTUALIZAR";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            // 
-            // lblDbUsuario
-            // 
-            this.lblDbUsuario.AutoSize = true;
-            this.lblDbUsuario.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.lblDbUsuario.Location = new System.Drawing.Point(302, 62);
-            this.lblDbUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDbUsuario.Name = "lblDbUsuario";
-            this.lblDbUsuario.Size = new System.Drawing.Size(97, 28);
-            this.lblDbUsuario.TabIndex = 25;
-            this.lblDbUsuario.Text = "Categoria";
-            // 
-            // cmbDbUsuario
-            // 
-            this.cmbDbUsuario.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.cmbDbUsuario.FormattingEnabled = true;
-            this.cmbDbUsuario.Location = new System.Drawing.Point(418, 62);
-            this.cmbDbUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmbDbUsuario.Name = "cmbDbUsuario";
-            this.cmbDbUsuario.Size = new System.Drawing.Size(280, 36);
-            this.cmbDbUsuario.TabIndex = 28;
             // 
             // pnlDatos
             // 
@@ -84,10 +49,10 @@
             this.pnlDatos.Controls.Add(this.txtDescripcion);
             this.pnlDatos.Controls.Add(this.lblApellidoNombre);
             this.pnlDatos.Controls.Add(this.lblDescripcion);
-            this.pnlDatos.Location = new System.Drawing.Point(184, 146);
+            this.pnlDatos.Location = new System.Drawing.Point(179, 158);
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(700, 226);
-            this.pnlDatos.TabIndex = 29;
+            this.pnlDatos.TabIndex = 30;
             // 
             // label1
             // 
@@ -147,29 +112,63 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.Location = new System.Drawing.Point(694, 57);
+            this.btnBuscar.Location = new System.Drawing.Point(695, 67);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(52, 42);
-            this.btnBuscar.TabIndex = 30;
+            this.btnBuscar.TabIndex = 33;
             this.btnBuscar.Text = "🔍";
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
-            // frmUpdateCategoria
+            // cmbDbUsuario
+            // 
+            this.cmbDbUsuario.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.cmbDbUsuario.FormattingEnabled = true;
+            this.cmbDbUsuario.Location = new System.Drawing.Point(419, 72);
+            this.cmbDbUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbDbUsuario.Name = "cmbDbUsuario";
+            this.cmbDbUsuario.Size = new System.Drawing.Size(280, 36);
+            this.cmbDbUsuario.TabIndex = 32;
+            // 
+            // lblDbUsuario
+            // 
+            this.lblDbUsuario.AutoSize = true;
+            this.lblDbUsuario.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.lblDbUsuario.Location = new System.Drawing.Point(303, 72);
+            this.lblDbUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDbUsuario.Name = "lblDbUsuario";
+            this.lblDbUsuario.Size = new System.Drawing.Size(97, 28);
+            this.lblDbUsuario.TabIndex = 31;
+            this.lblDbUsuario.Text = "Categoria";
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Segoe UI Historic", 8F, System.Drawing.FontStyle.Bold);
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(419, 439);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(208, 57);
+            this.btnActualizar.TabIndex = 34;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            // 
+            // frmUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(1058, 542);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cmbDbUsuario);
             this.Controls.Add(this.lblDbUsuario);
+            this.Controls.Add(this.pnlDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frmUpdateCategoria";
-            this.Text = "frmUpdateCategoria";
-            this.Load += new System.EventHandler(this.frmUpdateUsuario_Load);
+            this.Name = "frmUpdate";
+            this.Text = "frmUpdate";
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
             this.ResumeLayout(false);
@@ -179,9 +178,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Label lblDbUsuario;
-        private System.Windows.Forms.ComboBox cmbDbUsuario;
         private System.Windows.Forms.Panel pnlDatos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombre;
@@ -189,5 +185,8 @@
         private System.Windows.Forms.Label lblApellidoNombre;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.ComboBox cmbDbUsuario;
+        private System.Windows.Forms.Label lblDbUsuario;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }
