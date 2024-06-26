@@ -32,21 +32,7 @@ namespace Vistas
                
                 TrabajoUsuario.delete_user(nombreUsuario);
                 MessageBox.Show("Usuario eliminado con exito");
-                volver_al_menu();
             }
-        }
-        private void volver_al_menu()
-        {
-            frmMenu menu = new frmMenu();
-            this.Hide();
-            menu.ShowDialog();
-            this.Close();
-        }
-
-
-        private void btnVolver_Click_1(object sender, EventArgs e)
-        {
-            volver_al_menu();
         }
     }
 }

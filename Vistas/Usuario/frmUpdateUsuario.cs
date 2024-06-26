@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClasesBase;
 
 namespace Vistas
 {
@@ -34,7 +33,6 @@ namespace Vistas
                 };
                 TrabajoUsuario.update_user(user);
                 MessageBox.Show("Usuario actualizado con éxito.");
-                volver_al_menu();
             }
             else
             {
@@ -59,14 +57,6 @@ namespace Vistas
 
             pnlDatosUsuario.Visible = true;
         }
-        private void volver_al_menu()
-        {
-            frmMenu menu = new frmMenu();
-            
-            this.Hide();
-            menu.ShowDialog();
-            this.Close();
-        }
         private void load_combo_usuarios()
         {
             cmbDbUsuario.DisplayMember = "Usu_NombreUsuario";
@@ -86,9 +76,5 @@ namespace Vistas
             load_combo_roles();
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            volver_al_menu();
-        }
     }
 }

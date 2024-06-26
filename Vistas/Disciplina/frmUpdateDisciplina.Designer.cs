@@ -32,12 +32,12 @@
             this.lblDbUsuario = new System.Windows.Forms.Label();
             this.cmbDbUsuario = new System.Windows.Forms.ComboBox();
             this.pnlDatos = new System.Windows.Forms.Panel();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblApellidoNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.pnlDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +88,16 @@
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(700, 241);
             this.pnlDatos.TabIndex = 29;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.txtDescripcion.Location = new System.Drawing.Point(287, 155);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(347, 63);
+            this.txtDescripcion.TabIndex = 12;
             // 
             // label1
             // 
@@ -145,16 +155,6 @@
             this.btnBuscar.TabIndex = 30;
             this.btnBuscar.Text = "🔍";
             this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.txtDescripcion.Location = new System.Drawing.Point(287, 155);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(347, 63);
-            this.txtDescripcion.TabIndex = 12;
             // 
             // frmUpdateDisciplina
             // 

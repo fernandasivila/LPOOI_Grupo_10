@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vistas.Usuario
+namespace Vistas
 {
     public partial class frmCompetencias : Form
     {
