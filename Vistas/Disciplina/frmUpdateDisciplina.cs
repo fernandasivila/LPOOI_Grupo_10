@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vistas
+namespace Vistas.Disciplina
 {
     public partial class frmUpdateDisciplina : Form
     {
         public frmUpdateDisciplina()
         {
-
-        }
-
-
-        private void frmUpdateUsuario_Load(object sender, EventArgs e)
-        {
+            InitializeComponent();
         }
     }
 }

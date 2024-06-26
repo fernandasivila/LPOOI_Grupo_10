@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categoria\frmUpdateCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categoria\frmUpdateCategoria.Designer.cs">
+      <DependentUpon>frmUpdateCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Disciplina\frmDisciplinas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,12 +138,6 @@
     <Compile Include="Atleta\frmAtletas.Designer.cs">
       <DependentUpon>frmAtletas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Categoria\frmUpdateCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Categoria\frmUpdateCategoria.Designer.cs">
-      <DependentUpon>frmUpdateCategoria.cs</DependentUpon>
-    </Compile>
     <Compile Include="Usuario\frmUpdateUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +197,9 @@
     <EmbeddedResource Include="Atleta\frmAtletas.resx">
       <DependentUpon>frmAtletas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Categoria\frmUpdateCategoria.resx">
+      <DependentUpon>frmUpdateCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Disciplina\frmDisciplinas.resx">
       <DependentUpon>frmDisciplinas.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,9 +229,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario\frmDeleteUsuario.resx">
       <DependentUpon>frmDeleteUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Categoria\frmUpdateCategoria.resx">
-      <DependentUpon>frmUpdateCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario\frmUpdateUsuario.resx">
       <DependentUpon>frmUpdateUsuario.cs</DependentUpon>
@@ -291,6 +291,11 @@
     <None Include="img\usuario.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\user.png" />
+    <None Include="img\icons8-medal-30.png" />
+    <None Include="img\athlete.png" />
+    <None Include="img\list.png" />
+    <None Include="img\event.png" />
     <Content Include="silueta.ico" />
   </ItemGroup>
   <ItemGroup>

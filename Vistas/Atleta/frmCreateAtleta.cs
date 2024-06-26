@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using ClasesBase;
 
 namespace Vistas
@@ -36,6 +35,7 @@ namespace Vistas
             {
                 btnRegistrar.Text = "ACTUALIZAR";
                 lblTitulo.Text = "MODIFICAR ATLETA";
+                
             }
             /*if (this.accion == "borrar")
             {
