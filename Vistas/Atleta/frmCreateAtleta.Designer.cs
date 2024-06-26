@@ -396,11 +396,10 @@
             // 
             // frmCreateAtleta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1058, 542);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1058, 540);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnObtener);
             this.Controls.Add(this.panel1);
@@ -410,6 +409,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCreateAtleta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Alta de Atleta";
             this.Load += new System.EventHandler(this.frmAltaAtleta_Load);
             this.panel1.ResumeLayout(false);
