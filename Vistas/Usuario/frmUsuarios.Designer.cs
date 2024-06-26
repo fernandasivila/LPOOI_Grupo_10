@@ -1,4 +1,4 @@
-﻿namespace Vistas.Usuario
+﻿namespace Vistas
 {
     partial class frmUsuarios
     {

@@ -32,7 +32,6 @@ namespace Vistas
                 TrabajoUsuario.insert_users(oUser);
 
                 MessageBox.Show("Usuario Registrado con exito");
-                volver_al_menu();
             }
             else {
                 MessageBox.Show($"El nombre de usuario {txtUsuario.Text} no se encuentra disponible.", "Nombre no disponible", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -49,18 +48,6 @@ namespace Vistas
             cmbRoles.ValueMember = "Rol_Codigo";
             cmbRoles.DataSource = TrabajoUsuario.list_roles();
 
-        }
-        private void volver_al_menu()
-        {
-            frmMenu menu = new frmMenu();
-            this.Hide();
-            menu.ShowDialog();
-            this.Close();
-        }
-
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            volver_al_menu();
         }
     }
 }

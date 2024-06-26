@@ -8,8 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using ClasesBase;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Vistas
 {
@@ -37,7 +37,7 @@ namespace Vistas
                 btnRegistrar.Text = "ACTUALIZAR";
                 lblTitulo.Text = "MODIFICAR ATLETA";
             }
-            if (this.accion == "borrar")
+            /*if (this.accion == "borrar")
             {
                 btnRegistrar.Text = "Borrar Atleta";
                 btnObtener.Visible = false;
@@ -64,7 +64,7 @@ namespace Vistas
                 lblDireccion.Visible = false;
                 txtCorreoElectronico.Visible = false;
                 lblCorreoElectronico.Visible = false;
-            }
+            }*/
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -168,14 +168,7 @@ namespace Vistas
             }
             return true;
         }
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            frmMenu menu = new frmMenu();
-            this.Hide();
-            menu.ShowDialog();
-            this.Close();
-        }
-
+        
         private void btnObtener_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtID.Text))

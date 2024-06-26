@@ -18,15 +18,6 @@ namespace Vistas
             InitializeComponent();
         }
 
-
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            frmMenu menu = new frmMenu();
-            this.Hide();
-            menu.ShowDialog();
-            this.Close();
-        }
-
         private void frmMostrarAtleta_Load(object sender, EventArgs e)
         {
             List<Atleta> atletas = TrabajoAtleta.obtenerAtletas();
