@@ -33,9 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBuscarUser = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBuscador = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvListaUsuarios = new System.Windows.Forms.DataGridView();
+            this.btnMostrarTodos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,16 +54,17 @@
             this.btnBuscarUser.TabIndex = 31;
             this.btnBuscarUser.Text = "🔍";
             this.btnBuscarUser.UseVisualStyleBackColor = false;
+            this.btnBuscarUser.Click += new System.EventHandler(this.btnBuscarUser_Click);
             // 
-            // textBox1
+            // txtBuscador
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.textBox1.Location = new System.Drawing.Point(638, 40);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 42);
-            this.textBox1.TabIndex = 32;
+            this.txtBuscador.BackColor = System.Drawing.Color.White;
+            this.txtBuscador.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.txtBuscador.Location = new System.Drawing.Point(638, 40);
+            this.txtBuscador.Multiline = true;
+            this.txtBuscador.Name = "txtBuscador";
+            this.txtBuscador.Size = new System.Drawing.Size(316, 42);
+            this.txtBuscador.TabIndex = 32;
             // 
             // label1
             // 
@@ -128,19 +130,38 @@
             this.dgvListaUsuarios.Size = new System.Drawing.Size(979, 406);
             this.dgvListaUsuarios.TabIndex = 35;
             // 
+            // btnMostrarTodos
+            // 
+            this.btnMostrarTodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(211)))), ((int)(((byte)(82)))));
+            this.btnMostrarTodos.FlatAppearance.BorderSize = 0;
+            this.btnMostrarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarTodos.Font = new System.Drawing.Font("Segoe UI Historic", 8F, System.Drawing.FontStyle.Bold);
+            this.btnMostrarTodos.ForeColor = System.Drawing.Color.White;
+            this.btnMostrarTodos.Location = new System.Drawing.Point(371, 40);
+            this.btnMostrarTodos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMostrarTodos.Name = "btnMostrarTodos";
+            this.btnMostrarTodos.Size = new System.Drawing.Size(191, 42);
+            this.btnMostrarTodos.TabIndex = 36;
+            this.btnMostrarTodos.Text = "Mostrar Todos";
+            this.btnMostrarTodos.UseVisualStyleBackColor = false;
+            this.btnMostrarTodos.Visible = false;
+            this.btnMostrarTodos.Click += new System.EventHandler(this.btnMostrarTodos_Click);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(1058, 542);
+            this.Controls.Add(this.btnMostrarTodos);
             this.Controls.Add(this.dgvListaUsuarios);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBuscador);
             this.Controls.Add(this.btnBuscarUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUsuarios";
             this.Text = "frmUsuarios";
+            this.Load += new System.EventHandler(this.frmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -150,8 +171,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnBuscarUser;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscador;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvListaUsuarios;
+        private System.Windows.Forms.Button btnMostrarTodos;
     }
 }

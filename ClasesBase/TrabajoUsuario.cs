@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using System.Runtime.InteropServices;
 
 namespace ClasesBase
 {
@@ -15,10 +16,17 @@ namespace ClasesBase
         public static bool comprobarDisponibilidadNombre(string nombreUsuario)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
+
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = $"SELECT * FROM Usuario WHERE Usu_NombreUsuario='{nombreUsuario}'";
-            cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
+            cmd.CommandText = "ComprobarDisponibilidadUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter param;
+            param = new SqlParameter("@Usuario", SqlDbType.VarChar);
+            param.Direction = ParameterDirection.Input;
+            param.Value = nombreUsuario;
+            cmd.Parameters.Add(param);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
@@ -46,13 +54,23 @@ namespace ClasesBase
         }
         */
 
-        public static DataTable login(string nombreUsuario, string passwrd)
+        public static DataTable login(string nombreUsuario, string password)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = $"SELECT * FROM Usuario WHERE Usu_NombreUsuario='{nombreUsuario}' AND Usu_Contraseña='{passwrd}'";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Login";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
+
+            SqlParameter param1 = new SqlParameter("@Usuario", SqlDbType.VarChar);
+            SqlParameter param2 = new SqlParameter("@Contrasenia", SqlDbType.VarChar);
+            param1.Direction = ParameterDirection.Input;
+            param2.Direction = ParameterDirection.Input;
+            param1.Value = nombreUsuario;
+            param2.Value = password;
+
+            cmd.Parameters.Add(param1);
+            cmd.Parameters.Add(param2); 
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
@@ -66,8 +84,8 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Rol";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "ListarRoles";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -82,14 +100,27 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Usuario(Usu_NombreUsuario, Usu_ApellidoNombre, Usu_Contraseña, Rol_Codigo) values(@nombreUsuario, @apellidoNombre, @password, @rol)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "CrearUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
-            cmd.Parameters.AddWithValue("@nombreUsuario", user.Usu_NombreUsuario);
-            cmd.Parameters.AddWithValue("@apellidoNombre", user.Usu_ApellidoNombre);
-            cmd.Parameters.AddWithValue("@password", user.Usu_Contrasenia);
-            cmd.Parameters.AddWithValue("@rol", user.Rol_Codigo);
+            SqlParameter param1 = new SqlParameter("@Usuario", SqlDbType.VarChar);
+            SqlParameter param2 = new SqlParameter("@Password", SqlDbType.VarChar);
+            SqlParameter param3 = new SqlParameter("@NombreCompleto", SqlDbType.VarChar);
+            SqlParameter param4 = new SqlParameter("@Rol", SqlDbType.Int);
+            param1.Direction = ParameterDirection.Input;
+            param2.Direction = ParameterDirection.Input;
+            param3.Direction = ParameterDirection.Input;
+            param4.Direction = ParameterDirection.Input;
+            param1.Value = user.Usu_NombreUsuario;
+            param2.Value = user.Usu_Contrasenia;
+            param3.Value = user.Usu_ApellidoNombre;
+            param4.Value = user.Rol_Codigo;
+
+            cmd.Parameters.Add(param1);
+            cmd.Parameters.Add(param2);
+            cmd.Parameters.Add(param3);
+            cmd.Parameters.Add(param4);
 
             cnn.Open();
             cmd.ExecuteNonQuery();
@@ -99,15 +130,31 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Usuario SET Usu_NombreUsuario = @nombreUsuario, Usu_ApellidoNombre = @apellidoNombre, Usu_Contraseña = @password, Rol_Codigo = @rol WHERE Usu_ID = @id";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "ModificarUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
-            cmd.Parameters.AddWithValue("@nombreUsuario", user.Usu_NombreUsuario);
-            cmd.Parameters.AddWithValue("@apellidoNombre", user.Usu_ApellidoNombre);
-            cmd.Parameters.AddWithValue("@password", user.Usu_Contrasenia);
-            cmd.Parameters.AddWithValue("@rol", user.Rol_Codigo);
-            cmd.Parameters.AddWithValue("@id", user.Usu_ID);
+            SqlParameter param1 = new SqlParameter("@Usuario", SqlDbType.VarChar);
+            SqlParameter param2 = new SqlParameter("@Password", SqlDbType.VarChar);
+            SqlParameter param3 = new SqlParameter("@NombreCompleto", SqlDbType.VarChar);
+            SqlParameter param4 = new SqlParameter("@Rol", SqlDbType.Int);
+            SqlParameter param5 = new SqlParameter("@Id", SqlDbType.Int);
+            param1.Direction = ParameterDirection.Input;
+            param2.Direction = ParameterDirection.Input;
+            param3.Direction = ParameterDirection.Input;
+            param4.Direction = ParameterDirection.Input;
+            param5.Direction = ParameterDirection.Input;
+            param1.Value = user.Usu_NombreUsuario;
+            param2.Value = user.Usu_Contrasenia;
+            param3.Value = user.Usu_ApellidoNombre;
+            param4.Value = user.Rol_Codigo;
+            param5.Value = user.Usu_ID;
+
+            cmd.Parameters.Add(param1);
+            cmd.Parameters.Add(param2);
+            cmd.Parameters.Add(param3);
+            cmd.Parameters.Add(param4);
+            cmd.Parameters.Add(param5);
 
             cnn.Open();
             cmd.ExecuteNonQuery();
@@ -117,24 +164,37 @@ namespace ClasesBase
         {
            SqlConnection cnn = new SqlConnection (ClasesBase.Properties.Settings.Default.comdepConnectionString);
            SqlCommand cmd = new SqlCommand();
-           cmd.CommandText = "DELETE FROM Usuario WHERE Usu_NombreUsuario = @nombreUsuario";
-            cmd.CommandType = CommandType.Text;
+           cmd.CommandText = "EliminarUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
-            cmd.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+            SqlParameter param;
+            param = new SqlParameter("@Usuario", SqlDbType.VarChar);
+            param.Direction = ParameterDirection.Input;
+            param.Value = nombreUsuario;
+            cmd.Parameters.Add(param);
 
             cnn.Open();
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
 
-        public static Usuario GetUserById(int userId)
+        public static Usuario GetUserById(int id)
         {
             Usuario user = null;
             using (SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString))
             {
-                SqlCommand cmd = new SqlCommand("SELECT Usu_ID, Usu_NombreUsuario, Usu_ApellidoNombre, Usu_Contraseña, Rol_Codigo FROM Usuario WHERE Usu_ID = @id", cnn);
-                cmd.Parameters.AddWithValue("@id", userId);
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "ObtenerUsuarioById";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = cnn;
+
+                SqlParameter param;
+                param = new SqlParameter("@Id", SqlDbType.Int);
+                param.Direction = ParameterDirection.Input;
+                param.Value = id;
+                cmd.Parameters.Add(param);
+
                 cnn.Open();
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -153,12 +213,36 @@ namespace ClasesBase
             }
             return user;
         }
-            public static DataTable list_usuarios()
+
+        public static DataTable GetUsersByFullname(string keyword)
+        {
+            using (SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "ObtenerUsuariosByNombre";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = cnn;
+
+                SqlParameter param;
+                param = new SqlParameter("@Keyword", SqlDbType.VarChar);
+                param.Direction = ParameterDirection.Input;
+                param.Value = $"%{keyword}%";
+                cmd.Parameters.Add(param);
+
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    DataTable usuarios = new DataTable();
+                    da.Fill(usuarios);
+                    return usuarios;
+                }
+            }
+        }
+        public static DataTable list_usuarios()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Usuario";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "ObtenerUsuarios";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
