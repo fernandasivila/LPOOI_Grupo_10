@@ -6,12 +6,12 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace ClasesBase
 {
     public class TrabajoUsuario
     {
-
         public static bool comprobarDisponibilidadNombre(string nombreUsuario)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);

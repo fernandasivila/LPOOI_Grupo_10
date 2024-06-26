@@ -15,8 +15,6 @@ namespace Vistas
     public partial class frmLogIn : Form
     {
         private readonly Usuarios usuariosLogIn = new Usuarios();
-        private List<Usuario> usuarios;
-        
 
         public frmLogIn()
         {
@@ -25,15 +23,15 @@ namespace Vistas
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            string usernameVista = txtUsuario.Text;
-            string passwordVista = txtContraseña.Text;
-            if ( ValidarCampos(usernameVista,passwordVista) )
+            string username = txtUsuario.Text;
+            string password = txtContraseña.Text;
+            if ( ValidarCampos(username,password) )
             {
                 MessageBox.Show("Ningun campo puede estar vacio", "Campos Obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                DataTable user = TrabajoUsuario.login(usernameVista, passwordVista);
+                DataTable user = TrabajoUsuario.login(username, password);
 
                 if (user.Rows.Count > 0)
                 {
@@ -48,10 +46,9 @@ namespace Vistas
 
                     UsuarioLogIn.Instance.Usuario = usuario;
 
-                    Frm_Principal menu = new Frm_Principal();
+                    frmPrincipal menu = new frmPrincipal();
+                    menu.Show();
                     this.Hide();
-                    menu.ShowDialog();
-                    this.Close();
                 }
                 else
                 {
