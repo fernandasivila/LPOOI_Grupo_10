@@ -187,6 +187,7 @@
             this.btnBorrar.TabIndex = 17;
             this.btnBorrar.Text = "BORRAR";
             this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // frmCreateUsuario
             // 

@@ -287,16 +287,5 @@ namespace Vistas
                 
                 
         }
-
-        private void HideAllSubmenusExcept(Panel showPanel)
-        {
-            foreach (Control control in Controls)
-            {
-                if (control is Panel panel && panel.Name.StartsWith("pnl_SubMenu"))
-                {
-                    panel.Visible = (panel == showPanel);
-                }
-            }
-        }
     }
 }
