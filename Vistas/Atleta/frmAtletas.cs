@@ -23,5 +23,16 @@ namespace Vistas
             List<Atleta> atletas = TrabajoAtleta.obtenerAtletas();
             dataGridViewAtleta.DataSource = atletas;
         }
+
+        private void frmMostrarAtletaApellido(object sender, EventArgs e)
+        {
+            List<Atleta> atletas = TrabajoAtleta.obtenerAtletasApellidos();
+            dataGridViewAtleta.DataSource = atletas;
+        }
+        private void frmMostrarAtletaDNI(object sender, EventArgs e)
+        {
+            List<Atleta> atletas = TrabajoAtleta.obtenerAtletasDNIs();
+            dataGridViewAtleta.DataSource = atletas;
+        }
     }
 }
