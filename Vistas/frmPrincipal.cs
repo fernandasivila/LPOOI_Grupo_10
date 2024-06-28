@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vistas;
 using Vistas.Categoria;
-using Vistas.Disciplina;
 
 namespace Vistas
 {
