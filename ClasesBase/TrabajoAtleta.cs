@@ -15,12 +15,8 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Atleta(" +
-                "Alt_DNI, Alt_Apellido, Alt_Nombre, Alt_Nacionalidad, Alt_Entrenador, " +
-                "Alt_Genero, Alt_Altura, Alt_Peso, Alt_FechaNac, Alt_Direccion, Alt_Email) " +
-                "values(@Dni, @Apellido, @Nombre, @Nacionalidad, @Entrenador, @Genero, " +
-                "@Altura, @Peso, @FechaNac, @Direccion, @Email)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "agregarAtleta";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
             cmd.Parameters.AddWithValue("@Dni", atleta.Atl_DNI);
             cmd.Parameters.AddWithValue("@Apellido", atleta.Atl_Apellido);
@@ -43,9 +39,8 @@ namespace ClasesBase
             Atleta oAtleta = null;
             using (SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString))
             {
-                SqlCommand cmd = new SqlCommand("SELECT Alt_ID, Alt_DNI, Alt_Apellido, Alt_Nombre, " +
-                    "Alt_Nacionalidad, Alt_Entrenador, Alt_Genero, Alt_Altura, Alt_Peso, " +
-                    "Alt_FechaNac, Alt_Direccion, Alt_Email FROM Atleta WHERE Alt_ID = @id", cnn);
+                SqlCommand cmd = new SqlCommand("obtenerAtletaById", cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id", id);
                 cnn.Open();
                 using (SqlDataReader reader = cmd.ExecuteReader())
@@ -76,8 +71,8 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "DELETE FROM Atleta WHERE Alt_ID = @id";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "borrarAtleta";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
             cmd.Parameters.AddWithValue("@id", id);
 
@@ -90,19 +85,8 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Atleta SET Alt_DNI = @dni, " +
-            "Alt_Apellido = @apellido, " +
-            "Alt_Nombre = @nombre, " +
-            "Alt_Nacionalidad = @nacionalidad, " +
-            "Alt_Entrenador = @entrenador, " +
-            "Alt_Genero = @genero, " +
-            "Alt_Altura = @altura, " +
-            "Alt_Peso = @peso, " +
-            "Alt_FechaNac = @fechaNac, " +
-            "Alt_Direccion = @direccion, " +
-            "Alt_Email = @email " +
-            "WHERE Alt_ID = @id";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "modificarAtleta";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@dni", atleta.Atl_DNI);
@@ -126,7 +110,76 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Atleta";
+            cmd.CommandText = "obtenerAtletas";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cnn.Open();
+            List<Atleta> atletas = new List<Atleta>();
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    Atleta oAtleta = new Atleta(reader.GetInt32(reader.GetOrdinal("Alt_ID")),
+                            reader.GetString(reader.GetOrdinal("Alt_DNI")),
+                            reader.GetString(reader.GetOrdinal("Alt_Apellido")),
+                            reader.GetString(reader.GetOrdinal("Alt_Nombre")),
+                            reader.GetString(reader.GetOrdinal("Alt_Nacionalidad")),
+                            reader.GetString(reader.GetOrdinal("Alt_Entrenador")),
+                            reader.GetString(reader.GetOrdinal("Alt_Genero"))[0],
+                            reader.GetDouble(reader.GetOrdinal("Alt_Altura")),
+                            reader.GetDouble(reader.GetOrdinal("Alt_Peso")),
+                            reader.GetDateTime(reader.GetOrdinal("Alt_FechaNac")),
+                            reader.GetString(reader.GetOrdinal("Alt_Direccion")),
+                            reader.GetString(reader.GetOrdinal("Alt_Email"))
+                            );
+                    atletas.Add(oAtleta);
+                }
+            }
+            cnn.Close();
+            return atletas;
+        }
+
+        public static List<Atleta> obtenerAtletasPorDNI()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "obtenerAtletasPorDNI";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cnn.Open();
+            List<Atleta> atletas = new List<Atleta>();
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    Atleta oAtleta = new Atleta(reader.GetInt32(reader.GetOrdinal("Alt_ID")),
+                            reader.GetString(reader.GetOrdinal("Alt_DNI")),
+                            reader.GetString(reader.GetOrdinal("Alt_Apellido")),
+                            reader.GetString(reader.GetOrdinal("Alt_Nombre")),
+                            reader.GetString(reader.GetOrdinal("Alt_Nacionalidad")),
+                            reader.GetString(reader.GetOrdinal("Alt_Entrenador")),
+                            reader.GetString(reader.GetOrdinal("Alt_Genero"))[0],
+                            reader.GetDouble(reader.GetOrdinal("Alt_Altura")),
+                            reader.GetDouble(reader.GetOrdinal("Alt_Peso")),
+                            reader.GetDateTime(reader.GetOrdinal("Alt_FechaNac")),
+                            reader.GetString(reader.GetOrdinal("Alt_Direccion")),
+                            reader.GetString(reader.GetOrdinal("Alt_Email"))
+                            );
+                    atletas.Add(oAtleta);
+                }
+            }
+            cnn.Close();
+            return atletas;
+        }
+
+        public static List<Atleta> obtenerAtletasPorApellido()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "obtenerAtletasPorDNI";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cnn.Open();
