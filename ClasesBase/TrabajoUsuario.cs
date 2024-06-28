@@ -58,12 +58,12 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "Login";
+            cmd.CommandText = "iniciarSesion";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             SqlParameter param1 = new SqlParameter("@Usuario", SqlDbType.VarChar);
-            SqlParameter param2 = new SqlParameter("@Contrasenia", SqlDbType.VarChar);
+            SqlParameter param2 = new SqlParameter("@Password", SqlDbType.VarChar);
             param1.Direction = ParameterDirection.Input;
             param2.Direction = ParameterDirection.Input;
             param1.Value = nombreUsuario;

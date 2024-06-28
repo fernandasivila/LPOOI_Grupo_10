@@ -8,8 +8,8 @@ namespace ClasesBase
     {
         private static string connectionString = ClasesBase.Properties.Settings.Default.comdepConnectionString;
 
-        public static void AddCategoria(
-            Categoria categoria )
+        public static void AgregarCategoria(
+            Categoria categoria)
         {
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
@@ -28,8 +28,8 @@ namespace ClasesBase
             }
         }
 
-        public static void DeleteCategoriaById(
-            string categoria_id )
+        public static void BorrarCategoriaPorID(
+            string categoria_id)
         {
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
@@ -46,8 +46,8 @@ namespace ClasesBase
             }
         }
 
-        public static void ModifyCategoria(
-            Categoria categoria )
+        public static void ModificarCategoriaPorID(
+            Categoria categoria)
         {
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
@@ -65,6 +65,24 @@ namespace ClasesBase
                 cmd.ExecuteNonQuery();
                 cnn.Close();
             }
+        }
+        public static DataTable ObtenerCategorias()
+        {
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "obtenerCategorias";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = cnn;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                return dt;
+            }
+
         }
     }
 }
