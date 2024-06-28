@@ -36,7 +36,7 @@ namespace Vistas
             oCategoria.Cat_Nombre = txtNombre.Text;
             oCategoria.Cat_Descripcion = txtDescripcion.Text;
 
-            TrabajoCategoria.AddCategoria(oCategoria);
+            TrabajoCategoria.AgregarCategoria(oCategoria);
         }
 
         private bool ValidarCampos(out string mensajeError)

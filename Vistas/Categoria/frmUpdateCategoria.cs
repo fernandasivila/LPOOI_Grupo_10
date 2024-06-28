@@ -37,6 +37,7 @@ namespace Vistas
                 return;
             }
             Categoria oCategoria = new Categoria();
+
             oCategoria.Cat_ID = Convert.ToInt32(cmbDbCategoria.SelectedValue);
             oCategoria.Cat_Nombre = txtNombre.Text;
             oCategoria.Cat_Descripcion = txtDescripcion.Text;
