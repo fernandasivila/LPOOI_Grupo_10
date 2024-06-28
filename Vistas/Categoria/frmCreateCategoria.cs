@@ -32,12 +32,16 @@ namespace Vistas
                 MessageBox.Show(mensajeError, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            Categoria
+            Categoria oCategoria = new Categoria();
+            oCategoria.Cat_Nombre = txtNombre.Text;
+            oCategoria.Cat_Descripcion = txtDescripcion.Text;
+
+            TrabajoCategoria.AddCategoria(oCategoria);
         }
 
         private bool ValidarCampos(out string mensajeError)
         {
-            mensajeError = "";
+            mensajeError = string.Empty;
             if(txtNombre.Text == "")
             {
                 mensajeError = "Debe ingresar un Nombre de categoría.";

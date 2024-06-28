@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace ClasesBase
 {
-    internal class TrabajoCategoria
+    public class TrabajoCategoria
     {
         private static string connectionString = ClasesBase.Properties.Settings.Default.comdepConnectionString;
 
@@ -56,6 +56,7 @@ namespace ClasesBase
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = cnn;
 
+                cmd.Parameters.AddWithValue("@id", categoria.Cat_ID);
                 cmd.Parameters.AddWithValue("@Nombre", categoria.Cat_Nombre);
                 if (!string.IsNullOrEmpty(categoria.Cat_Descripcion))
                     cmd.Parameters.AddWithValue("@Descripcion", categoria.Cat_Descripcion);
