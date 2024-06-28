@@ -100,7 +100,7 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "CrearUsuario";
+            cmd.CommandText = "agregarUsuario";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
