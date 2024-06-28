@@ -9,16 +9,16 @@ namespace ClasesBase
     {
         private int cat_ID;
         private string cat_Nombre;
-        private int cat_Descripcion;
+        private string cat_Descripcion;
 
         public int Cat_ID { get => cat_ID; set => cat_ID = value; }
         public string Cat_Nombre { get => cat_Nombre; set => cat_Nombre = value; }
-        public int Cat_Descripcion { get => cat_Descripcion; set => cat_Descripcion = value; }
+        public string Cat_Descripcion { get => cat_Descripcion; set => cat_Descripcion = value; }
 
         public Categoria()
         {
         }
-        public Categoria(int cat_ID, string cat_Nombre, int cat_Descripcion)
+        public Categoria(int cat_ID, string cat_Nombre, string cat_Descripcion)
         {
             this.cat_ID = cat_ID;
             this.cat_Nombre = cat_Nombre;
