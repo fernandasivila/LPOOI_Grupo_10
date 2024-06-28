@@ -21,17 +21,17 @@ namespace Vistas
 
         private void btnBorrarUsuario_Click(object sender, EventArgs e)
         {
-            string nombreUsuario = txtID.Text;
+            string id = txtID.Text;
 
-            if (TrabajoUsuario.comprobarDisponibilidadNombre(nombreUsuario))
+            if (TrabajoAtleta.obtenerAtletaById(Int32.Parse(id)) == null)
             {
-                MessageBox.Show($"El nombre de usuario {nombreUsuario} no existe", "Nombre no disponible", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"El id de atleta {id} no existe", "Invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                
-                TrabajoUsuario.delete_user(nombreUsuario);
-                MessageBox.Show("Usuario eliminado con exito");
+                TrabajoAtleta.borrarAtleta(Int32.Parse(id));
+                MessageBox.Show("Atleta eliminado con exito");
             }
         }
 

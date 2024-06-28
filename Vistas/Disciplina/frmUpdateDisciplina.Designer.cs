@@ -1,4 +1,4 @@
-﻿namespace Vistas.Disciplina
+﻿namespace Vistas
 {
     partial class frmUpdateDisciplina
     {

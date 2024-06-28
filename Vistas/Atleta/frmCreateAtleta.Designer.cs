@@ -66,7 +66,7 @@
             this.lblNombre.Location = new System.Drawing.Point(54, 57);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(85, 28);
+            this.lblNombre.Size = new System.Drawing.Size(59, 19);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
@@ -78,7 +78,7 @@
             this.txtNombre.Location = new System.Drawing.Point(173, 54);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(279, 34);
+            this.txtNombre.Size = new System.Drawing.Size(279, 25);
             this.txtNombre.TabIndex = 1;
             // 
             // txtApellido
@@ -89,7 +89,7 @@
             this.txtApellido.Location = new System.Drawing.Point(599, 54);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(327, 34);
+            this.txtApellido.Size = new System.Drawing.Size(327, 25);
             this.txtApellido.TabIndex = 3;
             // 
             // lblApellido
@@ -99,7 +99,7 @@
             this.lblApellido.Location = new System.Drawing.Point(498, 57);
             this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(86, 28);
+            this.lblApellido.Size = new System.Drawing.Size(58, 19);
             this.lblApellido.TabIndex = 2;
             this.lblApellido.Text = "Apellido";
             // 
@@ -111,7 +111,7 @@
             this.txtDNI.Location = new System.Drawing.Point(173, 122);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(212, 34);
+            this.txtDNI.Size = new System.Drawing.Size(212, 25);
             this.txtDNI.TabIndex = 6;
             // 
             // lblDNI
@@ -121,7 +121,7 @@
             this.lblDNI.Location = new System.Drawing.Point(93, 125);
             this.lblDNI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(46, 28);
+            this.lblDNI.Size = new System.Drawing.Size(33, 19);
             this.lblDNI.TabIndex = 5;
             this.lblDNI.Text = "DNI";
             // 
@@ -133,7 +133,7 @@
             this.txtNacionalidad.Location = new System.Drawing.Point(173, 190);
             this.txtNacionalidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtNacionalidad.Name = "txtNacionalidad";
-            this.txtNacionalidad.Size = new System.Drawing.Size(279, 34);
+            this.txtNacionalidad.Size = new System.Drawing.Size(279, 25);
             this.txtNacionalidad.TabIndex = 10;
             // 
             // lblNacionalidad
@@ -143,7 +143,7 @@
             this.lblNacionalidad.Location = new System.Drawing.Point(11, 193);
             this.lblNacionalidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNacionalidad.Name = "lblNacionalidad";
-            this.lblNacionalidad.Size = new System.Drawing.Size(128, 28);
+            this.lblNacionalidad.Size = new System.Drawing.Size(87, 19);
             this.lblNacionalidad.TabIndex = 9;
             this.lblNacionalidad.Text = "Nacionalidad";
             // 
@@ -154,7 +154,7 @@
             this.lblGenero.Location = new System.Drawing.Point(498, 261);
             this.lblGenero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(76, 28);
+            this.lblGenero.Size = new System.Drawing.Size(54, 19);
             this.lblGenero.TabIndex = 11;
             this.lblGenero.Text = "Genero";
             // 
@@ -170,7 +170,7 @@
             this.cmbGenero.Location = new System.Drawing.Point(599, 253);
             this.cmbGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(324, 36);
+            this.cmbGenero.Size = new System.Drawing.Size(324, 25);
             this.cmbGenero.TabIndex = 12;
             // 
             // lblAltura
@@ -180,7 +180,7 @@
             this.lblAltura.Location = new System.Drawing.Point(74, 329);
             this.lblAltura.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAltura.Name = "lblAltura";
-            this.lblAltura.Size = new System.Drawing.Size(65, 28);
+            this.lblAltura.Size = new System.Drawing.Size(46, 19);
             this.lblAltura.TabIndex = 13;
             this.lblAltura.Text = "Altura";
             // 
@@ -192,7 +192,7 @@
             this.txtAltura.Location = new System.Drawing.Point(424, 329);
             this.txtAltura.Margin = new System.Windows.Forms.Padding(4);
             this.txtAltura.Name = "txtAltura";
-            this.txtAltura.Size = new System.Drawing.Size(132, 34);
+            this.txtAltura.Size = new System.Drawing.Size(132, 25);
             this.txtAltura.TabIndex = 14;
             // 
             // txtPeso
@@ -202,7 +202,7 @@
             this.txtPeso.Location = new System.Drawing.Point(173, 326);
             this.txtPeso.Margin = new System.Windows.Forms.Padding(4);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(132, 34);
+            this.txtPeso.Size = new System.Drawing.Size(132, 25);
             this.txtPeso.TabIndex = 16;
             // 
             // lblPeso
@@ -214,7 +214,7 @@
             this.lblPeso.Location = new System.Drawing.Point(359, 329);
             this.lblPeso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(53, 28);
+            this.lblPeso.Size = new System.Drawing.Size(38, 19);
             this.lblPeso.TabIndex = 15;
             this.lblPeso.Text = "Peso";
             // 
@@ -225,7 +225,7 @@
             this.lblFechaNacimiento.Location = new System.Drawing.Point(594, 329);
             this.lblFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(132, 28);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(93, 19);
             this.lblFechaNacimiento.TabIndex = 17;
             this.lblFechaNacimiento.Text = "Fecha de Nac.";
             // 
@@ -238,7 +238,7 @@
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(779, 329);
             this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(144, 34);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(144, 25);
             this.dtpFechaNacimiento.TabIndex = 18;
             // 
             // txtEntrenador
@@ -248,7 +248,7 @@
             this.txtEntrenador.Location = new System.Drawing.Point(599, 119);
             this.txtEntrenador.Margin = new System.Windows.Forms.Padding(4);
             this.txtEntrenador.Name = "txtEntrenador";
-            this.txtEntrenador.Size = new System.Drawing.Size(327, 34);
+            this.txtEntrenador.Size = new System.Drawing.Size(327, 25);
             this.txtEntrenador.TabIndex = 21;
             // 
             // lblEntrenador
@@ -258,7 +258,7 @@
             this.lblEntrenador.Location = new System.Drawing.Point(465, 125);
             this.lblEntrenador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEntrenador.Name = "lblEntrenador";
-            this.lblEntrenador.Size = new System.Drawing.Size(109, 28);
+            this.lblEntrenador.Size = new System.Drawing.Size(77, 19);
             this.lblEntrenador.TabIndex = 22;
             this.lblEntrenador.Text = "Entrenador";
             // 
@@ -269,7 +269,7 @@
             this.lblDireccion.Location = new System.Drawing.Point(480, 193);
             this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(94, 28);
+            this.lblDireccion.Size = new System.Drawing.Size(65, 19);
             this.lblDireccion.TabIndex = 24;
             this.lblDireccion.Text = "Dirección";
             // 
@@ -280,7 +280,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(602, 187);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(327, 34);
+            this.txtDireccion.Size = new System.Drawing.Size(327, 25);
             this.txtDireccion.TabIndex = 23;
             // 
             // lblCorreoElectronico
@@ -290,7 +290,7 @@
             this.lblCorreoElectronico.Location = new System.Drawing.Point(80, 261);
             this.lblCorreoElectronico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreoElectronico.Name = "lblCorreoElectronico";
-            this.lblCorreoElectronico.Size = new System.Drawing.Size(59, 28);
+            this.lblCorreoElectronico.Size = new System.Drawing.Size(41, 19);
             this.lblCorreoElectronico.TabIndex = 26;
             this.lblCorreoElectronico.Text = "Email";
             // 
@@ -301,7 +301,7 @@
             this.txtCorreoElectronico.Location = new System.Drawing.Point(173, 258);
             this.txtCorreoElectronico.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
-            this.txtCorreoElectronico.Size = new System.Drawing.Size(239, 34);
+            this.txtCorreoElectronico.Size = new System.Drawing.Size(239, 25);
             this.txtCorreoElectronico.TabIndex = 25;
             // 
             // txtID
@@ -309,7 +309,7 @@
             this.txtID.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
             this.txtID.Location = new System.Drawing.Point(408, 12);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(255, 34);
+            this.txtID.Size = new System.Drawing.Size(255, 25);
             this.txtID.TabIndex = 63;
             // 
             // lblID
@@ -318,7 +318,7 @@
             this.lblID.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
             this.lblID.Location = new System.Drawing.Point(273, 15);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(103, 28);
+            this.lblID.Size = new System.Drawing.Size(75, 19);
             this.lblID.TabIndex = 64;
             this.lblID.Text = "Ingrese ID:";
             // 
@@ -360,7 +360,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(395, 9);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(191, 32);
+            this.lblTitulo.Size = new System.Drawing.Size(131, 21);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "NUEVO ATLETA";
             // 
@@ -378,6 +378,7 @@
             this.btnRegistrar.TabIndex = 66;
             this.btnRegistrar.Text = "REGISTRAR";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnObtener
             // 
@@ -393,6 +394,7 @@
             this.btnObtener.TabIndex = 71;
             this.btnObtener.Text = "🔍";
             this.btnObtener.UseVisualStyleBackColor = false;
+            this.btnObtener.Click += new System.EventHandler(this.btnObtener_Click);
             // 
             // frmCreateAtleta
             // 

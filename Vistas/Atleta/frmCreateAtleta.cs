@@ -37,7 +37,7 @@ namespace Vistas
                 lblTitulo.Text = "MODIFICAR ATLETA";
                 
             }
-            /*if (this.accion == "borrar")
+            if (this.accion == "borrar")
             {
                 btnRegistrar.Text = "Borrar Atleta";
                 btnObtener.Visible = false;
@@ -64,7 +64,7 @@ namespace Vistas
                 lblDireccion.Visible = false;
                 txtCorreoElectronico.Visible = false;
                 lblCorreoElectronico.Visible = false;
-            }*/
+            }
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
