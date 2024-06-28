@@ -68,7 +68,8 @@
             this.dataGridViewAtleta.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewAtleta.EnableHeadersVisualStyles = false;
             this.dataGridViewAtleta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.dataGridViewAtleta.Location = new System.Drawing.Point(34, 102);
+            this.dataGridViewAtleta.Location = new System.Drawing.Point(23, 66);
+            this.dataGridViewAtleta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewAtleta.MultiSelect = false;
             this.dataGridViewAtleta.Name = "dataGridViewAtleta";
             this.dataGridViewAtleta.ReadOnly = true;
@@ -92,17 +93,16 @@
             this.dataGridViewAtleta.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewAtleta.RowTemplate.Height = 28;
             this.dataGridViewAtleta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAtleta.Size = new System.Drawing.Size(979, 406);
+            this.dataGridViewAtleta.Size = new System.Drawing.Size(653, 264);
             this.dataGridViewAtleta.TabIndex = 36;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(19, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 32);
+            this.label1.Size = new System.Drawing.Size(78, 21);
             this.label1.TabIndex = 37;
             this.label1.Text = "ATLETAS";
             // 
@@ -111,24 +111,28 @@
             this.rbtnListarApellido.AutoSize = true;
             this.rbtnListarApellido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnListarApellido.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.rbtnListarApellido.Location = new System.Drawing.Point(352, 9);
+            this.rbtnListarApellido.Location = new System.Drawing.Point(235, 6);
+            this.rbtnListarApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnListarApellido.Name = "rbtnListarApellido";
-            this.rbtnListarApellido.Size = new System.Drawing.Size(109, 32);
+            this.rbtnListarApellido.Size = new System.Drawing.Size(75, 23);
             this.rbtnListarApellido.TabIndex = 38;
             this.rbtnListarApellido.Text = "Apellido";
             this.rbtnListarApellido.UseVisualStyleBackColor = true;
+            this.rbtnListarApellido.CheckedChanged += new System.EventHandler(this.rbtnListarApellido_CheckedChanged);
             // 
             // rbtnListarDNI
             // 
             this.rbtnListarDNI.AutoSize = true;
             this.rbtnListarDNI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbtnListarDNI.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.rbtnListarDNI.Location = new System.Drawing.Point(231, 9);
+            this.rbtnListarDNI.Location = new System.Drawing.Point(154, 6);
+            this.rbtnListarDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnListarDNI.Name = "rbtnListarDNI";
-            this.rbtnListarDNI.Size = new System.Drawing.Size(69, 32);
+            this.rbtnListarDNI.Size = new System.Drawing.Size(50, 23);
             this.rbtnListarDNI.TabIndex = 39;
             this.rbtnListarDNI.Text = "DNI";
             this.rbtnListarDNI.UseVisualStyleBackColor = true;
+            this.rbtnListarDNI.CheckedChanged += new System.EventHandler(this.rbtnListarDNI_CheckedChanged);
             // 
             // label2
             // 
@@ -136,9 +140,10 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(211)))), ((int)(((byte)(82)))));
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.label2.Location = new System.Drawing.Point(20, 11);
+            this.label2.Location = new System.Drawing.Point(13, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 28);
+            this.label2.Size = new System.Drawing.Size(88, 19);
             this.label2.TabIndex = 40;
             this.label2.Text = "Ordenar por:";
             // 
@@ -148,22 +153,22 @@
             this.panel1.Controls.Add(this.rbtnListarApellido);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.rbtnListarDNI);
-            this.panel1.Location = new System.Drawing.Point(494, 28);
+            this.panel1.Location = new System.Drawing.Point(329, 18);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(519, 53);
+            this.panel1.Size = new System.Drawing.Size(346, 34);
             this.panel1.TabIndex = 41;
             // 
             // frmAtletas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(1058, 542);
+            this.ClientSize = new System.Drawing.Size(705, 352);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewAtleta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAtletas";
             this.Text = "frmMostrarAtleta";
             this.Load += new System.EventHandler(this.frmMostrarAtleta_Load);
