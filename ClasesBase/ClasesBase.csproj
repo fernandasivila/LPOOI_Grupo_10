@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Atleta.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="TrabajoCategoria.cs" />
     <Compile Include="comdepDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,6 +88,8 @@
     </Compile>
     <Compile Include="DBConnectionString.cs" />
     <Compile Include="TrabajoAtleta.cs" />
+    <Compile Include="TrabajoCompetencia.cs" />
+    <Compile Include="TrabajoDisciplina.cs" />
     <Compile Include="TrabajoUsuario.cs" />
     <Compile Include="Competencia.cs" />
     <Compile Include="Disciplina.cs" />
