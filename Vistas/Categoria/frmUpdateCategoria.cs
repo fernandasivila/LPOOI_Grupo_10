@@ -25,7 +25,9 @@ namespace Vistas
 
         private void cargarCategorias()
         {
-            //TODO: Agregar carga de categorias
+            cmbDbCategoria.DataSource = TrabajoCategoria.ObtenerCategorias();
+            cmbDbCategoria.DisplayMember = "Cat_Nombre";
+            cmbDbCategoria.ValueMember = "Cat_ID";
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -41,6 +43,10 @@ namespace Vistas
             oCategoria.Cat_ID = Convert.ToInt32(cmbDbCategoria.SelectedValue);
             oCategoria.Cat_Nombre = txtNombre.Text;
             oCategoria.Cat_Descripcion = txtDescripcion.Text;
+
+            TrabajoCategoria.ModificarCategoriaPorID(oCategoria);
+
+            MessageBox.Show("Categoria Modificada!");
         }
 
         private bool validarCampos(out string mensajeError)
@@ -52,6 +58,13 @@ namespace Vistas
                 return false;
             }
             return true;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Categoria oCategoria = TrabajoCategoria.ObtenerCategoriaById(Convert.ToInt32(cmbDbCategoria.SelectedValue));
+            txtNombre.Text = oCategoria.Cat_Nombre;
+            txtDescripcion.Text = oCategoria.Cat_Descripcion;
         }
     }
 }

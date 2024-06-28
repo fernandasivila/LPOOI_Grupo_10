@@ -41,10 +41,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 45);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(17, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 32);
+            this.label1.Size = new System.Drawing.Size(112, 21);
             this.label1.TabIndex = 34;
             this.label1.Text = "CATEGORIAS";
             // 
@@ -74,7 +73,8 @@
             this.dgvListaCategorias.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListaCategorias.EnableHeadersVisualStyles = false;
             this.dgvListaCategorias.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.dgvListaCategorias.Location = new System.Drawing.Point(32, 104);
+            this.dgvListaCategorias.Location = new System.Drawing.Point(21, 68);
+            this.dgvListaCategorias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvListaCategorias.MultiSelect = false;
             this.dgvListaCategorias.Name = "dgvListaCategorias";
             this.dgvListaCategorias.ReadOnly = true;
@@ -98,20 +98,22 @@
             this.dgvListaCategorias.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListaCategorias.RowTemplate.Height = 28;
             this.dgvListaCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaCategorias.Size = new System.Drawing.Size(979, 406);
+            this.dgvListaCategorias.Size = new System.Drawing.Size(653, 264);
             this.dgvListaCategorias.TabIndex = 35;
             // 
             // frmCategorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(1058, 542);
+            this.ClientSize = new System.Drawing.Size(705, 352);
             this.Controls.Add(this.dgvListaCategorias);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCategorias";
             this.Text = "frmCategorias";
+            this.Load += new System.EventHandler(this.frmCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCategorias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
