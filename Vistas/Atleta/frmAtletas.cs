@@ -23,5 +23,17 @@ namespace Vistas
             List<Atleta> atletas = TrabajoAtleta.obtenerAtletas();
             dataGridViewAtleta.DataSource = atletas;
         }
+
+        private void rbtnListarDNI_CheckedChanged(object sender, EventArgs e)
+        {
+            List<Atleta> atletas = TrabajoAtleta.obtenerAtletasPorDNI();
+            dataGridViewAtleta.DataSource = atletas;
+        }
+
+        private void rbtnListarApellido_CheckedChanged(object sender, EventArgs e)
+        {
+            List<Atleta> atletas = TrabajoAtleta.obtenerAtletasPorApellido();
+            dataGridViewAtleta.DataSource = atletas;
+        }
     }
 }
