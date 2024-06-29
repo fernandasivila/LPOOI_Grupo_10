@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using ClasesBase;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,5 +20,25 @@ namespace Vistas
         {
             InitializeComponent();
         }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            string nombre = txtNombre.Text;
+            int? id = TrabajoDisciplina.obtenerDisciplinaIdByNombre(nombre);
+
+            if (id == null)
+            {
+                MessageBox.Show($"La disciplina {nombre} no existe", "Invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+
+                TrabajoDisciplina.BorrarDisciplinaPorID(id.Value);
+
+                MessageBox.Show($"Disciplina {nombre} eliminada con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
+
+
