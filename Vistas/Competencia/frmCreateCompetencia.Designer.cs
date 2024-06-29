@@ -287,6 +287,7 @@
             this.btnRegistrar.TabIndex = 62;
             this.btnRegistrar.Text = "REGISTRAR";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnBorrar
             // 

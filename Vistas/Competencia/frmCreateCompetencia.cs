@@ -17,6 +17,7 @@ namespace Vistas
         public frmCreateCompetencia()
         {
             InitializeComponent();
+            LlenarComboBoxCategorias();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -55,8 +56,7 @@ namespace Vistas
                         + " Sponsors: " + oCompetencia.Com_Sponsors + "\n"
                         + " Categoria: " + cmbCategoria.Items[oCompetencia.Cat_ID].ToString() + "\n"
                         + " Disciplina: " + cmbDisciplina.Items[oCompetencia.Dis_ID].ToString());
-                
-               
+                   TrabajoCompetencia.AgregarComptencia(oCompetencia);
             }
         }
         private bool ValidarCampos()
@@ -75,6 +75,14 @@ namespace Vistas
 
             return true;
         }
+        private void LlenarComboBoxCategorias()
+        {
+            List<Categoria> listaCategorias = TrabajoCategoria.ObtenerListaCategorias();
 
+            cmbCategoria.DisplayMember = "Cat_Nombre";
+            cmbCategoria.ValueMember = "Cat_ID";
+
+            cmbCategoria.DataSource = listaCategorias;
+        }
     }
 }
