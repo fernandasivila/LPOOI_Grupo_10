@@ -46,30 +46,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(275, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(183, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 32);
+            this.label1.Size = new System.Drawing.Size(162, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "NUEVA DISCIPLINA";
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.txtNombre.Location = new System.Drawing.Point(237, 107);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombre.Location = new System.Drawing.Point(158, 70);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(451, 34);
+            this.txtNombre.Size = new System.Drawing.Size(302, 25);
             this.txtNombre.TabIndex = 1;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI Historic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(74, 110);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(49, 72);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(85, 28);
+            this.lblNombre.Size = new System.Drawing.Size(59, 19);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre";
             // 
@@ -77,21 +74,19 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI Historic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(45, 170);
-            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescripcion.Location = new System.Drawing.Point(30, 110);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(114, 28);
+            this.lblDescripcion.Size = new System.Drawing.Size(79, 19);
             this.lblDescripcion.TabIndex = 7;
             this.lblDescripcion.Text = "Descripcion";
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.txtDescripcion.Location = new System.Drawing.Point(237, 167);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDescripcion.Location = new System.Drawing.Point(158, 109);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(451, 63);
+            this.txtDescripcion.Size = new System.Drawing.Size(302, 42);
             this.txtDescripcion.TabIndex = 11;
             // 
             // btnRegistrarDisciplina
@@ -101,10 +96,9 @@
             this.btnRegistrarDisciplina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarDisciplina.Font = new System.Drawing.Font("Segoe UI Historic", 8F, System.Drawing.FontStyle.Bold);
             this.btnRegistrarDisciplina.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarDisciplina.Location = new System.Drawing.Point(260, 378);
-            this.btnRegistrarDisciplina.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRegistrarDisciplina.Location = new System.Drawing.Point(173, 246);
             this.btnRegistrarDisciplina.Name = "btnRegistrarDisciplina";
-            this.btnRegistrarDisciplina.Size = new System.Drawing.Size(208, 57);
+            this.btnRegistrarDisciplina.Size = new System.Drawing.Size(139, 37);
             this.btnRegistrarDisciplina.TabIndex = 14;
             this.btnRegistrarDisciplina.Text = "REGISTRAR";
             this.btnRegistrarDisciplina.UseVisualStyleBackColor = false;
@@ -118,9 +112,10 @@
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.txtDescripcion);
             this.panel1.Controls.Add(this.lblDescripcion);
-            this.panel1.Location = new System.Drawing.Point(125, 60);
+            this.panel1.Location = new System.Drawing.Point(83, 39);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(782, 258);
+            this.panel1.Size = new System.Drawing.Size(521, 168);
             this.panel1.TabIndex = 16;
             // 
             // btnBorrar
@@ -130,27 +125,27 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Segoe UI Historic", 8F, System.Drawing.FontStyle.Bold);
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(524, 378);
-            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBorrar.Location = new System.Drawing.Point(349, 246);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(208, 57);
+            this.btnBorrar.Size = new System.Drawing.Size(139, 37);
             this.btnBorrar.TabIndex = 17;
-            this.btnBorrar.Text = "BORRAR";
+            this.btnBorrar.Text = "LIMPIAR";
             this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // frmCreateDisciplina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(1058, 542);
+            this.ClientSize = new System.Drawing.Size(705, 352);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRegistrarDisciplina);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmCreateDisciplina";
             this.Text = "Añadir Usuario";
+            this.Load += new System.EventHandler(this.frmCreateDisciplina_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comdepDataSetBindingSource)).EndInit();
