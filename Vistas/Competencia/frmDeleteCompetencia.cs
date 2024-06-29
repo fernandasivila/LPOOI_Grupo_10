@@ -19,20 +19,25 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private void btnBorrarUsuario_Click(object sender, EventArgs e)
+        private void btnBorrarCompetencia_Click(object sender, EventArgs e)
         {
-            string nombreUsuario = txtNombre.Text;
-
-            if (TrabajoUsuario.comprobarDisponibilidadNombre(nombreUsuario))
+            if (Int32.TryParse(txtNombre.Text, out int idCompetencia))
             {
-                MessageBox.Show($"El nombre de usuario {nombreUsuario} no existe", "Nombre no disponible", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Competencia competencia = TrabajoCompetencia.ObtenerCompetenciaById(idCompetencia);
+
+                if (competencia == null)
+                {
+                    MessageBox.Show($"La competencia con ID {idCompetencia} no existe", "ID no disponible", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    TrabajoCompetencia.BorrarCompetenciaByID(idCompetencia.ToString());
+                    MessageBox.Show("Competencia eliminada con éxito");
+                }
             }
             else
             {
-               
-                TrabajoUsuario.delete_user(nombreUsuario);
-                MessageBox.Show("Usuario eliminado con exito");
-
+                MessageBox.Show("Por favor, ingrese un ID de competencia válido", "ID inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

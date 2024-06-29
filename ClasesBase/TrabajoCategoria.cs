@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -107,5 +108,33 @@ namespace ClasesBase
             }
             return oCategoria;
         }
+        public static List<Categoria> ObtenerListaCategorias()
+        {
+            List<Categoria> listaCategorias = new List<Categoria>();
+
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("obtenerCategorias", cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cnn.Open();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Categoria categoria = new Categoria
+                        {
+                            Cat_ID = reader.GetInt32(reader.GetOrdinal("Cat_ID")),
+                            Cat_Nombre = reader.GetString(reader.GetOrdinal("Cat_Nombre")),
+                            Cat_Descripcion = reader.IsDBNull(reader.GetOrdinal("Cat_Descripcion")) ? null : reader.GetString(reader.GetOrdinal("Cat_Descripcion"))
+                        };
+                        listaCategorias.Add(categoria);
+                    }
+                }
+                cnn.Close();
+            }
+            return listaCategorias;
+        }
     }
 }
+

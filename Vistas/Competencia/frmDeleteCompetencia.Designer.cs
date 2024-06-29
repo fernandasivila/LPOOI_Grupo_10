@@ -60,6 +60,7 @@
             this.btnBorrar.TabIndex = 15;
             this.btnBorrar.Text = "BORRAR";
             this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrarCompetencia_Click);
             // 
             // panel1
             // 
