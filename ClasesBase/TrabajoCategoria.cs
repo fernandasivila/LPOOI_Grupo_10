@@ -84,5 +84,28 @@ namespace ClasesBase
             }
 
         }
+        public static Categoria ObtenerCategoriaById(
+            int categoria_id)
+        {
+            Categoria oCategoria = new Categoria();
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("obtenerCategoriaById", cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", categoria_id);
+                cnn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        oCategoria.Cat_Nombre = reader.GetString(reader.GetOrdinal("Cat_Nombre"));
+                        if(!reader.IsDBNull(reader.GetOrdinal("Cat_Descripcion")))
+                            oCategoria.Cat_Descripcion = reader.GetString(reader.GetOrdinal("Cat_Descripcion"));
+                    }
+                }
+                cnn.Close();
+            }
+            return oCategoria;
+        }
     }
 }

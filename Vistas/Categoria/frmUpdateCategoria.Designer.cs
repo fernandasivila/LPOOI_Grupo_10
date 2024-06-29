@@ -50,7 +50,7 @@
             this.pnlDatos.Controls.Add(this.lblApellidoNombre);
             this.pnlDatos.Controls.Add(this.lblDescripcion);
             this.pnlDatos.Location = new System.Drawing.Point(119, 103);
-            this.pnlDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlDatos.Margin = new System.Windows.Forms.Padding(2);
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(467, 147);
             this.pnlDatos.TabIndex = 30;
@@ -109,12 +109,13 @@
             this.btnBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.Transparent;
             this.btnBuscar.Location = new System.Drawing.Point(463, 44);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(1);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(35, 27);
             this.btnBuscar.TabIndex = 33;
             this.btnBuscar.Text = "🔍";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // cmbDbCategoria
             // 
@@ -161,7 +162,7 @@
             this.Controls.Add(this.lblDbUsuario);
             this.Controls.Add(this.pnlDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUpdateCategoria";
             this.Text = "frmUpdate";
             this.Load += new System.EventHandler(this.frmUpdateCategoria_Load);

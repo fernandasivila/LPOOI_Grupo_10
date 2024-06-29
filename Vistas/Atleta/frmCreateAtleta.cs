@@ -199,5 +199,10 @@ namespace Vistas
                 MessageBox.Show("Campo de ID vacio", "Campos Obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

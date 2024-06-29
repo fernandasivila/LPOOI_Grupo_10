@@ -37,6 +37,9 @@ namespace Vistas
             oCategoria.Cat_Descripcion = txtDescripcion.Text;
 
             TrabajoCategoria.AgregarCategoria(oCategoria);
+            MessageBox.Show("OBJETO GUARDADO:\n"
+            + "Nombre: " + oCategoria.Cat_Nombre + "\n"
+            + "Descripcion: " + oCategoria.Cat_Descripcion);
         }
 
         private bool ValidarCampos(out string mensajeError)

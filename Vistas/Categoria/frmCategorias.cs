@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClasesBase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace Vistas
         public frmCategorias()
         {
             InitializeComponent();
+        }
+
+        private void frmCategorias_Load(object sender, EventArgs e)
+        {
+            dgvListaCategorias.DataSource = TrabajoCategoria.ObtenerCategorias();
         }
     }
 }
