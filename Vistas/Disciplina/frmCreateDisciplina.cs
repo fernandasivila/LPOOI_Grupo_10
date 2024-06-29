@@ -25,31 +25,37 @@ namespace Vistas
 
         private void btnRegistrarDisciplina_Click(object sender, EventArgs e)
         {
-            if (!validarCampos())
+
+            string mensajeError;
+            if (!ValidarCampos(out mensajeError))
             {
-                MessageBox.Show("Ningun campo puede estar vacio", "Campos Obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(mensajeError, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
-            {
-                Disciplina oDisciplina = new Disciplina();
-                oDisciplina.Dis_Nombre = txtNombre.Text;
-                oDisciplina.Dis_Descripcion = txtDescripcion.Text;
-                oDisciplina.Dis_ID = 1;
-                MessageBox.Show("Objeto Guardado: " + "\n"
-                    + " Nombre: " + oDisciplina.Dis_Nombre + "\n"
-                    + " Descripcion: " + oDisciplina.Dis_Descripcion);
-            }
+            Disciplina oDisciplina = new Disciplina();
+            oDisciplina.Dis_Nombre = txtNombre.Text;
+            oDisciplina.Dis_Descripcion = txtDescripcion.Text;
+
+           
+            TrabajoDisciplina.AgregarDisciplina(oDisciplina);
         }
 
-        private bool validarCampos()
+        
+        private bool ValidarCampos(out string mensajeError)
         {
-            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
-                string.IsNullOrWhiteSpace(txtDescripcion.Text))
+            mensajeError = string.Empty;
+            if (txtNombre.Text == "")
             {
+                mensajeError = "Debe ingresar un Nombre de Disciplina.";
                 return false;
             }
-
             return true;
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            txtNombre.Text = "";
+            txtDescripcion.Text = "";
         }
     }
 }
