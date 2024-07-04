@@ -60,10 +60,7 @@ namespace Vistas
             txtDescripcion.Text = "";
         }
 
-        private void frmCreateDisciplina_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
 
