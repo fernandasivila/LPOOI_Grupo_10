@@ -31,8 +31,8 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbDisciplina = new System.Windows.Forms.ComboBox();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,14 +64,22 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cmbDisciplina);
             this.panel1.Controls.Add(this.lblTitulo);
-            this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Location = new System.Drawing.Point(101, 76);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(467, 122);
             this.panel1.TabIndex = 17;
+            // 
+            // cmbDisciplina
+            // 
+            this.cmbDisciplina.FormattingEnabled = true;
+            this.cmbDisciplina.Location = new System.Drawing.Point(135, 65);
+            this.cmbDisciplina.Name = "cmbDisciplina";
+            this.cmbDisciplina.Size = new System.Drawing.Size(273, 21);
+            this.cmbDisciplina.TabIndex = 18;
             // 
             // lblTitulo
             // 
@@ -82,14 +90,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(173, 21);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "BORRAR DISCIPLINA";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.txtNombre.Location = new System.Drawing.Point(132, 63);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(264, 23);
-            this.txtNombre.TabIndex = 11;
             // 
             // frmDeleteDisciplina
             // 
@@ -102,6 +102,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDeleteDisciplina";
             this.Text = "Borrar Usuario";
+            this.Load += new System.EventHandler(this.frmDeleteDisciplina_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -113,6 +114,6 @@
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.ComboBox cmbDisciplina;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClasesBase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace Vistas
         public frmDisciplinas()
         {
             InitializeComponent();
+        }
+
+        private void frmDisciplinas_Load(object sender, EventArgs e)
+        {
+            List<Disciplina> disciplinas = TrabajoDisciplina.obtenerListaDisciplinas();
+            dataGridViewDisciplina.DataSource = disciplinas;
         }
     }
 }

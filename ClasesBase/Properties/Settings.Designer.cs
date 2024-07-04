@@ -26,8 +26,9 @@ namespace ClasesBase.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\RUTMIR\\source\\repos\\" +
-            "LPOOI_Grupo_10\\comdep.mdf;Integrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Estudiante\\Desktop\\M" +
+            "arisel\\LPOOI_2024\\LPOOI_Grupo_10\\comdep.mdf;Integrated Security=True;Connect Tim" +
+            "eout=30")]
         public string comdepConnectionString {
             get {
                 return ((string)(this["comdepConnectionString"]));

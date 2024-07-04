@@ -37,17 +37,11 @@ namespace Vistas
         private void btnBuscarDisciplina_Click(object sender, EventArgs e)
         {
             int idDisciplina = Convert.ToInt32(cmbDbDisciplina.SelectedValue);
-            cmbDbDisciplina.Enabled = false;
-            btnBuscarDisciplina.Enabled = false;
+           
             Disciplina disciplina = TrabajoDisciplina.ObtenerDisciplinaByID(idDisciplina);
-
 
             txtNombre.Text = disciplina.Dis_Nombre;
             txtDescripcion.Text = disciplina.Dis_Descripcion;
-
-
-
-            pnlDatos.Visible = true;
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -64,13 +58,10 @@ namespace Vistas
             odisciplina.Dis_Descripcion = txtDescripcion.Text;
 
             TrabajoDisciplina.ModificarDisciplinaPorID(odisciplina);
-            MessageBox.Show($"Disciplina {odisciplina.Dis_Nombre} actualizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Disciplina {odisciplina.Dis_Nombre} actualizada con éxito.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Resetear el formulario después de actualizar
-            cmbDbDisciplina.Enabled = true;
-            btnBuscarDisciplina.Enabled = true;
-            pnlDatos.Visible = false;
-            txtNombre.Text = string.Empty;
+             txtNombre.Text = string.Empty;
             txtDescripcion.Text = string.Empty;
             load_combo_disciplinas();
 

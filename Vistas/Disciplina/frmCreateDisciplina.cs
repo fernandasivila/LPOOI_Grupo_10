@@ -39,6 +39,7 @@ namespace Vistas
 
 
             TrabajoDisciplina.AgregarDisciplina(oDisciplina);
+            MessageBox.Show("Se ha cargado exitosamente una nueva disciplina", "Disciplina registrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
 

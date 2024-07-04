@@ -20,25 +20,49 @@ namespace Vistas
         {
             InitializeComponent();
         }
+        private void cargarDisciplinas()
+        {
+            cmbDisciplina.DataSource = TrabajoDisciplina.ObtenerDisciplinas();
+            cmbDisciplina.DisplayMember = "Dis_Nombre";
+            cmbDisciplina.ValueMember = "Dis_ID";
 
+        }
+        private void frmDeleteDisciplina_Load(object sender, EventArgs e)
+                {
+                        cargarDisciplinas();
+                }
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            string nombre = txtNombre.Text;
-            int? id = TrabajoDisciplina.obtenerDisciplinaIdByNombre(nombre);
-
-            if (id == null)
+            if (cmbDisciplina.Items != null)
             {
-                MessageBox.Show($"La disciplina {nombre} no existe", "Invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                string disNombre = cmbDisciplina.Text;
+               // string disId = (string)cmbDisciplina.SelectedValue;
+                int disId;
+                if (int.TryParse(cmbDisciplina.SelectedValue.ToString(), out disId)) ;
+
+
+                    var confirmar = MessageBox.Show($"¿Estás seguro de que deseas eliminar la disciplina '{disNombre}'?", "Confirmar Eliminación", MessageBoxButtons.YesNo);
+
+                if (confirmar == DialogResult.Yes)
+                {
+                    try
+                    {
+                        TrabajoDisciplina.BorrarDisciplinaPorID(disId);
+
+                        MessageBox.Show("Disciplina eliminada con éxito.", "Éxito", MessageBoxButtons.OK);
+                        cargarDisciplinas();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al eliminar la categoría: {ex.Message}", "Error");
+                    }
+                }
             }
             else
             {
-
-                TrabajoDisciplina.BorrarDisciplinaPorID(id.Value);
-
-                MessageBox.Show($"Disciplina {nombre} eliminada con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Por favor, selecciona una disciplina.", "Advertencia");
             }
-        }
+         }
     }
+
 }
-
-
