@@ -18,6 +18,7 @@ namespace Vistas
         {
             InitializeComponent();
             LlenarComboBoxCategorias();
+            LlenarComboBoxDisciplinas();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -28,34 +29,30 @@ namespace Vistas
             }
             else
             {
-               
 
+                Competencia oCompetencia = new Competencia();
+                oCompetencia.Com_Nombre = txtNombre.Text;
+                oCompetencia.Com_Descripcion = txtDescripcion.Text;
+                oCompetencia.Com_FechaInicio = dtpFechaInicio.Value;
+                oCompetencia.Com_FechaFin = dtpFechaFin.Value;
+                oCompetencia.Com_Estado = cmbEstado.Text;
+                oCompetencia.Com_Ubicacion = txtUbicacion.Text;
+                oCompetencia.Com_Organizador = txtOrganizacion.Text;
+                oCompetencia.Com_Sponsors = txtSponsors.Text;
+                oCompetencia.Cat_ID = (int)cmbCategoria.SelectedValue;
+                oCompetencia.Dis_ID = (int)cmbDisciplina.SelectedValue;
 
-                    int indice1 = cmbCategoria.SelectedIndex;
-                    int indice2 = cmbDisciplina.SelectedIndex;
-                    Competencia oCompetencia = new Competencia();
-                    oCompetencia.Com_Nombre = txtNombre.Text;
-                    oCompetencia.Com_Descripcion = txtDescripcion.Text;
-                    oCompetencia.Com_FechaInicio = dtpFechaInicio.Value;
-                    oCompetencia.Com_FechaFin = dtpFechaFin.Value;
-                    oCompetencia.Com_Estado = cmbEstado.Text;
-                    oCompetencia.Com_Ubicacion = txtUbicacion.Text;
-                    oCompetencia.Com_Organizador = txtOrganizacion.Text;
-                    oCompetencia.Com_Sponsors = txtSponsors.Text;
-                    oCompetencia.Cat_ID = indice1;
-                    oCompetencia.Dis_ID = indice2;
-
-                    MessageBox.Show("Objeto guardado: " + "\n"
-                        + " Nombre: " + oCompetencia.Com_Nombre + "\n"
-                        + " Descripcion: " + oCompetencia.Com_Descripcion + "\n"
-                        + " FechaInicio: " + oCompetencia.Com_FechaInicio + "\n"
-                        + " FechaFin: " + oCompetencia.Com_FechaFin + "\n"
-                        + " Estado : " + oCompetencia.Com_Estado + "\n"
-                        + " Ubicacion: " + oCompetencia.Com_Ubicacion + "\n"
-                        + " Organizacion: " + oCompetencia.Com_Organizador + "\n"
-                        + " Sponsors: " + oCompetencia.Com_Sponsors + "\n"
-                        + " Categoria: " + cmbCategoria.Items[oCompetencia.Cat_ID].ToString() + "\n"
-                        + " Disciplina: " + cmbDisciplina.Items[oCompetencia.Dis_ID].ToString());
+                MessageBox.Show("Objeto guardado: " + "\n"
+                    + " Nombre: " + oCompetencia.Com_Nombre + "\n"
+                    + " Descripcion: " + oCompetencia.Com_Descripcion + "\n"
+                    + " FechaInicio: " + oCompetencia.Com_FechaInicio + "\n"
+                    + " FechaFin: " + oCompetencia.Com_FechaFin + "\n"
+                    + " Estado : " + oCompetencia.Com_Estado + "\n"
+                    + " Ubicacion: " + oCompetencia.Com_Ubicacion + "\n"
+                    + " Organizacion: " + oCompetencia.Com_Organizador + "\n"
+                    + " Sponsors: " + oCompetencia.Com_Sponsors + "\n"
+                    + " Categoria: " + oCompetencia.Cat_ID + "\n"
+                    + " Disciplina: " + oCompetencia.Dis_ID);
                    TrabajoCompetencia.AgregarComptencia(oCompetencia);
             }
         }
@@ -78,11 +75,18 @@ namespace Vistas
         private void LlenarComboBoxCategorias()
         {
             List<Categoria> listaCategorias = TrabajoCategoria.ObtenerListaCategorias();
-
+            cmbCategoria.DataSource = listaCategorias;
             cmbCategoria.DisplayMember = "Cat_Nombre";
             cmbCategoria.ValueMember = "Cat_ID";
+        }
 
-            cmbCategoria.DataSource = listaCategorias;
+        private void LlenarComboBoxDisciplinas()
+        {
+            List<Disciplina> listaDisciplinas = TrabajoDisciplina.obtenerListaDisciplinas();
+            cmbDisciplina.DataSource = listaDisciplinas;
+            cmbDisciplina.DisplayMember = "Dis_Nombre";
+            cmbDisciplina.ValueMember = "Dis_ID";
+
         }
     }
 }

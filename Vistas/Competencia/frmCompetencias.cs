@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClasesBase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace Vistas
         public frmCompetencias()
         {
             InitializeComponent();
+            this.Load += new System.EventHandler(this.frmCompetencias_Load);
+        }
+
+        private void frmCompetencias_Load(object sender, EventArgs e)
+        {
+            DataTable dt = TrabajoCompetencia.ObtenerCompetencias();
+            dgvListaCompetencias.DataSource = dt;
         }
     }
 }

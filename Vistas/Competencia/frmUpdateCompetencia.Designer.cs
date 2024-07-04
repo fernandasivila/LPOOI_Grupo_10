@@ -295,7 +295,7 @@
             this.panel1.Controls.Add(this.cmbEstado);
             this.panel1.Controls.Add(this.lblFechaFin);
             this.panel1.Location = new System.Drawing.Point(24, 45);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(652, 248);
             this.panel1.TabIndex = 64;
@@ -318,12 +318,13 @@
             this.btnBuscarUser.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarUser.ForeColor = System.Drawing.Color.Transparent;
             this.btnBuscarUser.Location = new System.Drawing.Point(457, 7);
-            this.btnBuscarUser.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnBuscarUser.Margin = new System.Windows.Forms.Padding(1);
             this.btnBuscarUser.Name = "btnBuscarUser";
             this.btnBuscarUser.Size = new System.Drawing.Size(35, 27);
             this.btnBuscarUser.TabIndex = 70;
             this.btnBuscarUser.Text = "🔍";
             this.btnBuscarUser.UseVisualStyleBackColor = false;
+            this.btnBuscarUser.Click += new System.EventHandler(this.btnBuscarUser_Click);
             // 
             // cmbDbUsuario
             // 
