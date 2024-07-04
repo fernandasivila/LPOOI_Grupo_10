@@ -36,9 +36,9 @@ namespace Vistas
             if (cmbDisciplina.Items != null)
             {
                 string disNombre = cmbDisciplina.Text;
-               // string disId = (string)cmbDisciplina.SelectedValue;
+                
                 int disId;
-                if (int.TryParse(cmbDisciplina.SelectedValue.ToString(), out disId)) ;
+                if (int.TryParse(cmbDisciplina.SelectedValue.ToString(), out disId));
 
 
                     var confirmar = MessageBox.Show($"¿Estás seguro de que deseas eliminar la disciplina '{disNombre}'?", "Confirmar Eliminación", MessageBoxButtons.YesNo);

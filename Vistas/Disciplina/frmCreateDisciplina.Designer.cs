@@ -145,7 +145,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCreateDisciplina";
             this.Text = "Añadir Usuario";
-            this.Load += new System.EventHandler(this.frmCreateDisciplina_Load);
+            
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comdepDataSetBindingSource)).EndInit();
