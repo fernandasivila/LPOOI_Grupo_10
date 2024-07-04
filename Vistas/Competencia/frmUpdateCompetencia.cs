@@ -18,7 +18,10 @@ namespace Vistas
         {
             InitializeComponent();
             LlenarComboBoxCategorias();
+            LlenarComboBoxDisciplinas();
+            LlenarComboBoxCompetencias();
         }
+
         private bool ValidarCampos()
         {
             if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
@@ -32,18 +35,32 @@ namespace Vistas
             {
                 return false;
             }
-
             return true;
         }
 
         private void LlenarComboBoxCategorias()
         {
             List<Categoria> listaCategorias = TrabajoCategoria.ObtenerListaCategorias();
-
+            cmbCategoria.DataSource = listaCategorias;
             cmbCategoria.DisplayMember = "Cat_Nombre";
             cmbCategoria.ValueMember = "Cat_ID";
+        }
 
-            cmbCategoria.DataSource = listaCategorias;
+        private void LlenarComboBoxDisciplinas()
+        {
+            List<Disciplina> listaDisciplinas = TrabajoDisciplina.obtenerListaDisciplinas();
+           
+            cmbDisciplina.DataSource = listaDisciplinas;
+            cmbDisciplina.DisplayMember = "Dis_Nombre";
+            cmbDisciplina.ValueMember = "Dis_ID";
+        }
+
+        private void LlenarComboBoxCompetencias()
+        {
+            List<Competencia> listaCompetencias = TrabajoCompetencia.obtenerListaCompetencia();
+            cmbDbUsuario.DataSource = listaCompetencias;
+            cmbDbUsuario.DisplayMember = "Com_Nombre";
+            cmbDbUsuario.ValueMember = "Com_ID";
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -54,22 +71,20 @@ namespace Vistas
             }
             else
             {
-
-
-
-                int indice1 = cmbCategoria.SelectedIndex;
-                int indice2 = cmbDisciplina.SelectedIndex;
-                Competencia oCompetencia = new Competencia();
-                oCompetencia.Com_Nombre = txtNombre.Text;
-                oCompetencia.Com_Descripcion = txtDescripcion.Text;
-                oCompetencia.Com_FechaInicio = dtpFechaInicio.Value;
-                oCompetencia.Com_FechaFin = dtpFechaFin.Value;
-                oCompetencia.Com_Estado = cmbEstado.Text;
-                oCompetencia.Com_Ubicacion = txtUbicacion.Text;
-                oCompetencia.Com_Organizador = txtOrganizacion.Text;
-                oCompetencia.Com_Sponsors = txtSponsors.Text;
-                oCompetencia.Cat_ID = indice1;
-                oCompetencia.Dis_ID = indice2;
+                Competencia oCompetencia = new Competencia
+                {
+                    Com_ID = (int)cmbDbUsuario.SelectedValue,
+                    Com_Nombre = txtNombre.Text,
+                    Com_Descripcion = txtDescripcion.Text,
+                    Com_FechaInicio = dtpFechaInicio.Value,
+                    Com_FechaFin = dtpFechaFin.Value,
+                    Com_Estado = cmbEstado.Text,
+                    Com_Ubicacion = txtUbicacion.Text,
+                    Com_Organizador = txtOrganizacion.Text,
+                    Com_Sponsors = txtSponsors.Text,
+                    Cat_ID = (int)cmbCategoria.SelectedValue,
+                    Dis_ID = (int)cmbDisciplina.SelectedValue
+                };
 
                 MessageBox.Show("Objeto guardado: " + "\n"
                     + " Nombre: " + oCompetencia.Com_Nombre + "\n"
@@ -80,9 +95,40 @@ namespace Vistas
                     + " Ubicacion: " + oCompetencia.Com_Ubicacion + "\n"
                     + " Organizacion: " + oCompetencia.Com_Organizador + "\n"
                     + " Sponsors: " + oCompetencia.Com_Sponsors + "\n"
-                    + " Categoria: " + cmbCategoria.Items[oCompetencia.Cat_ID].ToString() + "\n"
-                    + " Disciplina: " + cmbDisciplina.Items[oCompetencia.Dis_ID].ToString());
+                    + " Categoria: " + cmbCategoria.Text + "\n"
+                    + " Disciplina: " + cmbDisciplina.Text);
                 TrabajoCompetencia.ModificarCompetenciaByID(oCompetencia);
+            }
+        }
+
+        private void btnBuscarUser_Click(object sender, EventArgs e)
+        {
+            int competenciaId;
+            if (cmbDbUsuario.SelectedValue != null)
+            {
+                competenciaId = (int)cmbDbUsuario.SelectedValue;
+                Competencia oCompetencia = TrabajoCompetencia.ObtenerCompetenciaById(competenciaId);
+                if (oCompetencia != null)
+                {
+                    txtNombre.Text = oCompetencia.Com_Nombre;
+                    txtDescripcion.Text = oCompetencia.Com_Descripcion;
+                    txtOrganizacion.Text = oCompetencia.Com_Organizador;
+                    txtSponsors.Text = oCompetencia.Com_Sponsors;
+                    txtUbicacion.Text = oCompetencia.Com_Ubicacion;
+                    dtpFechaInicio.Value = oCompetencia.Com_FechaInicio;
+                    dtpFechaFin.Value = oCompetencia.Com_FechaFin;
+                    cmbEstado.Text = oCompetencia.Com_Estado;
+                    cmbCategoria.SelectedValue = oCompetencia.Cat_ID;
+                    cmbDisciplina.SelectedValue = oCompetencia.Dis_ID;
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró la competencia.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un ID de competencia válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

@@ -151,6 +151,32 @@ namespace ClasesBase
             return disciplina;
         }
 
+        public static List<Disciplina> obtenerListaDisciplinas()
+        {
+            List<Disciplina> listaDisciplinas = new List<Disciplina>();
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("obtenerDisciplinas", cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cnn.Open();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Disciplina disciplina = new Disciplina()
+                        {
+                            Dis_ID = reader.GetInt32(reader.GetOrdinal("Dis_ID")),
+                            Dis_Nombre = reader.GetString(reader.GetOrdinal("Dis_Nombre")),
+                            Dis_Descripcion = reader.GetString(reader.GetOrdinal("Dis_Decripcion"))
+                        };
+                        listaDisciplinas.Add(disciplina);
+                    }
+                }
+                cnn.Close();
+            }
+            return listaDisciplinas;
+        }
     }
 }
 

@@ -62,7 +62,7 @@ namespace ClasesBase
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "modificarCategoria";
+                cmd.CommandText = "modificarCompetencia";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = cnn;
 
@@ -90,9 +90,10 @@ namespace ClasesBase
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM Competencia WHERE Com_ID = @Com_ID";
-                SqlCommand cmd = new SqlCommand(query, cnn);
-                cmd.Parameters.AddWithValue("@Com_ID", competencia_id);
+                string storedProcedure = "obtenerCompetenciaById";
+                SqlCommand cmd = new SqlCommand(storedProcedure, cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", competencia_id);
                 cnn.Open();
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
@@ -121,7 +122,57 @@ namespace ClasesBase
 
             return competencia;
         }
+
+        public static List<Competencia> obtenerListaCompetencia()
+        {
+            List<Competencia> listaCompetencias = new List<Competencia>();
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("obtenerCompetencias", cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cnn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Competencia competencia = new Competencia
+                        {
+                            Com_ID = reader.GetInt32(reader.GetOrdinal("Com_ID")),
+                            Com_Nombre = reader.GetString(reader.GetOrdinal("Com_Nombre")),
+                            Com_Descripcion = reader.IsDBNull(reader.GetOrdinal("Com_Descripcion")) ? null : reader.GetString(reader.GetOrdinal("Com_Descripcion")),
+                            Com_FechaInicio = reader.GetDateTime(reader.GetOrdinal("Com_FechaInicio")),
+                            Com_FechaFin = reader.GetDateTime(reader.GetOrdinal("Com_FechaFin")),
+                            Com_Estado = reader.GetString(reader.GetOrdinal("Com_Estado")),
+                            Com_Organizador = reader.GetString(reader.GetOrdinal("Com_Organizador")),
+                            Com_Ubicacion = reader.GetString(reader.GetOrdinal("Com_Ubicacion")),
+                            Com_Sponsors = reader.GetString(reader.GetOrdinal("Com_Sponsors")),
+                            Cat_ID = reader.GetInt32(reader.GetOrdinal("Cat_ID")),
+                            Dis_ID = reader.GetInt32(reader.GetOrdinal("Dis_ID"))
+                        };
+                        listaCompetencias.Add(competencia);
+                    }
+                }
+                cnn.Close();
+            }
+            return listaCompetencias;
+        }
+
+        public static DataTable ObtenerCompetencias()
+        {
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "obtenerCompetencias";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = cnn;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                return dt;
+            }
+        }
     }
 }
-
-
