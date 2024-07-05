@@ -21,6 +21,10 @@ namespace Vistas
         private void frmCategorias_Load(object sender, EventArgs e)
         {
             dgvListaCategorias.DataSource = TrabajoCategoria.ObtenerCategorias();
+
+            dgvListaCategorias.Columns["Cat_ID"].HeaderText = "ID";
+            dgvListaCategorias.Columns["Cat_Nombre"].HeaderText = "Nombre";
+            dgvListaCategorias.Columns["Cat_Descripcion"].HeaderText = "Descripcion";
         }
     }
 }
