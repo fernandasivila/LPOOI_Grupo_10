@@ -51,62 +51,77 @@ namespace Vistas
             List<Disciplina> listaDisciplinas = TrabajoDisciplina.obtenerListaDisciplinas();
            
             cmbDisciplina.DataSource = listaDisciplinas;
-            cmbDisciplina.DisplayMember = "Dis_Nombre";
+            cmbDisciplina.DisplayMember = "Dis_Descripcion";
             cmbDisciplina.ValueMember = "Dis_ID";
         }
 
         private void LlenarComboBoxCompetencias()
         {
             List<Competencia> listaCompetencias = TrabajoCompetencia.obtenerListaCompetencia();
-            cmbDbUsuario.DataSource = listaCompetencias;
-            cmbDbUsuario.DisplayMember = "Com_Nombre";
-            cmbDbUsuario.ValueMember = "Com_ID";
+            cmbCompetencia.DataSource = listaCompetencias;
+            cmbCompetencia.DisplayMember = "Com_Nombre";
+            cmbCompetencia.ValueMember = "Com_ID";
+            cmbCompetencia.Text = "Seleccionar...";
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos())
+            if (cmbCompetencia.Text == "Seleccionar...")
             {
-                MessageBox.Show("Ningun campo puede estar vacio", "Campos Obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar una competencia a modificar", "Error de selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             else
             {
-                Competencia oCompetencia = new Competencia
+                if (!ValidarCampos())
                 {
-                    Com_ID = (int)cmbDbUsuario.SelectedValue,
-                    Com_Nombre = txtNombre.Text,
-                    Com_Descripcion = txtDescripcion.Text,
-                    Com_FechaInicio = dtpFechaInicio.Value,
-                    Com_FechaFin = dtpFechaFin.Value,
-                    Com_Estado = cmbEstado.Text,
-                    Com_Ubicacion = txtUbicacion.Text,
-                    Com_Organizador = txtOrganizacion.Text,
-                    Com_Sponsors = txtSponsors.Text,
-                    Cat_ID = (int)cmbCategoria.SelectedValue,
-                    Dis_ID = (int)cmbDisciplina.SelectedValue
-                };
+                    MessageBox.Show("Ningun campo puede estar vacio", "Campos Obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    Competencia oCompetencia = new Competencia
+                    {
+                        Com_ID = (int)cmbCompetencia.SelectedValue,
+                        Com_Nombre = txtNombre.Text,
+                        Com_Descripcion = txtDescripcion.Text,
+                        Com_FechaInicio = dtpFechaInicio.Value,
+                        Com_FechaFin = dtpFechaFin.Value,
+                        Com_Estado = cmbEstado.Text,
+                        Com_Ubicacion = txtUbicacion.Text,
+                        Com_Organizador = txtOrganizacion.Text,
+                        Com_Sponsors = txtSponsors.Text,
+                        Cat_ID = (int)cmbCategoria.SelectedValue,
+                        Dis_ID = (int)cmbDisciplina.SelectedValue
+                    };
 
-                MessageBox.Show("Objeto guardado: " + "\n"
-                    + " Nombre: " + oCompetencia.Com_Nombre + "\n"
-                    + " Descripcion: " + oCompetencia.Com_Descripcion + "\n"
-                    + " FechaInicio: " + oCompetencia.Com_FechaInicio + "\n"
-                    + " FechaFin: " + oCompetencia.Com_FechaFin + "\n"
-                    + " Estado : " + oCompetencia.Com_Estado + "\n"
-                    + " Ubicacion: " + oCompetencia.Com_Ubicacion + "\n"
-                    + " Organizacion: " + oCompetencia.Com_Organizador + "\n"
-                    + " Sponsors: " + oCompetencia.Com_Sponsors + "\n"
-                    + " Categoria: " + cmbCategoria.Text + "\n"
-                    + " Disciplina: " + cmbDisciplina.Text);
-                TrabajoCompetencia.ModificarCompetenciaByID(oCompetencia);
+                    TrabajoCompetencia.ModificarCompetenciaByID(oCompetencia);
+
+                    MessageBox.Show("Objeto guardado: " + "\n"
+                        + " Nombre: " + oCompetencia.Com_Nombre + "\n"
+                        + " Descripcion: " + oCompetencia.Com_Descripcion + "\n"
+                        + " FechaInicio: " + oCompetencia.Com_FechaInicio + "\n"
+                        + " FechaFin: " + oCompetencia.Com_FechaFin + "\n"
+                        + " Estado : " + oCompetencia.Com_Estado + "\n"
+                        + " Ubicacion: " + oCompetencia.Com_Ubicacion + "\n"
+                        + " Organizacion: " + oCompetencia.Com_Organizador + "\n"
+                        + " Sponsors: " + oCompetencia.Com_Sponsors + "\n"
+                        + " Categoria: " + cmbCategoria.Text + "\n"
+                        + " Disciplina: " + cmbDisciplina.Text);
+
+                }
             }
         }
 
         private void btnBuscarUser_Click(object sender, EventArgs e)
         {
-            int competenciaId;
-            if (cmbDbUsuario.SelectedValue != null)
+            if (cmbCompetencia.Text == "Seleccionar...")
             {
-                competenciaId = (int)cmbDbUsuario.SelectedValue;
+                MessageBox.Show("Debe seleccionar una competencia a modificar", "Error de selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                int competenciaId = (int)cmbCompetencia.SelectedValue;
                 Competencia oCompetencia = TrabajoCompetencia.ObtenerCompetenciaById(competenciaId);
                 if (oCompetencia != null)
                 {
@@ -125,10 +140,6 @@ namespace Vistas
                 {
                     MessageBox.Show("No se encontró la competencia.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Ingrese un ID de competencia válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
