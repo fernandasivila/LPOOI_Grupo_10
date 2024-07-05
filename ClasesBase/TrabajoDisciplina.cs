@@ -123,7 +123,7 @@ namespace ClasesBase
             Disciplina oDisciplina = new Disciplina();
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
-                SqlCommand cmd = new SqlCommand("obtenerDisciplinaById");
+                SqlCommand cmd = new SqlCommand("obtenerDisciplinaById", cnn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id", dis_Id);
                 cnn.Open();
