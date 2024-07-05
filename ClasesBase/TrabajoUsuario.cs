@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 namespace ClasesBase
 {
@@ -21,7 +22,7 @@ namespace ClasesBase
             cmd.Connection = cnn;
             cmd.CommandText = "ComprobarDisponibilidadUsuario";
             cmd.CommandType = CommandType.StoredProcedure;
-
+             
             SqlParameter param;
             param = new SqlParameter("@Usuario", SqlDbType.VarChar);
             param.Direction = ParameterDirection.Input;
@@ -130,7 +131,7 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "ModificarUsuario";
+            cmd.CommandText = "modificarUsuario";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
@@ -164,7 +165,7 @@ namespace ClasesBase
         {
            SqlConnection cnn = new SqlConnection (ClasesBase.Properties.Settings.Default.comdepConnectionString);
            SqlCommand cmd = new SqlCommand();
-           cmd.CommandText = "EliminarUsuario";
+           cmd.CommandText = "borrarUsuario";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
@@ -226,13 +227,18 @@ namespace ClasesBase
                 SqlParameter param;
                 param = new SqlParameter("@Keyword", SqlDbType.VarChar);
                 param.Direction = ParameterDirection.Input;
-                param.Value = $"%{keyword}%";
+
+                param.Value = keyword;
                 cmd.Parameters.Add(param);
 
                 using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                 {
                     DataTable usuarios = new DataTable();
                     da.Fill(usuarios);
+                    Debug.WriteLine($"Número de usuarios encontrados: {usuarios.Rows.Count}");
+
+
+
                     return usuarios;
                 }
             }

@@ -25,7 +25,12 @@ namespace Vistas
 
         private void btnBuscarUser_Click(object sender, EventArgs e)
         {
+
             string keyword = txtBuscador.Text;
+
+            MessageBox.Show($"Buscando usuarios con el keyword: {keyword}");
+
+
             if (!string.IsNullOrWhiteSpace(keyword))
             {
                 DataTable usuariosEncontrados = TrabajoUsuario.GetUsersByFullname(keyword);

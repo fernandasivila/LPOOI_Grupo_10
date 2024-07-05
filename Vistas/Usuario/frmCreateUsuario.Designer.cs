@@ -50,30 +50,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(223, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(149, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 32);
+            this.label1.Size = new System.Drawing.Size(170, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "DATOS DE USUARIO";
             // 
             // txtApellidoNombre
             // 
             this.txtApellidoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.txtApellidoNombre.Location = new System.Drawing.Point(276, 184);
-            this.txtApellidoNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtApellidoNombre.Location = new System.Drawing.Point(184, 120);
             this.txtApellidoNombre.Name = "txtApellidoNombre";
-            this.txtApellidoNombre.Size = new System.Drawing.Size(347, 28);
+            this.txtApellidoNombre.Size = new System.Drawing.Size(233, 21);
             this.txtApellidoNombre.TabIndex = 1;
             // 
             // lblRol
             // 
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Segoe UI Historic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.Location = new System.Drawing.Point(57, 129);
-            this.lblRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRol.Location = new System.Drawing.Point(38, 84);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(41, 28);
+            this.lblRol.Size = new System.Drawing.Size(28, 19);
             this.lblRol.TabIndex = 2;
             this.lblRol.Text = "Rol";
             // 
@@ -81,10 +78,9 @@
             // 
             this.lblApellidoNombre.AutoSize = true;
             this.lblApellidoNombre.Font = new System.Drawing.Font("Segoe UI Historic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidoNombre.Location = new System.Drawing.Point(57, 184);
-            this.lblApellidoNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblApellidoNombre.Location = new System.Drawing.Point(38, 120);
             this.lblApellidoNombre.Name = "lblApellidoNombre";
-            this.lblApellidoNombre.Size = new System.Drawing.Size(179, 28);
+            this.lblApellidoNombre.Size = new System.Drawing.Size(123, 19);
             this.lblApellidoNombre.TabIndex = 4;
             this.lblApellidoNombre.Text = "Apellido y Nombre";
             // 
@@ -92,10 +88,9 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI Historic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(57, 239);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Location = new System.Drawing.Point(38, 155);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(79, 28);
+            this.lblUsuario.Size = new System.Drawing.Size(56, 19);
             this.lblUsuario.TabIndex = 7;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -103,30 +98,27 @@
             // 
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Segoe UI Historic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(57, 294);
-            this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContraseña.Location = new System.Drawing.Point(38, 191);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(110, 28);
+            this.lblContraseña.Size = new System.Drawing.Size(79, 19);
             this.lblContraseña.TabIndex = 8;
             this.lblContraseña.Text = "Contraseña";
             // 
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.txtContraseña.Location = new System.Drawing.Point(276, 294);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtContraseña.Location = new System.Drawing.Point(184, 191);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(347, 28);
+            this.txtContraseña.Size = new System.Drawing.Size(233, 21);
             this.txtContraseña.TabIndex = 10;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.txtUsuario.Location = new System.Drawing.Point(276, 239);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUsuario.Location = new System.Drawing.Point(184, 155);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(347, 28);
+            this.txtUsuario.Size = new System.Drawing.Size(233, 21);
             this.txtUsuario.TabIndex = 11;
             // 
             // cmbRoles
@@ -134,10 +126,9 @@
             this.cmbRoles.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.cmbRoles.FormattingEnabled = true;
-            this.cmbRoles.Location = new System.Drawing.Point(276, 125);
-            this.cmbRoles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbRoles.Location = new System.Drawing.Point(184, 81);
             this.cmbRoles.Name = "cmbRoles";
-            this.cmbRoles.Size = new System.Drawing.Size(347, 32);
+            this.cmbRoles.Size = new System.Drawing.Size(233, 23);
             this.cmbRoles.TabIndex = 13;
             // 
             // btnRegistrarUsuario
@@ -147,10 +138,9 @@
             this.btnRegistrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarUsuario.Font = new System.Drawing.Font("Segoe UI Historic", 8F, System.Drawing.FontStyle.Bold);
             this.btnRegistrarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarUsuario.Location = new System.Drawing.Point(266, 447);
-            this.btnRegistrarUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRegistrarUsuario.Location = new System.Drawing.Point(177, 291);
             this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
-            this.btnRegistrarUsuario.Size = new System.Drawing.Size(208, 57);
+            this.btnRegistrarUsuario.Size = new System.Drawing.Size(139, 37);
             this.btnRegistrarUsuario.TabIndex = 14;
             this.btnRegistrarUsuario.Text = "REGISTRAR";
             this.btnRegistrarUsuario.UseVisualStyleBackColor = false;
@@ -168,9 +158,10 @@
             this.panel1.Controls.Add(this.txtContraseña);
             this.panel1.Controls.Add(this.lblUsuario);
             this.panel1.Controls.Add(this.lblContraseña);
-            this.panel1.Location = new System.Drawing.Point(163, 30);
+            this.panel1.Location = new System.Drawing.Point(109, 20);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(700, 394);
+            this.panel1.Size = new System.Drawing.Size(467, 256);
             this.panel1.TabIndex = 16;
             // 
             // btnBorrar
@@ -180,10 +171,9 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Font = new System.Drawing.Font("Segoe UI Historic", 8F, System.Drawing.FontStyle.Bold);
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(530, 447);
-            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBorrar.Location = new System.Drawing.Point(353, 291);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(208, 57);
+            this.btnBorrar.Size = new System.Drawing.Size(139, 37);
             this.btnBorrar.TabIndex = 17;
             this.btnBorrar.Text = "BORRAR";
             this.btnBorrar.UseVisualStyleBackColor = false;
@@ -191,15 +181,14 @@
             // 
             // frmCreateUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(1058, 542);
+            this.ClientSize = new System.Drawing.Size(705, 352);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRegistrarUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmCreateUsuario";
             this.Text = "Añadir Usuario";
             this.Load += new System.EventHandler(this.frmUsuario_Load);

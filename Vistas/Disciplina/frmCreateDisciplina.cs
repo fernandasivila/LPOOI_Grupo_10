@@ -40,6 +40,10 @@ namespace Vistas
 
             TrabajoDisciplina.AgregarDisciplina(oDisciplina);
             MessageBox.Show("Se ha cargado exitosamente una nueva disciplina", "Disciplina registrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            frmDisciplinas listadoDisciplina = new frmDisciplinas();
+            (this.ParentForm as frmPrincipal)?.OpenFormChild(listadoDisciplina);
+
         }
 
 
@@ -48,7 +52,12 @@ namespace Vistas
             mensajeError = string.Empty;
             if (txtNombre.Text == "")
             {
-                mensajeError = "Debe ingresar un Nombre de Disciplina.";
+                mensajeError = "Debe ingresar un Nombre para Disciplina.";
+                return false;
+            }
+            if (txtDescripcion.Text == "")
+            {
+                mensajeError = "Debe ingresar una Descripcion para Disciplina.";
                 return false;
             }
             return true;

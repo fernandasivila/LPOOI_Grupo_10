@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -90,10 +91,33 @@ namespace ClasesBase
             }
 
         }
+       /* public static DataTable GetDisciplinaByName(string name)
+        {
+            using (SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "obtenerDisciplinasByNombre";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = cnn;
+
+                SqlParameter param;
+                param = new SqlParameter("@name", SqlDbType.VarChar);
+                param.Direction = ParameterDirection.Input;
+
+                param.Value = name;
+                cmd.Parameters.Add(param);
+
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    DataTable dis = new DataTable();
+                    da.Fill(dis);
+                    return dis;
+                }
+            }
+        }
+       */
 
 
-
-      
         public static Disciplina ObtenerDisciplinaByID(int dis_Id)
         {
             Disciplina oDisciplina = new Disciplina();
