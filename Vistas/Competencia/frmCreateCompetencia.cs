@@ -84,7 +84,7 @@ namespace Vistas
         {
             List<Disciplina> listaDisciplinas = TrabajoDisciplina.obtenerListaDisciplinas();
             cmbDisciplina.DataSource = listaDisciplinas;
-            cmbDisciplina.DisplayMember = "Dis_Nombre";
+            cmbDisciplina.DisplayMember = "Dis_Descripcion";
             cmbDisciplina.ValueMember = "Dis_ID";
 
         }
