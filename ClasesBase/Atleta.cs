@@ -51,5 +51,10 @@ namespace ClasesBase
             this.atl_Direccion = atl_Direccion;
             this.atl_Email = atl_Email;
         }
+
+        public string NombreCompleto
+        {
+            get { return Atl_Nombre + " " + Atl_Apellido; }
+        }
     }
 }

@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblAtleta = new System.Windows.Forms.Label();
             this.btnBorrarAtleta = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.cmbAtleta = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblNombre
+            // lblAtleta
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.lblNombre.Location = new System.Drawing.Point(70, 65);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(77, 19);
-            this.lblNombre.TabIndex = 2;
-            this.lblNombre.Text = "Ingresar ID";
+            this.lblAtleta.AutoSize = true;
+            this.lblAtleta.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.lblAtleta.Location = new System.Drawing.Point(31, 68);
+            this.lblAtleta.Name = "lblAtleta";
+            this.lblAtleta.Size = new System.Drawing.Size(116, 19);
+            this.lblAtleta.TabIndex = 2;
+            this.lblAtleta.Text = "Seleccionar Atleta";
             // 
             // btnBorrarAtleta
             // 
@@ -64,11 +64,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cmbAtleta);
             this.panel1.Controls.Add(this.lblTitulo);
-            this.panel1.Controls.Add(this.txtID);
-            this.panel1.Controls.Add(this.lblNombre);
+            this.panel1.Controls.Add(this.lblAtleta);
             this.panel1.Location = new System.Drawing.Point(111, 57);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(467, 122);
             this.panel1.TabIndex = 17;
@@ -83,13 +83,13 @@
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "BORRAR ATLETA";
             // 
-            // txtID
+            // cmbAtleta
             // 
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.txtID.Location = new System.Drawing.Point(153, 65);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(233, 23);
-            this.txtID.TabIndex = 11;
+            this.cmbAtleta.FormattingEnabled = true;
+            this.cmbAtleta.Location = new System.Drawing.Point(152, 68);
+            this.cmbAtleta.Name = "cmbAtleta";
+            this.cmbAtleta.Size = new System.Drawing.Size(234, 21);
+            this.cmbAtleta.TabIndex = 12;
             // 
             // frmDeleteAtleta
             // 
@@ -102,6 +102,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDeleteAtleta";
             this.Text = "Borrar Usuario";
+            this.Load += new System.EventHandler(this.frmDeleteAtleta_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -109,10 +110,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblAtleta;
         private System.Windows.Forms.Button btnBorrarAtleta;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.ComboBox cmbAtleta;
     }
 }
