@@ -31,8 +31,8 @@
             this.lblCategoria = new System.Windows.Forms.Label();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,10 +68,18 @@
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.lblCategoria);
             this.panel1.Location = new System.Drawing.Point(101, 76);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(467, 122);
             this.panel1.TabIndex = 17;
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(133, 62);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(273, 21);
+            this.cmbCategoria.TabIndex = 3;
             // 
             // lblTitulo
             // 
@@ -82,14 +90,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(174, 21);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "BORRAR CATEGORIA";
-            // 
-            // cmbCategoria
-            // 
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(133, 62);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(273, 21);
-            this.cmbCategoria.TabIndex = 3;
             // 
             // frmDeleteCategoria
             // 
@@ -103,6 +103,7 @@
             this.Name = "frmDeleteCategoria";
             this.Text = "Borrar Usuario";
             this.Load += new System.EventHandler(this.frmDeleteCategoria_Load);
+            this.Click += new System.EventHandler(this.btnBorrar_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
