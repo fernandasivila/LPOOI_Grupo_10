@@ -8,11 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Vistas
 {
     public partial class frmUsuarios : Form
-    {
+    { private const string PlaceholderText = "Ingrese el usuario";
         public frmUsuarios()
         {
             InitializeComponent();
@@ -21,15 +22,37 @@ namespace Vistas
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
             Load_All_Users();
+
+            
+            txtBuscador.Text = PlaceholderText;
+            txtBuscador.ForeColor = Color.Gray;
+
+            txtBuscador.GotFocus += RemovePlaceholder;
+            txtBuscador.LostFocus += ShowPlaceholder;
+        }
+        private void RemovePlaceholder(object sender, EventArgs e)
+        {
+            if (txtBuscador.Text == PlaceholderText)
+            {
+                txtBuscador.Text = "";
+                txtBuscador.ForeColor = Color.Black;
+            }
         }
 
+        private void ShowPlaceholder(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscador.Text))
+            {
+                txtBuscador.Text = PlaceholderText;
+                txtBuscador.ForeColor = Color.Gray;
+            }
+        }
         private void btnBuscarUser_Click(object sender, EventArgs e)
         {
 
             string keyword = txtBuscador.Text;
 
-            MessageBox.Show($"Buscando usuarios con el keyword: {keyword}");
-
+           
 
             if (!string.IsNullOrWhiteSpace(keyword))
             {
