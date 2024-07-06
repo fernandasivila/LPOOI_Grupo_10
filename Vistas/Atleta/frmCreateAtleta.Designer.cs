@@ -53,9 +53,10 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnObtener = new System.Windows.Forms.Button();
+            this.cmbAtleta = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -355,17 +356,6 @@
             this.panel1.TabIndex = 66;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(231, 9);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(131, 21);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "NUEVO ATLETA";
-            // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
@@ -381,6 +371,17 @@
             this.btnRegistrar.Text = "REGISTRAR";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(231, 9);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(131, 21);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "NUEVO ATLETA";
             // 
             // btnObtener
             // 
@@ -398,6 +399,15 @@
             this.btnObtener.UseVisualStyleBackColor = false;
             this.btnObtener.Click += new System.EventHandler(this.btnObtener_Click);
             // 
+            // cmbAtleta
+            // 
+            this.cmbAtleta.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.cmbAtleta.FormattingEnabled = true;
+            this.cmbAtleta.Location = new System.Drawing.Point(260, 34);
+            this.cmbAtleta.Name = "cmbAtleta";
+            this.cmbAtleta.Size = new System.Drawing.Size(255, 25);
+            this.cmbAtleta.TabIndex = 72;
+            // 
             // frmCreateAtleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -406,6 +416,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(705, 352);
+            this.Controls.Add(this.cmbAtleta);
             this.Controls.Add(this.btnObtener);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtID);
@@ -453,5 +464,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnObtener;
+        private System.Windows.Forms.ComboBox cmbAtleta;
     }
 }

@@ -30,11 +30,16 @@ namespace Vistas
                 txtID.Visible = false;
                 btnObtener.Visible = false;
                 lblID.Visible = false;
+                cmbAtleta.Visible = false;
             }
             if (this.accion == "modificar")
             {
+                cmbAtleta.Visible = true;
+                txtID.Visible = false;
                 btnRegistrar.Text = "ACTUALIZAR";
                 lblTitulo.Text = "MODIFICAR ATLETA";
+
+                cargarAtletas();
                 
             }
             if (this.accion == "borrar")
@@ -65,6 +70,14 @@ namespace Vistas
                 txtCorreoElectronico.Visible = false;
                 lblCorreoElectronico.Visible = false;
             }
+        }
+
+        private void cargarAtletas()
+        {
+            cmbAtleta.DisplayMember = "Atl_Nombre";
+            cmbAtleta.ValueMember = "Atl_ID";
+            cmbAtleta.DataSource = TrabajoAtleta.obtenerAtletas();
+
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -108,11 +121,14 @@ namespace Vistas
             }
             if (this.accion == "modificar")
             {
-                if (!validarCampos() || !string.IsNullOrWhiteSpace(txtID.Text))
-                {
-                    if (TrabajoAtleta.obtenerAtletaById(Int32.Parse(txtID.Text)) != null)
+                
+                    int idAtleta = Convert.ToInt32(cmbAtleta.SelectedValue);
+
+                    
+
+                    if (TrabajoAtleta.obtenerAtletaById(idAtleta) != null)
                     {
-                        Atleta oAtleta = new Atleta(Int32.Parse(txtID.Text), txtDNI.Text, txtApellido.Text
+                        Atleta oAtleta = new Atleta(idAtleta, txtDNI.Text, txtApellido.Text
                         , txtNombre.Text, txtNacionalidad.Text, txtEntrenador.Text
                         , char.Parse(cmbGenero.Text), double.Parse(txtAltura.Text),
                         double.Parse(txtPeso.Text), dtpFechaNacimiento.Value, txtDireccion.Text
@@ -124,11 +140,8 @@ namespace Vistas
                     {
                         MessageBox.Show("El Atleta No Existe", "Objeto No Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Ningun campo puede estar vacio", "Campos Obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                
+                
             }
             if (this.accion == "borrar")
             {
@@ -168,35 +181,57 @@ namespace Vistas
             }
             return true;
         }
-        
+
         private void btnObtener_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtID.Text))
+            if (this.accion == "registrar")
             {
-                Atleta oAtleta = TrabajoAtleta.obtenerAtletaById(Int32.Parse(txtID.Text));
-                if (oAtleta != null)
+
+
+                if (!string.IsNullOrWhiteSpace(txtID.Text))
                 {
-                    txtID.Text = oAtleta.Atl_ID.ToString();
-                    txtDNI.Text = oAtleta.Atl_DNI.ToString();
-                    txtApellido.Text = oAtleta.Atl_Apellido.ToString();
-                    txtNombre.Text = oAtleta.Atl_Nombre.ToString();
-                    txtNacionalidad.Text = oAtleta.Atl_Nacionalidad.ToString();
-                    txtEntrenador.Text = oAtleta.Atl_Entrenador.ToString();
-                    cmbGenero.Text = oAtleta.Atl_Genero.ToString();
-                    txtAltura.Text = oAtleta.Atl_Altura.ToString();
-                    txtPeso.Text = oAtleta.Atl_Peso.ToString();
-                    dtpFechaNacimiento.Text = oAtleta.Atl_FechaNac.ToString();
-                    txtDireccion.Text = oAtleta.Atl_Direccion.ToString();
-                    txtCorreoElectronico.Text = oAtleta.Atl_Email.ToString();
+                    Atleta oAtleta = TrabajoAtleta.obtenerAtletaById(Int32.Parse(txtID.Text));
+                    if (oAtleta != null)
+                    {
+                        txtID.Text = oAtleta.Atl_ID.ToString();
+                        txtDNI.Text = oAtleta.Atl_DNI.ToString();
+                        txtApellido.Text = oAtleta.Atl_Apellido.ToString();
+                        txtNombre.Text = oAtleta.Atl_Nombre.ToString();
+                        txtNacionalidad.Text = oAtleta.Atl_Nacionalidad.ToString();
+                        txtEntrenador.Text = oAtleta.Atl_Entrenador.ToString();
+                        cmbGenero.Text = oAtleta.Atl_Genero.ToString();
+                        txtAltura.Text = oAtleta.Atl_Altura.ToString();
+                        txtPeso.Text = oAtleta.Atl_Peso.ToString();
+                        dtpFechaNacimiento.Text = oAtleta.Atl_FechaNac.ToString();
+                        txtDireccion.Text = oAtleta.Atl_Direccion.ToString();
+                        txtCorreoElectronico.Text = oAtleta.Atl_Email.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Atleta No Existe", "Objeto No Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("El Atleta No Existe", "Objeto No Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Campo de ID vacio", "Campos Obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else
+
+            if (this.accion == "modificar")
             {
-                MessageBox.Show("Campo de ID vacio", "Campos Obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Atleta oAtleta = TrabajoAtleta.obtenerAtletaById(Convert.ToInt32(cmbAtleta.SelectedValue));
+                txtID.Text = oAtleta.Atl_ID.ToString();
+                txtDNI.Text = oAtleta.Atl_DNI.ToString();
+                txtApellido.Text = oAtleta.Atl_Apellido.ToString();
+                txtNombre.Text = oAtleta.Atl_Nombre.ToString();
+                txtNacionalidad.Text = oAtleta.Atl_Nacionalidad.ToString();
+                txtEntrenador.Text = oAtleta.Atl_Entrenador.ToString();
+                cmbGenero.Text = oAtleta.Atl_Genero.ToString();
+                txtAltura.Text = oAtleta.Atl_Altura.ToString();
+                txtPeso.Text = oAtleta.Atl_Peso.ToString();
+                dtpFechaNacimiento.Text = oAtleta.Atl_FechaNac.ToString();
+                txtDireccion.Text = oAtleta.Atl_Direccion.ToString();
+                txtCorreoElectronico.Text = oAtleta.Atl_Email.ToString();
             }
         }
 
