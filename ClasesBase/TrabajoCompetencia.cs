@@ -174,5 +174,25 @@ namespace ClasesBase
                 return dt;
             }
         }
+
+        public static DataTable obtenerCompetenciasByNombre(String nombre)
+        {
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "obtenerCompetenciasByNombre";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = cnn;
+
+                cmd.Parameters.AddWithValue("@name", nombre);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                return dt;
+            }
+        }
+
     }
 }

@@ -24,5 +24,11 @@ namespace Vistas
             DataTable dt = TrabajoCompetencia.ObtenerCompetencias();
             dgvListaCompetencias.DataSource = dt;
         }
+
+        private void btnBuscarCompetencia_Click(object sender, EventArgs e)
+        {
+            dgvListaCompetencias.DataSource = TrabajoCompetencia.obtenerCompetenciasByNombre(txtNombre.Text);
+        }
+        
     }
 }

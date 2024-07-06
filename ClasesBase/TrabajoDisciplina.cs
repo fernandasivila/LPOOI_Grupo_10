@@ -161,7 +161,7 @@ namespace ClasesBase
                         {
                             Dis_ID = reader.GetInt32(reader.GetOrdinal("Dis_ID")),
                             Dis_Nombre = reader.GetString(reader.GetOrdinal("Dis_Nombre")),
-                            Dis_Descripcion = reader.GetString(reader.GetOrdinal("Dis_Decripcion"))
+                            Dis_Descripcion = reader.GetString(reader.GetOrdinal("Dis_Descripcion"))
                         };
                         listaDisciplinas.Add(disciplina);
                     }
