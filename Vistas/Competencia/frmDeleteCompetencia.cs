@@ -17,12 +17,12 @@ namespace Vistas
         public frmDeleteCompetencia()
         {
             InitializeComponent();
+            LlenarCmbCompetencia();
         }
 
         private void btnBorrarCompetencia_Click(object sender, EventArgs e)
         {
-            if (Int32.TryParse(txtNombre.Text, out int idCompetencia))
-            {
+            int idCompetencia = (int)cmbCompetencia.SelectedValue;
                 Competencia competencia = TrabajoCompetencia.ObtenerCompetenciaById(idCompetencia);
 
                 if (competencia == null)
@@ -34,11 +34,14 @@ namespace Vistas
                     TrabajoCompetencia.BorrarCompetenciaByID(idCompetencia.ToString());
                     MessageBox.Show("Competencia eliminada con éxito");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, ingrese un ID de competencia válido", "ID inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+        }
+
+        private void LlenarCmbCompetencia()
+        {
+            List<Competencia> listaCompetencias = TrabajoCompetencia.obtenerListaCompetencia();
+            cmbCompetencia.DataSource = listaCompetencias;
+            cmbCompetencia.DisplayMember = "Com_Nombre";
+            cmbCompetencia.ValueMember = "Com_ID";
         }
     }
 }
