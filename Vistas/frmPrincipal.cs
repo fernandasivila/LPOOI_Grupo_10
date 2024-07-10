@@ -165,6 +165,29 @@ namespace Vistas
             OpenFormChild(new frmCreateEvento());
         }
 
+        private void btn_EliminarInscripcion_Click(object sender, EventArgs e)
+        {
+            pnl_SubMenuEvents.Visible = false;
+            OpenFormChild(new frmDeleteEvento());
+        }
+
+        private void btn_Acreditaciones_Click(object sender, EventArgs e)
+        {
+            pnl_SubMenuEvents.Visible = false;
+            OpenFormChild(new frmAcreditacion());
+        }
+
+        private void btn_Cronometrajes_Click(object sender, EventArgs e)
+        {
+            pnl_SubMenuEvents.Visible = false;
+            OpenFormChild(new frmCronometrajes());
+        }
+
+        private void btn_Resultados_Click(object sender, EventArgs e)
+        {
+            pnl_SubMenuEvents.Visible = false;
+            OpenFormChild(new frmResultados());
+        }
 
         private void btn_Categories_Click(object sender, EventArgs e)
         {
@@ -279,28 +302,6 @@ namespace Vistas
                 login.Show();
                 this.Hide();
             }
-                
-                
-        }
-
-        private void btn_EliminarInscripcion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Acreditaciones_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Cronometrajes_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Resultados_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -72,10 +72,34 @@
     <Compile Include="Categoria\frmUpdateCategoria.Designer.cs">
       <DependentUpon>frmUpdateCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Disciplina\frmCreateEvento.cs">
+    <Compile Include="Evento\frmResultados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Disciplina\frmCreateEvento.Designer.cs">
+    <Compile Include="Evento\frmResultados.Designer.cs">
+      <DependentUpon>frmResultados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Evento\frmCronometrajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evento\frmCronometrajes.Designer.cs">
+      <DependentUpon>frmCronometrajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Evento\frmAcreditacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evento\frmAcreditacion.Designer.cs">
+      <DependentUpon>frmAcreditacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Evento\frmDeleteEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evento\frmDeleteEvento.Designer.cs">
+      <DependentUpon>frmDeleteEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Evento\frmCreateEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evento\frmCreateEvento.Designer.cs">
       <DependentUpon>frmCreateEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="Disciplina\frmDisciplinas.cs">
@@ -206,7 +230,19 @@
     <EmbeddedResource Include="Categoria\frmUpdateCategoria.resx">
       <DependentUpon>frmUpdateCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Disciplina\frmCreateEvento.resx">
+    <EmbeddedResource Include="Evento\frmResultados.resx">
+      <DependentUpon>frmResultados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evento\frmCronometrajes.resx">
+      <DependentUpon>frmCronometrajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evento\frmAcreditacion.resx">
+      <DependentUpon>frmAcreditacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evento\frmDeleteEvento.resx">
+      <DependentUpon>frmDeleteEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evento\frmCreateEvento.resx">
       <DependentUpon>frmCreateEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Disciplina\frmDisciplinas.resx">
@@ -313,8 +349,6 @@
       <Name>ClasesBase</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Evento\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
