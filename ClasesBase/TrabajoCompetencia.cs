@@ -93,7 +93,7 @@ namespace ClasesBase
                 string storedProcedure = "obtenerCompetenciaById";
                 SqlCommand cmd = new SqlCommand(storedProcedure, cnn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id", competencia_id);
+                cmd.Parameters.AddWithValue("@idC", competencia_id);
                 cnn.Open();
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
@@ -194,5 +194,20 @@ namespace ClasesBase
             }
         }
 
+        public static DataTable obtenerCompetenciasActivas()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "obtenerCompetenciasActivas";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }

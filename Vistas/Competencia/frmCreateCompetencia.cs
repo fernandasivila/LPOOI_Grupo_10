@@ -19,6 +19,7 @@ namespace Vistas
             InitializeComponent();
             LlenarComboBoxCategorias();
             LlenarComboBoxDisciplinas();
+            LlenarComboBoxEstados();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace Vistas
                 oCompetencia.Com_Descripcion = txtDescripcion.Text;
                 oCompetencia.Com_FechaInicio = dtpFechaInicio.Value;
                 oCompetencia.Com_FechaFin = dtpFechaFin.Value;
-                oCompetencia.Com_Estado = cmbEstado.Text;
+                oCompetencia.Com_Estado = cmbEstado.SelectedValue.ToString();
                 oCompetencia.Com_Ubicacion = txtUbicacion.Text;
                 oCompetencia.Com_Organizador = txtOrganizacion.Text;
                 oCompetencia.Com_Sponsors = txtSponsors.Text;
@@ -60,7 +61,7 @@ namespace Vistas
         {
             if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
                 string.IsNullOrWhiteSpace(txtDescripcion.Text) ||
-                string.IsNullOrWhiteSpace(cmbEstado.Text) ||
+                cmbEstado.SelectedIndex == - 1 ||
                 string.IsNullOrWhiteSpace(txtUbicacion.Text) ||
                 string.IsNullOrWhiteSpace(txtOrganizacion.Text) ||
                 string.IsNullOrWhiteSpace(txtSponsors.Text) ||
@@ -86,6 +87,20 @@ namespace Vistas
             cmbDisciplina.DataSource = listaDisciplinas;
             cmbDisciplina.DisplayMember = "Dis_Descripcion";
             cmbDisciplina.ValueMember = "Dis_ID";
+
+        }
+
+        private void LlenarComboBoxEstados()
+        {
+            List<string> estadosCompetencia = new List<string>
+            {
+                "Programado",
+                "Postergado",
+                "Reprogramado",
+                "Cancelado"
+            };
+            cmbEstado.DataSource = estadosCompetencia;
+            cmbEstado.Text = "Seleccione estado";
 
         }
     }

@@ -161,13 +161,10 @@ namespace Vistas
 
         private void btn_CreateEvent_Click(object sender, EventArgs e)
         {
-
+            pnl_SubMenuEvents.Visible = false;
+            OpenFormChild(new frmCreateEvento());
         }
 
-        private void btn_ListEvents_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_Categories_Click(object sender, EventArgs e)
         {
@@ -284,6 +281,26 @@ namespace Vistas
             }
                 
                 
+        }
+
+        private void btn_EliminarInscripcion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Acreditaciones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Cronometrajes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Resultados_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -90,6 +90,7 @@
     <Compile Include="TrabajoAtleta.cs" />
     <Compile Include="TrabajoCompetencia.cs" />
     <Compile Include="TrabajoDisciplina.cs" />
+    <Compile Include="TrabajoEvento.cs" />
     <Compile Include="TrabajoUsuario.cs" />
     <Compile Include="Competencia.cs" />
     <Compile Include="Disciplina.cs" />

@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.pnl_TitleBar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Restore = new System.Windows.Forms.PictureBox();
+            this.btn_Minimize = new System.Windows.Forms.PictureBox();
+            this.btn_Maximize = new System.Windows.Forms.PictureBox();
+            this.btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.pnl_MenuVertical = new System.Windows.Forms.Panel();
             this.pnl_SubMenuUsers = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -60,15 +64,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.btn_ListAthletes = new System.Windows.Forms.Button();
             this.btn_CreateAthlete = new System.Windows.Forms.Button();
-            this.pnl_SubMenuDiscipline = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.btn_DeleteDiscipline = new System.Windows.Forms.Button();
-            this.btn_UpdateDiscipline = new System.Windows.Forms.Button();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.btn_ListDisciplines = new System.Windows.Forms.Button();
-            this.btn_CreateDiscipline = new System.Windows.Forms.Button();
+            this.pbx_Logo = new System.Windows.Forms.PictureBox();
             this.decoration_ToBtnDisciplines = new System.Windows.Forms.Panel();
             this.pnl_SubMenuCategory = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
@@ -79,48 +75,58 @@
             this.panel26 = new System.Windows.Forms.Panel();
             this.btn_ListCategories = new System.Windows.Forms.Button();
             this.btn_CreateCategory = new System.Windows.Forms.Button();
+            this.btn_Disciplines = new System.Windows.Forms.Button();
+            this.pnl_SubMenuDiscipline = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.btn_DeleteDiscipline = new System.Windows.Forms.Button();
+            this.btn_UpdateDiscipline = new System.Windows.Forms.Button();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.btn_ListDisciplines = new System.Windows.Forms.Button();
+            this.btn_CreateDiscipline = new System.Windows.Forms.Button();
             this.decoration_ToBtnCategories = new System.Windows.Forms.Panel();
+            this.btn_Categories = new System.Windows.Forms.Button();
             this.pnl_SubMenuEvents = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.btn_ListEvents = new System.Windows.Forms.Button();
+            this.btn_EliminarInscripcion = new System.Windows.Forms.Button();
             this.btn_CreateEvent = new System.Windows.Forms.Button();
+            this.btn_Users = new System.Windows.Forms.Button();
+            this.btn_LogOut = new System.Windows.Forms.Button();
             this.decoration_ToBtnUsers = new System.Windows.Forms.Panel();
             this.decoration_ToBtnEvents = new System.Windows.Forms.Panel();
+            this.btn_Events = new System.Windows.Forms.Button();
             this.decoration_ToBtnAthletes = new System.Windows.Forms.Panel();
+            this.btn_Athletes = new System.Windows.Forms.Button();
             this.decoration_ToBtnCompetitions = new System.Windows.Forms.Panel();
+            this.btn_Competitions = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_Welcome = new System.Windows.Forms.Label();
             this.lbl_FullName = new System.Windows.Forms.Label();
-            this.pnl_Container = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbx_Logo = new System.Windows.Forms.PictureBox();
-            this.btn_Disciplines = new System.Windows.Forms.Button();
-            this.btn_Categories = new System.Windows.Forms.Button();
-            this.btn_Users = new System.Windows.Forms.Button();
-            this.btn_LogOut = new System.Windows.Forms.Button();
-            this.btn_Events = new System.Windows.Forms.Button();
-            this.btn_Athletes = new System.Windows.Forms.Button();
-            this.btn_Competitions = new System.Windows.Forms.Button();
-            this.btn_Restore = new System.Windows.Forms.PictureBox();
-            this.btn_Minimize = new System.Windows.Forms.PictureBox();
-            this.btn_Maximize = new System.Windows.Forms.PictureBox();
-            this.btn_Cerrar = new System.Windows.Forms.PictureBox();
+            this.pnl_Container = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.btn_Cronometrajes = new System.Windows.Forms.Button();
+            this.btn_Acreditaciones = new System.Windows.Forms.Button();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.btn_Resultados = new System.Windows.Forms.Button();
             this.pnl_TitleBar.SuspendLayout();
-            this.pnl_MenuVertical.SuspendLayout();
-            this.pnl_SubMenuUsers.SuspendLayout();
-            this.pnl_SubMenuCompetitions.SuspendLayout();
-            this.pnl_SubMenuAthletes.SuspendLayout();
-            this.pnl_SubMenuDiscipline.SuspendLayout();
-            this.pnl_SubMenuCategory.SuspendLayout();
-            this.pnl_SubMenuEvents.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Restore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Maximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar)).BeginInit();
+            this.pnl_MenuVertical.SuspendLayout();
+            this.pnl_SubMenuUsers.SuspendLayout();
+            this.pnl_SubMenuCompetitions.SuspendLayout();
+            this.pnl_SubMenuAthletes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_Logo)).BeginInit();
+            this.pnl_SubMenuCategory.SuspendLayout();
+            this.pnl_SubMenuDiscipline.SuspendLayout();
+            this.pnl_SubMenuEvents.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_TitleBar
@@ -146,6 +152,59 @@
             this.panel1.Size = new System.Drawing.Size(1058, 61);
             this.panel1.TabIndex = 3;
             // 
+            // btn_Restore
+            // 
+            this.btn_Restore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Restore.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Restore.Image = ((System.Drawing.Image)(resources.GetObject("btn_Restore.Image")));
+            this.btn_Restore.Location = new System.Drawing.Point(1214, 7);
+            this.btn_Restore.Name = "btn_Restore";
+            this.btn_Restore.Size = new System.Drawing.Size(25, 25);
+            this.btn_Restore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Restore.TabIndex = 2;
+            this.btn_Restore.TabStop = false;
+            this.btn_Restore.Visible = false;
+            this.btn_Restore.Click += new System.EventHandler(this.btn_Restore_Click);
+            // 
+            // btn_Minimize
+            // 
+            this.btn_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Minimize.Image = ((System.Drawing.Image)(resources.GetObject("btn_Minimize.Image")));
+            this.btn_Minimize.Location = new System.Drawing.Point(1167, 7);
+            this.btn_Minimize.Name = "btn_Minimize";
+            this.btn_Minimize.Size = new System.Drawing.Size(25, 25);
+            this.btn_Minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Minimize.TabIndex = 1;
+            this.btn_Minimize.TabStop = false;
+            this.btn_Minimize.Click += new System.EventHandler(this.btn_Minimize_Click);
+            // 
+            // btn_Maximize
+            // 
+            this.btn_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Maximize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Maximize.Image = ((System.Drawing.Image)(resources.GetObject("btn_Maximize.Image")));
+            this.btn_Maximize.Location = new System.Drawing.Point(1214, 7);
+            this.btn_Maximize.Name = "btn_Maximize";
+            this.btn_Maximize.Size = new System.Drawing.Size(25, 25);
+            this.btn_Maximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Maximize.TabIndex = 3;
+            this.btn_Maximize.TabStop = false;
+            this.btn_Maximize.Click += new System.EventHandler(this.btn_Maximize_Click);
+            // 
+            // btn_Cerrar
+            // 
+            this.btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cerrar.Image")));
+            this.btn_Cerrar.Location = new System.Drawing.Point(1261, 7);
+            this.btn_Cerrar.Name = "btn_Cerrar";
+            this.btn_Cerrar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Cerrar.TabIndex = 0;
+            this.btn_Cerrar.TabStop = false;
+            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
+            // 
             // pnl_MenuVertical
             // 
             this.pnl_MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
@@ -159,8 +218,8 @@
             this.pnl_MenuVertical.Controls.Add(this.btn_Disciplines);
             this.pnl_MenuVertical.Controls.Add(this.pnl_SubMenuDiscipline);
             this.pnl_MenuVertical.Controls.Add(this.decoration_ToBtnCategories);
-            this.pnl_MenuVertical.Controls.Add(this.btn_Categories);
             this.pnl_MenuVertical.Controls.Add(this.pnl_SubMenuEvents);
+            this.pnl_MenuVertical.Controls.Add(this.btn_Categories);
             this.pnl_MenuVertical.Controls.Add(this.btn_Users);
             this.pnl_MenuVertical.Controls.Add(this.btn_LogOut);
             this.pnl_MenuVertical.Controls.Add(this.decoration_ToBtnUsers);
@@ -188,7 +247,7 @@
             this.pnl_SubMenuUsers.Controls.Add(this.btn_ListUsers);
             this.pnl_SubMenuUsers.Controls.Add(this.btn_CreateUser);
             this.pnl_SubMenuUsers.Font = new System.Drawing.Font("Segoe UI Historic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnl_SubMenuUsers.Location = new System.Drawing.Point(44, 156);
+            this.pnl_SubMenuUsers.Location = new System.Drawing.Point(42, 119);
             this.pnl_SubMenuUsers.Name = "pnl_SubMenuUsers";
             this.pnl_SubMenuUsers.Size = new System.Drawing.Size(195, 179);
             this.pnl_SubMenuUsers.TabIndex = 23;
@@ -306,7 +365,7 @@
             this.pnl_SubMenuCompetitions.Controls.Add(this.btn_ListCompetitions);
             this.pnl_SubMenuCompetitions.Controls.Add(this.btn_CreateCompetition);
             this.pnl_SubMenuCompetitions.Font = new System.Drawing.Font("Segoe UI Historic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnl_SubMenuCompetitions.Location = new System.Drawing.Point(1, 220);
+            this.pnl_SubMenuCompetitions.Location = new System.Drawing.Point(0, 188);
             this.pnl_SubMenuCompetitions.Name = "pnl_SubMenuCompetitions";
             this.pnl_SubMenuCompetitions.Size = new System.Drawing.Size(239, 178);
             this.pnl_SubMenuCompetitions.TabIndex = 24;
@@ -431,7 +490,7 @@
             this.pnl_SubMenuAthletes.Controls.Add(this.btn_ListAthletes);
             this.pnl_SubMenuAthletes.Controls.Add(this.btn_CreateAthlete);
             this.pnl_SubMenuAthletes.Font = new System.Drawing.Font("Segoe UI Historic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnl_SubMenuAthletes.Location = new System.Drawing.Point(28, 284);
+            this.pnl_SubMenuAthletes.Location = new System.Drawing.Point(29, 241);
             this.pnl_SubMenuAthletes.Name = "pnl_SubMenuAthletes";
             this.pnl_SubMenuAthletes.Size = new System.Drawing.Size(211, 189);
             this.pnl_SubMenuAthletes.TabIndex = 25;
@@ -537,128 +596,20 @@
             this.btn_CreateAthlete.UseVisualStyleBackColor = false;
             this.btn_CreateAthlete.Click += new System.EventHandler(this.btn_CreateAthlete_Click);
             // 
-            // pnl_SubMenuDiscipline
+            // pbx_Logo
             // 
-            this.pnl_SubMenuDiscipline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
-            this.pnl_SubMenuDiscipline.Controls.Add(this.panel18);
-            this.pnl_SubMenuDiscipline.Controls.Add(this.panel19);
-            this.pnl_SubMenuDiscipline.Controls.Add(this.btn_DeleteDiscipline);
-            this.pnl_SubMenuDiscipline.Controls.Add(this.btn_UpdateDiscipline);
-            this.pnl_SubMenuDiscipline.Controls.Add(this.panel20);
-            this.pnl_SubMenuDiscipline.Controls.Add(this.panel21);
-            this.pnl_SubMenuDiscipline.Controls.Add(this.btn_ListDisciplines);
-            this.pnl_SubMenuDiscipline.Controls.Add(this.btn_CreateDiscipline);
-            this.pnl_SubMenuDiscipline.Font = new System.Drawing.Font("Segoe UI Historic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnl_SubMenuDiscipline.Location = new System.Drawing.Point(11, 412);
-            this.pnl_SubMenuDiscipline.Name = "pnl_SubMenuDiscipline";
-            this.pnl_SubMenuDiscipline.Size = new System.Drawing.Size(229, 178);
-            this.pnl_SubMenuDiscipline.TabIndex = 30;
-            this.pnl_SubMenuDiscipline.Visible = false;
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.panel18.Location = new System.Drawing.Point(0, 138);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(5, 40);
-            this.panel18.TabIndex = 14;
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.panel19.Location = new System.Drawing.Point(0, 92);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(5, 40);
-            this.panel19.TabIndex = 12;
-            // 
-            // btn_DeleteDiscipline
-            // 
-            this.btn_DeleteDiscipline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
-            this.btn_DeleteDiscipline.FlatAppearance.BorderSize = 0;
-            this.btn_DeleteDiscipline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.btn_DeleteDiscipline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DeleteDiscipline.Font = new System.Drawing.Font("Segoe UI Historic", 9F);
-            this.btn_DeleteDiscipline.ForeColor = System.Drawing.Color.White;
-            this.btn_DeleteDiscipline.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DeleteDiscipline.Location = new System.Drawing.Point(3, 138);
-            this.btn_DeleteDiscipline.Name = "btn_DeleteDiscipline";
-            this.btn_DeleteDiscipline.Size = new System.Drawing.Size(226, 40);
-            this.btn_DeleteDiscipline.TabIndex = 13;
-            this.btn_DeleteDiscipline.Text = "Eliminar Disciplina";
-            this.btn_DeleteDiscipline.UseVisualStyleBackColor = false;
-            this.btn_DeleteDiscipline.Click += new System.EventHandler(this.btn_DeleteDiscipline_Click);
-            // 
-            // btn_UpdateDiscipline
-            // 
-            this.btn_UpdateDiscipline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
-            this.btn_UpdateDiscipline.FlatAppearance.BorderSize = 0;
-            this.btn_UpdateDiscipline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.btn_UpdateDiscipline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_UpdateDiscipline.Font = new System.Drawing.Font("Segoe UI Historic", 9F);
-            this.btn_UpdateDiscipline.ForeColor = System.Drawing.Color.White;
-            this.btn_UpdateDiscipline.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_UpdateDiscipline.Location = new System.Drawing.Point(3, 92);
-            this.btn_UpdateDiscipline.Name = "btn_UpdateDiscipline";
-            this.btn_UpdateDiscipline.Size = new System.Drawing.Size(228, 40);
-            this.btn_UpdateDiscipline.TabIndex = 11;
-            this.btn_UpdateDiscipline.Text = "Modificar Disciplina";
-            this.btn_UpdateDiscipline.UseVisualStyleBackColor = false;
-            this.btn_UpdateDiscipline.Click += new System.EventHandler(this.btn_UpdateDiscipline_Click);
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.panel20.Location = new System.Drawing.Point(0, 46);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(5, 40);
-            this.panel20.TabIndex = 10;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.panel21.Location = new System.Drawing.Point(0, 0);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(5, 40);
-            this.panel21.TabIndex = 8;
-            // 
-            // btn_ListDisciplines
-            // 
-            this.btn_ListDisciplines.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
-            this.btn_ListDisciplines.FlatAppearance.BorderSize = 0;
-            this.btn_ListDisciplines.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.btn_ListDisciplines.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ListDisciplines.Font = new System.Drawing.Font("Segoe UI Historic", 9F);
-            this.btn_ListDisciplines.ForeColor = System.Drawing.Color.White;
-            this.btn_ListDisciplines.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ListDisciplines.Location = new System.Drawing.Point(3, 46);
-            this.btn_ListDisciplines.Name = "btn_ListDisciplines";
-            this.btn_ListDisciplines.Size = new System.Drawing.Size(228, 40);
-            this.btn_ListDisciplines.TabIndex = 9;
-            this.btn_ListDisciplines.Text = "Consultar Disciplinas";
-            this.btn_ListDisciplines.UseVisualStyleBackColor = false;
-            this.btn_ListDisciplines.Click += new System.EventHandler(this.btn_ListDisciplines_Click);
-            // 
-            // btn_CreateDiscipline
-            // 
-            this.btn_CreateDiscipline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
-            this.btn_CreateDiscipline.FlatAppearance.BorderSize = 0;
-            this.btn_CreateDiscipline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.btn_CreateDiscipline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CreateDiscipline.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CreateDiscipline.ForeColor = System.Drawing.Color.White;
-            this.btn_CreateDiscipline.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_CreateDiscipline.Location = new System.Drawing.Point(3, 0);
-            this.btn_CreateDiscipline.Name = "btn_CreateDiscipline";
-            this.btn_CreateDiscipline.Size = new System.Drawing.Size(228, 40);
-            this.btn_CreateDiscipline.TabIndex = 7;
-            this.btn_CreateDiscipline.Text = "Agregar Disciplina";
-            this.btn_CreateDiscipline.UseVisualStyleBackColor = false;
-            this.btn_CreateDiscipline.Click += new System.EventHandler(this.btn_CreateDiscipline_Click);
+            this.pbx_Logo.Image = global::Vistas.Properties.Resources.logo;
+            this.pbx_Logo.Location = new System.Drawing.Point(6, 6);
+            this.pbx_Logo.Name = "pbx_Logo";
+            this.pbx_Logo.Size = new System.Drawing.Size(224, 64);
+            this.pbx_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_Logo.TabIndex = 17;
+            this.pbx_Logo.TabStop = false;
             // 
             // decoration_ToBtnDisciplines
             // 
             this.decoration_ToBtnDisciplines.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.decoration_ToBtnDisciplines.Location = new System.Drawing.Point(0, 420);
+            this.decoration_ToBtnDisciplines.Location = new System.Drawing.Point(0, 361);
             this.decoration_ToBtnDisciplines.Name = "decoration_ToBtnDisciplines";
             this.decoration_ToBtnDisciplines.Size = new System.Drawing.Size(5, 50);
             this.decoration_ToBtnDisciplines.TabIndex = 15;
@@ -676,7 +627,7 @@
             this.pnl_SubMenuCategory.Controls.Add(this.btn_ListCategories);
             this.pnl_SubMenuCategory.Controls.Add(this.btn_CreateCategory);
             this.pnl_SubMenuCategory.Font = new System.Drawing.Font("Segoe UI Historic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnl_SubMenuCategory.Location = new System.Drawing.Point(14, 348);
+            this.pnl_SubMenuCategory.Location = new System.Drawing.Point(11, 298);
             this.pnl_SubMenuCategory.Name = "pnl_SubMenuCategory";
             this.pnl_SubMenuCategory.Size = new System.Drawing.Size(228, 178);
             this.pnl_SubMenuCategory.TabIndex = 28;
@@ -782,34 +733,196 @@
             this.btn_CreateCategory.UseVisualStyleBackColor = true;
             this.btn_CreateCategory.Click += new System.EventHandler(this.btn_CreateCategory_Click);
             // 
+            // btn_Disciplines
+            // 
+            this.btn_Disciplines.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_Disciplines.FlatAppearance.BorderSize = 0;
+            this.btn_Disciplines.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_Disciplines.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Disciplines.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.btn_Disciplines.ForeColor = System.Drawing.Color.White;
+            this.btn_Disciplines.Image = global::Vistas.Properties.Resources.list;
+            this.btn_Disciplines.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Disciplines.Location = new System.Drawing.Point(6, 304);
+            this.btn_Disciplines.Name = "btn_Disciplines";
+            this.btn_Disciplines.Size = new System.Drawing.Size(236, 50);
+            this.btn_Disciplines.TabIndex = 14;
+            this.btn_Disciplines.Text = "Disciplinas";
+            this.btn_Disciplines.UseVisualStyleBackColor = false;
+            this.btn_Disciplines.Visible = false;
+            this.btn_Disciplines.Click += new System.EventHandler(this.btn_Disciplines_Click);
+            // 
+            // pnl_SubMenuDiscipline
+            // 
+            this.pnl_SubMenuDiscipline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.pnl_SubMenuDiscipline.Controls.Add(this.panel18);
+            this.pnl_SubMenuDiscipline.Controls.Add(this.panel19);
+            this.pnl_SubMenuDiscipline.Controls.Add(this.btn_DeleteDiscipline);
+            this.pnl_SubMenuDiscipline.Controls.Add(this.btn_UpdateDiscipline);
+            this.pnl_SubMenuDiscipline.Controls.Add(this.panel20);
+            this.pnl_SubMenuDiscipline.Controls.Add(this.panel21);
+            this.pnl_SubMenuDiscipline.Controls.Add(this.btn_ListDisciplines);
+            this.pnl_SubMenuDiscipline.Controls.Add(this.btn_CreateDiscipline);
+            this.pnl_SubMenuDiscipline.Font = new System.Drawing.Font("Segoe UI Historic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnl_SubMenuDiscipline.Location = new System.Drawing.Point(11, 351);
+            this.pnl_SubMenuDiscipline.Name = "pnl_SubMenuDiscipline";
+            this.pnl_SubMenuDiscipline.Size = new System.Drawing.Size(229, 178);
+            this.pnl_SubMenuDiscipline.TabIndex = 30;
+            this.pnl_SubMenuDiscipline.Visible = false;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.panel18.Location = new System.Drawing.Point(0, 138);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(5, 40);
+            this.panel18.TabIndex = 14;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.panel19.Location = new System.Drawing.Point(0, 92);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(5, 40);
+            this.panel19.TabIndex = 12;
+            // 
+            // btn_DeleteDiscipline
+            // 
+            this.btn_DeleteDiscipline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_DeleteDiscipline.FlatAppearance.BorderSize = 0;
+            this.btn_DeleteDiscipline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_DeleteDiscipline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DeleteDiscipline.Font = new System.Drawing.Font("Segoe UI Historic", 9F);
+            this.btn_DeleteDiscipline.ForeColor = System.Drawing.Color.White;
+            this.btn_DeleteDiscipline.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DeleteDiscipline.Location = new System.Drawing.Point(3, 138);
+            this.btn_DeleteDiscipline.Name = "btn_DeleteDiscipline";
+            this.btn_DeleteDiscipline.Size = new System.Drawing.Size(226, 40);
+            this.btn_DeleteDiscipline.TabIndex = 13;
+            this.btn_DeleteDiscipline.Text = "Eliminar Disciplina";
+            this.btn_DeleteDiscipline.UseVisualStyleBackColor = false;
+            this.btn_DeleteDiscipline.Click += new System.EventHandler(this.btn_DeleteDiscipline_Click);
+            // 
+            // btn_UpdateDiscipline
+            // 
+            this.btn_UpdateDiscipline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_UpdateDiscipline.FlatAppearance.BorderSize = 0;
+            this.btn_UpdateDiscipline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_UpdateDiscipline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_UpdateDiscipline.Font = new System.Drawing.Font("Segoe UI Historic", 9F);
+            this.btn_UpdateDiscipline.ForeColor = System.Drawing.Color.White;
+            this.btn_UpdateDiscipline.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_UpdateDiscipline.Location = new System.Drawing.Point(3, 92);
+            this.btn_UpdateDiscipline.Name = "btn_UpdateDiscipline";
+            this.btn_UpdateDiscipline.Size = new System.Drawing.Size(228, 40);
+            this.btn_UpdateDiscipline.TabIndex = 11;
+            this.btn_UpdateDiscipline.Text = "Modificar Disciplina";
+            this.btn_UpdateDiscipline.UseVisualStyleBackColor = false;
+            this.btn_UpdateDiscipline.Click += new System.EventHandler(this.btn_UpdateDiscipline_Click);
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.panel20.Location = new System.Drawing.Point(0, 46);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(5, 40);
+            this.panel20.TabIndex = 10;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.panel21.Location = new System.Drawing.Point(0, 0);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(5, 40);
+            this.panel21.TabIndex = 8;
+            // 
+            // btn_ListDisciplines
+            // 
+            this.btn_ListDisciplines.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_ListDisciplines.FlatAppearance.BorderSize = 0;
+            this.btn_ListDisciplines.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_ListDisciplines.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ListDisciplines.Font = new System.Drawing.Font("Segoe UI Historic", 9F);
+            this.btn_ListDisciplines.ForeColor = System.Drawing.Color.White;
+            this.btn_ListDisciplines.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ListDisciplines.Location = new System.Drawing.Point(3, 46);
+            this.btn_ListDisciplines.Name = "btn_ListDisciplines";
+            this.btn_ListDisciplines.Size = new System.Drawing.Size(228, 40);
+            this.btn_ListDisciplines.TabIndex = 9;
+            this.btn_ListDisciplines.Text = "Consultar Disciplinas";
+            this.btn_ListDisciplines.UseVisualStyleBackColor = false;
+            this.btn_ListDisciplines.Click += new System.EventHandler(this.btn_ListDisciplines_Click);
+            // 
+            // btn_CreateDiscipline
+            // 
+            this.btn_CreateDiscipline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_CreateDiscipline.FlatAppearance.BorderSize = 0;
+            this.btn_CreateDiscipline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_CreateDiscipline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CreateDiscipline.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CreateDiscipline.ForeColor = System.Drawing.Color.White;
+            this.btn_CreateDiscipline.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_CreateDiscipline.Location = new System.Drawing.Point(3, 0);
+            this.btn_CreateDiscipline.Name = "btn_CreateDiscipline";
+            this.btn_CreateDiscipline.Size = new System.Drawing.Size(228, 40);
+            this.btn_CreateDiscipline.TabIndex = 7;
+            this.btn_CreateDiscipline.Text = "Agregar Disciplina";
+            this.btn_CreateDiscipline.UseVisualStyleBackColor = false;
+            this.btn_CreateDiscipline.Click += new System.EventHandler(this.btn_CreateDiscipline_Click);
+            // 
             // decoration_ToBtnCategories
             // 
             this.decoration_ToBtnCategories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.decoration_ToBtnCategories.Location = new System.Drawing.Point(0, 356);
+            this.decoration_ToBtnCategories.Location = new System.Drawing.Point(0, 304);
             this.decoration_ToBtnCategories.Name = "decoration_ToBtnCategories";
             this.decoration_ToBtnCategories.Size = new System.Drawing.Size(5, 50);
             this.decoration_ToBtnCategories.TabIndex = 15;
             this.decoration_ToBtnCategories.Visible = false;
             // 
+            // btn_Categories
+            // 
+            this.btn_Categories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_Categories.FlatAppearance.BorderSize = 0;
+            this.btn_Categories.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_Categories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Categories.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.btn_Categories.ForeColor = System.Drawing.Color.White;
+            this.btn_Categories.Image = global::Vistas.Properties.Resources.list;
+            this.btn_Categories.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Categories.Location = new System.Drawing.Point(6, 247);
+            this.btn_Categories.Name = "btn_Categories";
+            this.btn_Categories.Size = new System.Drawing.Size(236, 50);
+            this.btn_Categories.TabIndex = 14;
+            this.btn_Categories.Text = "Categorias";
+            this.btn_Categories.UseVisualStyleBackColor = false;
+            this.btn_Categories.Visible = false;
+            this.btn_Categories.Click += new System.EventHandler(this.btn_Categories_Click);
+            // 
             // pnl_SubMenuEvents
             // 
             this.pnl_SubMenuEvents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
             this.pnl_SubMenuEvents.Controls.Add(this.panel11);
+            this.pnl_SubMenuEvents.Controls.Add(this.panel28);
+            this.pnl_SubMenuEvents.Controls.Add(this.btn_Resultados);
+            this.pnl_SubMenuEvents.Controls.Add(this.panel27);
+            this.pnl_SubMenuEvents.Controls.Add(this.panel22);
+            this.pnl_SubMenuEvents.Controls.Add(this.btn_Cronometrajes);
+            this.pnl_SubMenuEvents.Controls.Add(this.btn_Acreditaciones);
             this.pnl_SubMenuEvents.Controls.Add(this.panel12);
-            this.pnl_SubMenuEvents.Controls.Add(this.btn_ListEvents);
+            this.pnl_SubMenuEvents.Controls.Add(this.btn_EliminarInscripcion);
             this.pnl_SubMenuEvents.Controls.Add(this.btn_CreateEvent);
-            this.pnl_SubMenuEvents.Location = new System.Drawing.Point(28, 476);
+            this.pnl_SubMenuEvents.Location = new System.Drawing.Point(28, 412);
             this.pnl_SubMenuEvents.Name = "pnl_SubMenuEvents";
-            this.pnl_SubMenuEvents.Size = new System.Drawing.Size(211, 92);
+            this.pnl_SubMenuEvents.Size = new System.Drawing.Size(211, 197);
             this.pnl_SubMenuEvents.TabIndex = 26;
             this.pnl_SubMenuEvents.Visible = false;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.panel11.Location = new System.Drawing.Point(0, 46);
+            this.panel11.Location = new System.Drawing.Point(0, 41);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(5, 40);
+            this.panel11.Size = new System.Drawing.Size(5, 35);
             this.panel11.TabIndex = 10;
             // 
             // panel12
@@ -817,24 +930,25 @@
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(5, 40);
+            this.panel12.Size = new System.Drawing.Size(5, 35);
             this.panel12.TabIndex = 8;
             // 
-            // btn_ListEvents
+            // btn_EliminarInscripcion
             // 
-            this.btn_ListEvents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
-            this.btn_ListEvents.FlatAppearance.BorderSize = 0;
-            this.btn_ListEvents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.btn_ListEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ListEvents.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ListEvents.ForeColor = System.Drawing.Color.White;
-            this.btn_ListEvents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ListEvents.Location = new System.Drawing.Point(3, 46);
-            this.btn_ListEvents.Name = "btn_ListEvents";
-            this.btn_ListEvents.Size = new System.Drawing.Size(208, 40);
-            this.btn_ListEvents.TabIndex = 9;
-            this.btn_ListEvents.Text = "Consultar Inscriptos";
-            this.btn_ListEvents.UseVisualStyleBackColor = false;
+            this.btn_EliminarInscripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_EliminarInscripcion.FlatAppearance.BorderSize = 0;
+            this.btn_EliminarInscripcion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_EliminarInscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EliminarInscripcion.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarInscripcion.ForeColor = System.Drawing.Color.White;
+            this.btn_EliminarInscripcion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_EliminarInscripcion.Location = new System.Drawing.Point(3, 41);
+            this.btn_EliminarInscripcion.Name = "btn_EliminarInscripcion";
+            this.btn_EliminarInscripcion.Size = new System.Drawing.Size(208, 35);
+            this.btn_EliminarInscripcion.TabIndex = 9;
+            this.btn_EliminarInscripcion.Text = "Anular Inscripción";
+            this.btn_EliminarInscripcion.UseVisualStyleBackColor = false;
+            this.btn_EliminarInscripcion.Click += new System.EventHandler(this.btn_EliminarInscripcion_Click);
             // 
             // btn_CreateEvent
             // 
@@ -847,15 +961,57 @@
             this.btn_CreateEvent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_CreateEvent.Location = new System.Drawing.Point(3, 0);
             this.btn_CreateEvent.Name = "btn_CreateEvent";
-            this.btn_CreateEvent.Size = new System.Drawing.Size(208, 40);
+            this.btn_CreateEvent.Size = new System.Drawing.Size(208, 35);
             this.btn_CreateEvent.TabIndex = 7;
             this.btn_CreateEvent.Text = "Inscribir Atleta";
             this.btn_CreateEvent.UseVisualStyleBackColor = false;
+            this.btn_CreateEvent.Click += new System.EventHandler(this.btn_CreateEvent_Click);
+            // 
+            // btn_Users
+            // 
+            this.btn_Users.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_Users.FlatAppearance.BorderSize = 0;
+            this.btn_Users.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_Users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Users.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.btn_Users.ForeColor = System.Drawing.Color.White;
+            this.btn_Users.Image = global::Vistas.Properties.Resources.user;
+            this.btn_Users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Users.Location = new System.Drawing.Point(6, 76);
+            this.btn_Users.Name = "btn_Users";
+            this.btn_Users.Size = new System.Drawing.Size(236, 50);
+            this.btn_Users.TabIndex = 7;
+            this.btn_Users.Text = "Usuarios";
+            this.btn_Users.UseVisualStyleBackColor = false;
+            this.btn_Users.Visible = false;
+            this.btn_Users.Click += new System.EventHandler(this.btn_Users_Click);
+            // 
+            // btn_LogOut
+            // 
+            this.btn_LogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_LogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(185)))), ((int)(((byte)(190)))));
+            this.btn_LogOut.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn_LogOut.FlatAppearance.BorderSize = 0;
+            this.btn_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LogOut.Font = new System.Drawing.Font("Verdana", 7F, System.Drawing.FontStyle.Bold);
+            this.btn_LogOut.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_LogOut.Image = ((System.Drawing.Image)(resources.GetObject("btn_LogOut.Image")));
+            this.btn_LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LogOut.Location = new System.Drawing.Point(12, 537);
+            this.btn_LogOut.Name = "btn_LogOut";
+            this.btn_LogOut.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btn_LogOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_LogOut.Size = new System.Drawing.Size(212, 48);
+            this.btn_LogOut.TabIndex = 10;
+            this.btn_LogOut.Text = "CERRAR SESIÓN";
+            this.btn_LogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_LogOut.UseVisualStyleBackColor = false;
+            this.btn_LogOut.Click += new System.EventHandler(this.btn_LogOut_Click);
             // 
             // decoration_ToBtnUsers
             // 
             this.decoration_ToBtnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.decoration_ToBtnUsers.Location = new System.Drawing.Point(0, 100);
+            this.decoration_ToBtnUsers.Location = new System.Drawing.Point(0, 76);
             this.decoration_ToBtnUsers.Name = "decoration_ToBtnUsers";
             this.decoration_ToBtnUsers.Size = new System.Drawing.Size(5, 50);
             this.decoration_ToBtnUsers.TabIndex = 8;
@@ -864,29 +1020,86 @@
             // decoration_ToBtnEvents
             // 
             this.decoration_ToBtnEvents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.decoration_ToBtnEvents.Location = new System.Drawing.Point(0, 292);
+            this.decoration_ToBtnEvents.Location = new System.Drawing.Point(0, 247);
             this.decoration_ToBtnEvents.Name = "decoration_ToBtnEvents";
             this.decoration_ToBtnEvents.Size = new System.Drawing.Size(5, 50);
             this.decoration_ToBtnEvents.TabIndex = 6;
             this.decoration_ToBtnEvents.Visible = false;
             // 
+            // btn_Events
+            // 
+            this.btn_Events.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_Events.FlatAppearance.BorderSize = 0;
+            this.btn_Events.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_Events.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Events.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.btn_Events.ForeColor = System.Drawing.Color.White;
+            this.btn_Events.Image = global::Vistas.Properties.Resources._event;
+            this.btn_Events.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Events.Location = new System.Drawing.Point(3, 361);
+            this.btn_Events.Name = "btn_Events";
+            this.btn_Events.Size = new System.Drawing.Size(239, 50);
+            this.btn_Events.TabIndex = 5;
+            this.btn_Events.Text = "Eventos";
+            this.btn_Events.UseVisualStyleBackColor = false;
+            this.btn_Events.Visible = false;
+            this.btn_Events.Click += new System.EventHandler(this.btn_Events_Click);
+            // 
             // decoration_ToBtnAthletes
             // 
             this.decoration_ToBtnAthletes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.decoration_ToBtnAthletes.Location = new System.Drawing.Point(0, 228);
+            this.decoration_ToBtnAthletes.Location = new System.Drawing.Point(0, 190);
             this.decoration_ToBtnAthletes.Name = "decoration_ToBtnAthletes";
             this.decoration_ToBtnAthletes.Size = new System.Drawing.Size(5, 50);
             this.decoration_ToBtnAthletes.TabIndex = 4;
             this.decoration_ToBtnAthletes.Visible = false;
             // 
+            // btn_Athletes
+            // 
+            this.btn_Athletes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_Athletes.FlatAppearance.BorderSize = 0;
+            this.btn_Athletes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_Athletes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Athletes.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.btn_Athletes.ForeColor = System.Drawing.Color.White;
+            this.btn_Athletes.Image = global::Vistas.Properties.Resources.athlete;
+            this.btn_Athletes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Athletes.Location = new System.Drawing.Point(3, 190);
+            this.btn_Athletes.Name = "btn_Athletes";
+            this.btn_Athletes.Size = new System.Drawing.Size(239, 50);
+            this.btn_Athletes.TabIndex = 3;
+            this.btn_Athletes.Text = "Atletas";
+            this.btn_Athletes.UseVisualStyleBackColor = false;
+            this.btn_Athletes.Visible = false;
+            this.btn_Athletes.Click += new System.EventHandler(this.btn_Athletes_Click);
+            // 
             // decoration_ToBtnCompetitions
             // 
             this.decoration_ToBtnCompetitions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.decoration_ToBtnCompetitions.Location = new System.Drawing.Point(0, 164);
+            this.decoration_ToBtnCompetitions.Location = new System.Drawing.Point(0, 132);
             this.decoration_ToBtnCompetitions.Name = "decoration_ToBtnCompetitions";
             this.decoration_ToBtnCompetitions.Size = new System.Drawing.Size(5, 50);
             this.decoration_ToBtnCompetitions.TabIndex = 2;
             this.decoration_ToBtnCompetitions.Visible = false;
+            // 
+            // btn_Competitions
+            // 
+            this.btn_Competitions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_Competitions.FlatAppearance.BorderSize = 0;
+            this.btn_Competitions.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_Competitions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Competitions.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
+            this.btn_Competitions.ForeColor = System.Drawing.Color.White;
+            this.btn_Competitions.Image = global::Vistas.Properties.Resources.icons8_medal_30;
+            this.btn_Competitions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Competitions.Location = new System.Drawing.Point(3, 133);
+            this.btn_Competitions.Name = "btn_Competitions";
+            this.btn_Competitions.Size = new System.Drawing.Size(239, 50);
+            this.btn_Competitions.TabIndex = 1;
+            this.btn_Competitions.Text = "Competencias";
+            this.btn_Competitions.UseVisualStyleBackColor = false;
+            this.btn_Competitions.Visible = false;
+            this.btn_Competitions.Click += new System.EventHandler(this.btn_Competitions_Click);
             // 
             // panel2
             // 
@@ -922,15 +1135,6 @@
             this.lbl_FullName.TabIndex = 1;
             this.lbl_FullName.Text = "Nombre Completo";
             // 
-            // pnl_Container
-            // 
-            this.pnl_Container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.pnl_Container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Container.Location = new System.Drawing.Point(242, 108);
-            this.pnl_Container.Name = "pnl_Container";
-            this.pnl_Container.Size = new System.Drawing.Size(1058, 542);
-            this.pnl_Container.TabIndex = 5;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -942,204 +1146,89 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pbx_Logo
+            // pnl_Container
             // 
-            this.pbx_Logo.Image = global::Vistas.Properties.Resources.logo;
-            this.pbx_Logo.Location = new System.Drawing.Point(6, 6);
-            this.pbx_Logo.Name = "pbx_Logo";
-            this.pbx_Logo.Size = new System.Drawing.Size(224, 80);
-            this.pbx_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_Logo.TabIndex = 17;
-            this.pbx_Logo.TabStop = false;
+            this.pnl_Container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.pnl_Container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Container.Location = new System.Drawing.Point(242, 108);
+            this.pnl_Container.Name = "pnl_Container";
+            this.pnl_Container.Size = new System.Drawing.Size(1058, 542);
+            this.pnl_Container.TabIndex = 5;
             // 
-            // btn_Disciplines
+            // panel22
             // 
-            this.btn_Disciplines.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
-            this.btn_Disciplines.FlatAppearance.BorderSize = 0;
-            this.btn_Disciplines.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.btn_Disciplines.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Disciplines.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.btn_Disciplines.ForeColor = System.Drawing.Color.White;
-            this.btn_Disciplines.Image = global::Vistas.Properties.Resources.list;
-            this.btn_Disciplines.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Disciplines.Location = new System.Drawing.Point(6, 356);
-            this.btn_Disciplines.Name = "btn_Disciplines";
-            this.btn_Disciplines.Size = new System.Drawing.Size(236, 50);
-            this.btn_Disciplines.TabIndex = 14;
-            this.btn_Disciplines.Text = "Disciplinas";
-            this.btn_Disciplines.UseVisualStyleBackColor = false;
-            this.btn_Disciplines.Visible = false;
-            this.btn_Disciplines.Click += new System.EventHandler(this.btn_Disciplines_Click);
+            this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.panel22.Location = new System.Drawing.Point(0, 82);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(5, 35);
+            this.panel22.TabIndex = 11;
             // 
-            // btn_Categories
+            // btn_Cronometrajes
             // 
-            this.btn_Categories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
-            this.btn_Categories.FlatAppearance.BorderSize = 0;
-            this.btn_Categories.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.btn_Categories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Categories.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.btn_Categories.ForeColor = System.Drawing.Color.White;
-            this.btn_Categories.Image = global::Vistas.Properties.Resources.list;
-            this.btn_Categories.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Categories.Location = new System.Drawing.Point(6, 292);
-            this.btn_Categories.Name = "btn_Categories";
-            this.btn_Categories.Size = new System.Drawing.Size(236, 50);
-            this.btn_Categories.TabIndex = 14;
-            this.btn_Categories.Text = "Categorias";
-            this.btn_Categories.UseVisualStyleBackColor = false;
-            this.btn_Categories.Visible = false;
-            this.btn_Categories.Click += new System.EventHandler(this.btn_Categories_Click);
+            this.btn_Cronometrajes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_Cronometrajes.FlatAppearance.BorderSize = 0;
+            this.btn_Cronometrajes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_Cronometrajes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cronometrajes.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cronometrajes.ForeColor = System.Drawing.Color.White;
+            this.btn_Cronometrajes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Cronometrajes.Location = new System.Drawing.Point(3, 123);
+            this.btn_Cronometrajes.Name = "btn_Cronometrajes";
+            this.btn_Cronometrajes.Size = new System.Drawing.Size(208, 35);
+            this.btn_Cronometrajes.TabIndex = 12;
+            this.btn_Cronometrajes.Text = "Cronometrajes";
+            this.btn_Cronometrajes.UseVisualStyleBackColor = false;
+            this.btn_Cronometrajes.Click += new System.EventHandler(this.btn_Cronometrajes_Click);
             // 
-            // btn_Users
+            // btn_Acreditaciones
             // 
-            this.btn_Users.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
-            this.btn_Users.FlatAppearance.BorderSize = 0;
-            this.btn_Users.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.btn_Users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Users.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.btn_Users.ForeColor = System.Drawing.Color.White;
-            this.btn_Users.Image = global::Vistas.Properties.Resources.user;
-            this.btn_Users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Users.Location = new System.Drawing.Point(6, 100);
-            this.btn_Users.Name = "btn_Users";
-            this.btn_Users.Size = new System.Drawing.Size(236, 50);
-            this.btn_Users.TabIndex = 7;
-            this.btn_Users.Text = "Usuarios";
-            this.btn_Users.UseVisualStyleBackColor = false;
-            this.btn_Users.Visible = false;
-            this.btn_Users.Click += new System.EventHandler(this.btn_Users_Click);
+            this.btn_Acreditaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_Acreditaciones.FlatAppearance.BorderSize = 0;
+            this.btn_Acreditaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_Acreditaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Acreditaciones.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Acreditaciones.ForeColor = System.Drawing.Color.White;
+            this.btn_Acreditaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Acreditaciones.Location = new System.Drawing.Point(3, 82);
+            this.btn_Acreditaciones.Name = "btn_Acreditaciones";
+            this.btn_Acreditaciones.Size = new System.Drawing.Size(208, 35);
+            this.btn_Acreditaciones.TabIndex = 10;
+            this.btn_Acreditaciones.Text = "Acreditaciones";
+            this.btn_Acreditaciones.UseVisualStyleBackColor = false;
+            this.btn_Acreditaciones.Click += new System.EventHandler(this.btn_Acreditaciones_Click);
             // 
-            // btn_LogOut
+            // panel27
             // 
-            this.btn_LogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_LogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(185)))), ((int)(((byte)(190)))));
-            this.btn_LogOut.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
-            this.btn_LogOut.FlatAppearance.BorderSize = 0;
-            this.btn_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_LogOut.Font = new System.Drawing.Font("Verdana", 7F, System.Drawing.FontStyle.Bold);
-            this.btn_LogOut.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_LogOut.Image = ((System.Drawing.Image)(resources.GetObject("btn_LogOut.Image")));
-            this.btn_LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LogOut.Location = new System.Drawing.Point(12, 537);
-            this.btn_LogOut.Name = "btn_LogOut";
-            this.btn_LogOut.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btn_LogOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_LogOut.Size = new System.Drawing.Size(212, 48);
-            this.btn_LogOut.TabIndex = 10;
-            this.btn_LogOut.Text = "CERRAR SESIÓN";
-            this.btn_LogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_LogOut.UseVisualStyleBackColor = false;
-            this.btn_LogOut.Click += new System.EventHandler(this.btn_LogOut_Click);
+            this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.panel27.Location = new System.Drawing.Point(0, 123);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(5, 35);
+            this.panel27.TabIndex = 12;
             // 
-            // btn_Events
+            // panel28
             // 
-            this.btn_Events.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
-            this.btn_Events.FlatAppearance.BorderSize = 0;
-            this.btn_Events.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.btn_Events.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Events.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.btn_Events.ForeColor = System.Drawing.Color.White;
-            this.btn_Events.Image = global::Vistas.Properties.Resources._event;
-            this.btn_Events.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Events.Location = new System.Drawing.Point(3, 420);
-            this.btn_Events.Name = "btn_Events";
-            this.btn_Events.Size = new System.Drawing.Size(239, 50);
-            this.btn_Events.TabIndex = 5;
-            this.btn_Events.Text = "Eventos";
-            this.btn_Events.UseVisualStyleBackColor = false;
-            this.btn_Events.Visible = false;
-            this.btn_Events.Click += new System.EventHandler(this.btn_Events_Click);
+            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.panel28.Location = new System.Drawing.Point(0, 164);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(5, 35);
+            this.panel28.TabIndex = 13;
             // 
-            // btn_Athletes
+            // btn_Resultados
             // 
-            this.btn_Athletes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
-            this.btn_Athletes.FlatAppearance.BorderSize = 0;
-            this.btn_Athletes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.btn_Athletes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Athletes.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.btn_Athletes.ForeColor = System.Drawing.Color.White;
-            this.btn_Athletes.Image = global::Vistas.Properties.Resources.athlete;
-            this.btn_Athletes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Athletes.Location = new System.Drawing.Point(3, 228);
-            this.btn_Athletes.Name = "btn_Athletes";
-            this.btn_Athletes.Size = new System.Drawing.Size(239, 50);
-            this.btn_Athletes.TabIndex = 3;
-            this.btn_Athletes.Text = "Atletas";
-            this.btn_Athletes.UseVisualStyleBackColor = false;
-            this.btn_Athletes.Visible = false;
-            this.btn_Athletes.Click += new System.EventHandler(this.btn_Athletes_Click);
-            // 
-            // btn_Competitions
-            // 
-            this.btn_Competitions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
-            this.btn_Competitions.FlatAppearance.BorderSize = 0;
-            this.btn_Competitions.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
-            this.btn_Competitions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Competitions.Font = new System.Drawing.Font("Segoe UI Historic", 10F);
-            this.btn_Competitions.ForeColor = System.Drawing.Color.White;
-            this.btn_Competitions.Image = global::Vistas.Properties.Resources.icons8_medal_30;
-            this.btn_Competitions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Competitions.Location = new System.Drawing.Point(3, 164);
-            this.btn_Competitions.Name = "btn_Competitions";
-            this.btn_Competitions.Size = new System.Drawing.Size(239, 50);
-            this.btn_Competitions.TabIndex = 1;
-            this.btn_Competitions.Text = "Competencias";
-            this.btn_Competitions.UseVisualStyleBackColor = false;
-            this.btn_Competitions.Visible = false;
-            this.btn_Competitions.Click += new System.EventHandler(this.btn_Competitions_Click);
-            // 
-            // btn_Restore
-            // 
-            this.btn_Restore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Restore.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Restore.Image = ((System.Drawing.Image)(resources.GetObject("btn_Restore.Image")));
-            this.btn_Restore.Location = new System.Drawing.Point(1214, 7);
-            this.btn_Restore.Name = "btn_Restore";
-            this.btn_Restore.Size = new System.Drawing.Size(25, 25);
-            this.btn_Restore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_Restore.TabIndex = 2;
-            this.btn_Restore.TabStop = false;
-            this.btn_Restore.Visible = false;
-            this.btn_Restore.Click += new System.EventHandler(this.btn_Restore_Click);
-            // 
-            // btn_Minimize
-            // 
-            this.btn_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Minimize.Image = ((System.Drawing.Image)(resources.GetObject("btn_Minimize.Image")));
-            this.btn_Minimize.Location = new System.Drawing.Point(1167, 7);
-            this.btn_Minimize.Name = "btn_Minimize";
-            this.btn_Minimize.Size = new System.Drawing.Size(25, 25);
-            this.btn_Minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_Minimize.TabIndex = 1;
-            this.btn_Minimize.TabStop = false;
-            this.btn_Minimize.Click += new System.EventHandler(this.btn_Minimize_Click);
-            // 
-            // btn_Maximize
-            // 
-            this.btn_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Maximize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Maximize.Image = ((System.Drawing.Image)(resources.GetObject("btn_Maximize.Image")));
-            this.btn_Maximize.Location = new System.Drawing.Point(1214, 7);
-            this.btn_Maximize.Name = "btn_Maximize";
-            this.btn_Maximize.Size = new System.Drawing.Size(25, 25);
-            this.btn_Maximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_Maximize.TabIndex = 3;
-            this.btn_Maximize.TabStop = false;
-            this.btn_Maximize.Click += new System.EventHandler(this.btn_Maximize_Click);
-            // 
-            // btn_Cerrar
-            // 
-            this.btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cerrar.Image")));
-            this.btn_Cerrar.Location = new System.Drawing.Point(1261, 7);
-            this.btn_Cerrar.Name = "btn_Cerrar";
-            this.btn_Cerrar.Size = new System.Drawing.Size(25, 25);
-            this.btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_Cerrar.TabIndex = 0;
-            this.btn_Cerrar.TabStop = false;
-            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
+            this.btn_Resultados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(78)))), ((int)(((byte)(32)))));
+            this.btn_Resultados.FlatAppearance.BorderSize = 0;
+            this.btn_Resultados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(49)))), ((int)(((byte)(38)))));
+            this.btn_Resultados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Resultados.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Resultados.ForeColor = System.Drawing.Color.White;
+            this.btn_Resultados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Resultados.Location = new System.Drawing.Point(3, 164);
+            this.btn_Resultados.Name = "btn_Resultados";
+            this.btn_Resultados.Size = new System.Drawing.Size(208, 35);
+            this.btn_Resultados.TabIndex = 14;
+            this.btn_Resultados.Text = "Resultados";
+            this.btn_Resultados.UseVisualStyleBackColor = false;
+            this.btn_Resultados.Click += new System.EventHandler(this.btn_Resultados_Click);
             // 
             // frmPrincipal
             // 
@@ -1156,21 +1245,21 @@
             this.Text = "Frm_Principal";
             this.Load += new System.EventHandler(this.Frm_Principal_Load);
             this.pnl_TitleBar.ResumeLayout(false);
-            this.pnl_MenuVertical.ResumeLayout(false);
-            this.pnl_SubMenuUsers.ResumeLayout(false);
-            this.pnl_SubMenuCompetitions.ResumeLayout(false);
-            this.pnl_SubMenuAthletes.ResumeLayout(false);
-            this.pnl_SubMenuDiscipline.ResumeLayout(false);
-            this.pnl_SubMenuCategory.ResumeLayout(false);
-            this.pnl_SubMenuEvents.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Restore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Maximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar)).EndInit();
+            this.pnl_MenuVertical.ResumeLayout(false);
+            this.pnl_SubMenuUsers.ResumeLayout(false);
+            this.pnl_SubMenuCompetitions.ResumeLayout(false);
+            this.pnl_SubMenuAthletes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_Logo)).EndInit();
+            this.pnl_SubMenuCategory.ResumeLayout(false);
+            this.pnl_SubMenuDiscipline.ResumeLayout(false);
+            this.pnl_SubMenuEvents.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1243,7 +1332,7 @@
         private System.Windows.Forms.Panel pnl_SubMenuEvents;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Button btn_ListEvents;
+        private System.Windows.Forms.Button btn_EliminarInscripcion;
         private System.Windows.Forms.Button btn_CreateEvent;
         private System.Windows.Forms.Panel pnl_SubMenuCompetitions;
         private System.Windows.Forms.Panel panel13;
@@ -1254,5 +1343,11 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btn_ListCompetitions;
         private System.Windows.Forms.Button btn_CreateCompetition;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Button btn_Cronometrajes;
+        private System.Windows.Forms.Button btn_Acreditaciones;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Button btn_Resultados;
     }
 }
