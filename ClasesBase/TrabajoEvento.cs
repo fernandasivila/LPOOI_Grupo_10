@@ -135,5 +135,22 @@ namespace ClasesBase
                 return null;
             
         }
+
+        public static int AnularInscripcion(int atletaId, int competenciaId)
+        {
+            using (SqlConnection connection = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString))
+            {
+                SqlCommand command = new SqlCommand("AnularInscripcion", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@AtletaId", atletaId);
+                command.Parameters.AddWithValue("@CompetenciaId", competenciaId);
+
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+                connection.Close();
+
+                return rowsAffected;
+            }
+        }
     }
 }

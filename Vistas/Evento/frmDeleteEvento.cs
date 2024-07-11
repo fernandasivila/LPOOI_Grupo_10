@@ -19,7 +19,7 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private void frmCreateEvento_Load(object sender, EventArgs e)
+        private void frmAnularEvento_Load(object sender, EventArgs e)
         {
             LlenarComboBoxAtletas();
             LlenarComboBoxCompetencias();
@@ -28,63 +28,36 @@ namespace Vistas
         private void LlenarComboBoxAtletas()
         {
             List<Atleta> listaAtletas = TrabajoAtleta.obtenerAtletas();
-            cbxAtleta.DataSource = listaAtletas;
-            cbxAtleta.DisplayMember = "NombreCompleto";
-            cbxAtleta.ValueMember = "Atl_ID";
+            cmbAtleta.DataSource = listaAtletas;
+            cmbAtleta.DisplayMember = "NombreCompleto";
+            cmbAtleta.ValueMember = "Atl_ID";
 
-            cbxAtleta.Text = "Seleccione un/a atleta";
+            cmbAtleta.Text = "Seleccione un/a atleta";
         }
 
         private void LlenarComboBoxCompetencias()
         {
             DataTable listaCompetencias = TrabajoCompetencia.obtenerCompetenciasActivas();
-            cbxCompetencia.DataSource = listaCompetencias;
-            cbxCompetencia.DisplayMember = "Com_Nombre";
-            cbxCompetencia.ValueMember = "Com_ID";
+            cmbCompetencia.DataSource = listaCompetencias;
+            cmbCompetencia.DisplayMember = "Com_Nombre";
+            cmbCompetencia.ValueMember = "Com_ID";
 
-            cbxCompetencia.Text = "Seleccione una competencia";
-        }
-
-        private void llblRegistrarAtleta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmCreateAtleta frm_CreateAtleta = new frmCreateAtleta("registrar");
-            (this.ParentForm as frmPrincipal)?.OpenFormChild(frm_CreateAtleta);
+            cmbCompetencia.Text = "Seleccione una competencia";
         }
 
         private bool ValidarCampos(out string mensajeError)
         {
             mensajeError = string.Empty;
-            if (cbxAtleta.Text == "Seleccione un/a atleta")
+            if (cmbAtleta.Text == "Seleccione un/a atleta")
             {
-                mensajeError = "Debe elegir un Atleta para inscribir.";
+                mensajeError = "Debe elegir un Atleta para anular.";
                 return false;
             }
-            if (cbxCompetencia.Text == "Seleccione una competencia")
+            if (cmbCompetencia.Text == "Seleccione una competencia")
             {
-                mensajeError = "Debe elegir una competencia para inscribir.";
+                mensajeError = "Debe elegir una competencia para anular.";
                 return false;
             }
-
-            int Atl_ID = (int)cbxAtleta.SelectedValue;
-
-            int Com_ID = (int)cbxCompetencia.SelectedValue;
-
-            if (!TrabajoEvento.verificarInscripcionPrevia(Com_ID, Atl_ID))
-            {
-                mensajeError = "El atleta ya se inscribió previamente a esta competencia.";
-                return false;
-            }
-
-            Competencia competencia= TrabajoCompetencia.ObtenerCompetenciaById(Com_ID);
-            DateTime fechaHoraActual = DateTime.Now;
-
-            if (competencia.Com_FechaInicio < fechaHoraActual)
-            {
-                mensajeError = $"La competencia {competencia.Com_Nombre} ya inició. No es posible realizar mas inscripciones";
-                return false;
-            }
-
-
             return true;
         }
 
@@ -95,11 +68,11 @@ namespace Vistas
 
         private void VaciarCampos()
         {
-            cbxAtleta.Text = "Seleccione un/a atleta";
-            cbxCompetencia.Text = "Seleccione una competencia";
+            cmbAtleta.Text = "Seleccione un/a atleta";
+            cmbCompetencia.Text = "Seleccione una competencia";
         }
 
-        private void btnRegistrarInscripcion_Click(object sender, EventArgs e)
+        private void btnAnularInscripcion_Click(object sender, EventArgs e)
         {
             string mensajeError;
             if (!ValidarCampos(out mensajeError))
@@ -107,16 +80,22 @@ namespace Vistas
                 MessageBox.Show(mensajeError, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            Evento oEvento = new Evento();
-            oEvento.Atl_ID = (int)cbxAtleta.SelectedValue;
-            oEvento.Com_ID = (int)cbxCompetencia.SelectedValue;
-            oEvento.Eve_Estado = "Inscripto";
 
-            Console.WriteLine(oEvento.Eve_Estado);
+            int atl_ID = (int)cmbAtleta.SelectedValue;
+            int com_ID = (int)cmbCompetencia.SelectedValue;
 
-            TrabajoEvento.AgregarEvento(oEvento);
-            MessageBox.Show("Se ha cargado exitosamente la inscripción", "Inscripción registrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            VaciarCampos();
+            int rowsAffected = TrabajoEvento.AnularInscripcion(atl_ID, com_ID);
+
+            if (rowsAffected > 0)
+            {
+                MessageBox.Show("Se ha anulado exitosamente la inscripción", "Inscripción Anulada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                VaciarCampos();
+            }
+            else
+            {
+                MessageBox.Show("No se encontró una inscripción para el atleta en la competencia seleccionada.");
+            }
+            
         }
     }
 }
