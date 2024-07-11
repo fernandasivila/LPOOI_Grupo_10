@@ -22,7 +22,6 @@ namespace Vistas
         private void frmCreateEvento_Load(object sender, EventArgs e)
         {
             LlenarComboBoxAtletas();
-            LlenarComboBoxCompetencias();
         }
 
         private void LlenarComboBoxAtletas()
@@ -37,54 +36,44 @@ namespace Vistas
 
         private void LlenarComboBoxCompetencias()
         {
-            DataTable listaCompetencias = TrabajoCompetencia.obtenerCompetenciasActivas();
-            cbxCompetencia.DataSource = listaCompetencias;
-            cbxCompetencia.DisplayMember = "Com_Nombre";
-            cbxCompetencia.ValueMember = "Com_ID";
+            if (cbxAtleta.SelectedValue == null)
+            {
+                cbxCompetencia.DataSource = null;
+                cbxCompetencia.Text = "Seleccione una competencia";
+                return;
+            }
+            if (cbxAtleta.SelectedValue is int atletaID)
+            {
+                List<Competencia> listaCompetencias = TrabajoEvento.ObtenerListaCompetenciasPorAtleta(atletaID);
+                cbxCompetencia.DataSource = listaCompetencias;
+                cbxCompetencia.DisplayMember = "Com_Nombre";
+                cbxCompetencia.ValueMember = "Com_ID";
 
-            cbxCompetencia.Text = "Seleccione una competencia";
+                cbxCompetencia.Text = "Seleccione una competencia";
+
+                DataTable listaCom = TrabajoEvento.ObtenerCompetenciasPorAtleta(atletaID);
+                dgvAcreditacion.DataSource = listaCompetencias;
+            }
+            else
+            {
+                cbxCompetencia.DataSource = null;
+                dgvAcreditacion.DataSource = null;
+                cbxCompetencia.Text = "Seleccione una competencia";
+            }
         }
-
-        private void llblRegistrarAtleta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmCreateAtleta frm_CreateAtleta = new frmCreateAtleta("registrar");
-            (this.ParentForm as frmPrincipal)?.OpenFormChild(frm_CreateAtleta);
-        }
-
         private bool ValidarCampos(out string mensajeError)
         {
             mensajeError = string.Empty;
             if (cbxAtleta.Text == "Seleccione un/a atleta")
             {
-                mensajeError = "Debe elegir un Atleta para inscribir.";
+                mensajeError = "Debe elegir un Atleta para Acreditar.";
                 return false;
             }
             if (cbxCompetencia.Text == "Seleccione una competencia")
             {
-                mensajeError = "Debe elegir una competencia para inscribir.";
+                mensajeError = "Debe elegir una competencia para Acreditar.";
                 return false;
             }
-
-            int Atl_ID = (int)cbxAtleta.SelectedValue;
-
-            int Com_ID = (int)cbxCompetencia.SelectedValue;
-
-            if (!TrabajoEvento.verificarInscripcionPrevia(Com_ID, Atl_ID))
-            {
-                mensajeError = "El atleta ya se inscribió previamente a esta competencia.";
-                return false;
-            }
-
-            Competencia competencia= TrabajoCompetencia.ObtenerCompetenciaById(Com_ID);
-            DateTime fechaHoraActual = DateTime.Now;
-
-            if (competencia.Com_FechaInicio < fechaHoraActual)
-            {
-                mensajeError = $"La competencia {competencia.Com_Nombre} ya inició. No es posible realizar mas inscripciones";
-                return false;
-            }
-
-
             return true;
         }
 
@@ -97,9 +86,16 @@ namespace Vistas
         {
             cbxAtleta.Text = "Seleccione un/a atleta";
             cbxCompetencia.Text = "Seleccione una competencia";
+            cbxCompetencia.DataSource = null;
+            dgvAcreditacion.DataSource = null;
         }
 
-        private void btnRegistrarInscripcion_Click(object sender, EventArgs e)
+        private void cbxAtleta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LlenarComboBoxCompetencias();
+        }
+
+        private void btnRegistrarAcreditacion_Click(object sender, EventArgs e)
         {
             string mensajeError;
             if (!ValidarCampos(out mensajeError))
@@ -107,16 +103,25 @@ namespace Vistas
                 MessageBox.Show(mensajeError, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            Evento oEvento = new Evento();
-            oEvento.Atl_ID = (int)cbxAtleta.SelectedValue;
-            oEvento.Com_ID = (int)cbxCompetencia.SelectedValue;
-            oEvento.Eve_Estado = "Inscripto";
+            int atl_ID;
+            int com_ID;
+            try
+            {
+                atl_ID = Convert.ToInt32(cbxAtleta.SelectedValue);
+                com_ID = Convert.ToInt32(cbxCompetencia.SelectedValue);
+            }
+            catch (InvalidCastException)
+            {
+                MessageBox.Show("Error al convertir los valores seleccionados. Asegúrese de seleccionar un atleta y una competencia válidos.", "Error de conversión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            Console.WriteLine(oEvento.Eve_Estado);
 
-            TrabajoEvento.AgregarEvento(oEvento);
-            MessageBox.Show("Se ha cargado exitosamente la inscripción", "Inscripción registrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            VaciarCampos();
+            TrabajoEvento.AcreditarInscripcion(atl_ID, com_ID);
+
+            
+                MessageBox.Show("Se ha acreditado exitosamente la Inscripcion", "Inscripción Acreditada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                VaciarCampos();
         }
     }
 }

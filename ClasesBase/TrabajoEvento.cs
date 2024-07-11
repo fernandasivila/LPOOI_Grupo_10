@@ -152,5 +152,88 @@ namespace ClasesBase
                 return rowsAffected;
             }
         }
+
+        public static List<Competencia> ObtenerListaCompetenciasPorAtleta(int atletaID)
+        {
+            List<Competencia> competencias = new List<Competencia>();
+
+            using (SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "ObtenerCompetenciasPorAtleta";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = cnn;
+
+                cmd.Parameters.AddWithValue("@AtletaID", atletaID);
+
+                cnn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Competencia competencia = new Competencia
+                    {
+                        Com_ID = (int)reader["com_ID"],
+                        Com_Nombre = reader["com_Nombre"].ToString(),
+                        Com_Descripcion = reader["com_Descripcion"].ToString(),
+                        Com_FechaInicio = (DateTime)reader["com_FechaInicio"],
+                        Com_FechaFin = (DateTime)reader["com_FechaFin"],
+                        Com_Estado = reader["com_Estado"].ToString(),
+                        Com_Organizador = reader["com_Organizador"].ToString(),
+                        Com_Ubicacion = reader["com_Ubicacion"].ToString(),
+                        Com_Sponsors = reader["com_Sponsors"].ToString(),
+                        Cat_ID = (int)reader["cat_ID"],
+                        Dis_ID = (int)reader["dis_ID"]
+                    };
+                    competencias.Add(competencia);
+                }
+            }
+            return competencias;
+        }
+
+        public static void AcreditarInscripcion(int atletaID, int competenciaID)
+        {
+            using (SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("AcreditarInscripcion", cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@AtletaId", atletaID);
+                cmd.Parameters.AddWithValue("@CompetenciaId", competenciaID);
+
+                cnn.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+                cnn.Close();
+
+                if (rowsAffected > 0)
+                {
+                    Console.WriteLine("Actualización exitosa. Filas afectadas: " + rowsAffected);
+                }
+                else
+                {
+                    Console.WriteLine("No se encontró el evento para actualizar.");
+                }
+            }
+        }
+
+        public static DataTable ObtenerCompetenciasPorAtleta(int atletaID)
+        {
+            using (SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "ObtenerCompetenciasPorAtleta";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = cnn;
+
+                cmd.Parameters.AddWithValue("@AtletaID", atletaID);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                return dt;
+            }
+        }
     }
 }
