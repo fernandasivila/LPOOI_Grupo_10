@@ -54,7 +54,7 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@Estado", ev.Eve_Estado);
             cmd.Parameters.AddWithValue("@HoraFin",ev.Eve_HoraFin);
             //cmd.Parameters.AddWithValue("@HoraInicio", ev.Eve_HoraIicio);
-            cmd.Parameters.AddWithValue("@HoraInicio", new DateTime());
+            cmd.Parameters.AddWithValue("@HoraInicio", ev.Eve_HoraIicio);
            
             Console.WriteLine("HORA DE INICIO: ",ev.Eve_HoraIicio);
             Console.WriteLine("HORA FIN:",ev.Eve_HoraFin);

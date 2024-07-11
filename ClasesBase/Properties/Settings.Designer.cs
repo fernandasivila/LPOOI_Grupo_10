@@ -27,7 +27,7 @@ namespace ClasesBase.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Estudiante\\Desktop\\M" +
-            "arisel\\LPOOI_2024\\TP_FINAL\\comdep.mdf;Integrated Security=True;Connect Timeout=3" +
+            "arisel\\LPOOI_2024\\TP_Final\\comdep.mdf;Integrated Security=True;Connect Timeout=3" +
             "0")]
         public string comdepConnectionString {
             get {
