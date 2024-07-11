@@ -14,16 +14,19 @@ namespace Vistas
 {
     public partial class frmCronometrajes : Form
     {
+        private Evento oEvento;
+        private DateTime horaInicioGeneral;
         public frmCronometrajes()
         {
             InitializeComponent();
+            panelHorarios.Visible = false;
         }
 
         private void frmCreateEvento_Load(object sender, EventArgs e)
         {
             LlenarComboBoxAtletas();
             LlenarComboBoxCompetencias();
-            LlenarComboBoxEstados();
+           // LlenarComboBoxEstados();
         }
 
         private void LlenarComboBoxAtletas()
@@ -35,11 +38,12 @@ namespace Vistas
 
             cbxAtleta.Text = "Seleccione un/a atleta";
         }
-        private void LlenarComboBoxEstados()
+      /*  private void LlenarComboBoxEstados()
         {
             List<string> estados = new List<string> {"Abandono","Descalificado"};
             cbxStateEvent.DataSource = estados;
         }
+      */
         private void LlenarComboBoxCompetencias()
         {
             DataTable listaCompetencias = TrabajoCompetencia.obtenerCompetenciasActivas();
@@ -78,10 +82,14 @@ namespace Vistas
         {
             cbxAtleta.Text = "Seleccione un/a atleta";
             cbxCompetencia.Text = "Seleccione una competencia";
-            cbxStateEvent.Text = "Seleccione un estado";
+            panelHorarios.Visible = false;
+          //  cbxStateEvent.Text = "Seleccione un estado";
         }
 
-        private void btnRegistrarInscripcion_Click(object sender, EventArgs e)
+       
+
+      
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             string mensajeError;
             if (!ValidarCampos(out mensajeError))
@@ -93,26 +101,70 @@ namespace Vistas
             int idAtleta = Convert.ToInt32(cbxAtleta.SelectedValue);
             int idComp = Convert.ToInt32(cbxCompetencia.SelectedValue);
 
-            Evento oEvento = TrabajoEvento.getEventByComByAtl(idAtleta, idComp);
-            Console.WriteLine("EVENTO ENCONTRADO", oEvento);
+             oEvento = TrabajoEvento.getEventByComByAtl(idAtleta, idComp);
+
             if (oEvento != null)
             {
-                oEvento.Eve_HoraFin = timeFin.Value;
-                Console.WriteLine("HORARIO DE FINALIZACION",oEvento.Eve_HoraFin);
+                Competencia auxCom = TrabajoCompetencia.ObtenerCompetenciaById(idComp);
 
-                TrabajoEvento.ModificarEvento(oEvento);
-                MessageBox.Show("Se ha cargado exitosamente la llegada", "Llegada registrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (auxCom != null) 
+                {
+                    panelHorarios.Visible = true;
+                    dtInicio.Visible = true;
+                    if (auxCom.Com_FechaInicio != DateTime.MinValue)
+                    {
+                        dtInicio.Value = auxCom.Com_FechaInicio;
+                        oEvento.Eve_HoraIicio = auxCom.Com_FechaInicio;
+                        
+                        dtInicio.Enabled = false;
+                    }
+                    else
+                    {
+                        dtInicio.Enabled = true;
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("La competencia no exisete :O", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
             }
             else
             {
                 MessageBox.Show("No se encontró un evento con los datos proporcionados.", "Evento no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               
+                VaciarCampos();
+
+            }
+        }
+
+        private void btnRegistrarInscripcion_Click(object sender, EventArgs e)
+        {
+            try
+            { 
+             oEvento.Eve_HoraFin = dtLlegada.Value;
+                Console.WriteLine("ESTADO", oEvento.Eve_Estado);
+                if (oEvento.Eve_Estado == "Inscripto")
+                {
+                    TrabajoEvento.ModificarEvento(oEvento);
+                    MessageBox.Show("Se ha cargado exitosamente la llegada", "Llegada registrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("El atleta no se encuentra en estado de inscripción", "Error de inscripion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    VaciarCampos();
+                }
+
+            
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
-            VaciarCampos();
         }
-
-       
     }
 }
 
