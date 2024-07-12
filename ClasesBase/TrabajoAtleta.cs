@@ -37,6 +37,7 @@ namespace ClasesBase
         public static Atleta obtenerAtletaById(Int32 id)
         {
             Atleta oAtleta = null;
+            DataTable atletasTable = new DataTable();
             using (SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString))
             {
                 SqlCommand cmd = new SqlCommand("obtenerAtletaById", cnn);
@@ -65,6 +66,31 @@ namespace ClasesBase
                 cnn.Close();
             }
             return oAtleta;
+        }
+
+        public static DataTable obtenerAtletasPorCompetencia(int compId)
+        {
+            DataTable atletas = new DataTable();
+
+            using (SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "obtenerAtletasPorCompetencia";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = cnn;
+
+                cmd.Parameters.AddWithValue("@CompID", compId);
+
+                cnn.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(atletas);
+                atletas.Columns.Add("NombreCompleto", typeof(string), "Alt_Apellido + ', ' + Alt_Nombre ");
+
+                cnn.Close();
+            }
+
+            return atletas;
         }
 
         public static void borrarAtleta(Int32 id)

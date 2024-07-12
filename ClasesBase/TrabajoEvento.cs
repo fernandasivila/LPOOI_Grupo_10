@@ -48,16 +48,15 @@ namespace ClasesBase
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
-            cmd.Parameters.AddWithValue("@Atleta",ev.Atl_ID );
+            cmd.Parameters.AddWithValue("@Atleta", ev.Atl_ID);
             cmd.Parameters.AddWithValue("@Competencia", ev.Com_ID);
             cmd.Parameters.AddWithValue("@Id", ev.Eve_ID);
             cmd.Parameters.AddWithValue("@Estado", ev.Eve_Estado);
-            cmd.Parameters.AddWithValue("@HoraFin",ev.Eve_HoraFin);
-            //cmd.Parameters.AddWithValue("@HoraInicio", ev.Eve_HoraIicio);
+            cmd.Parameters.AddWithValue("@HoraFin", ev.Eve_HoraFin);
             cmd.Parameters.AddWithValue("@HoraInicio", ev.Eve_HoraIicio);
-           
-            Console.WriteLine("HORA DE INICIO: ",ev.Eve_HoraIicio);
-            Console.WriteLine("HORA FIN:",ev.Eve_HoraFin);
+
+            Console.WriteLine("HORA DE INICIO: ", ev.Eve_HoraIicio);
+            Console.WriteLine("HORA FIN:", ev.Eve_HoraFin);
 
             cnn.Open();
             cmd.ExecuteNonQuery();
@@ -119,7 +118,7 @@ namespace ClasesBase
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            if(dt.Rows.Count > 0)
+            if (dt.Rows.Count > 0)
             {
                 oEvento.Atl_ID = Convert.ToInt32(dt.Rows[0]["Alt_ID"]);
                 oEvento.Com_ID = Convert.ToInt32(dt.Rows[0]["Com_ID"]);
@@ -128,12 +127,90 @@ namespace ClasesBase
                 {
                     oEvento.Eve_HoraIicio = Convert.ToDateTime(dt.Rows[0]["Eve_HorarioInicio"]);
                 }
-                
+
                 oEvento.Eve_Estado = dt.Rows[0]["Eve_Estado"].ToString();
                 return oEvento;
             }
-                return null;
-            
+            return null;
+
+        }
+        public static DataTable obtenerResultadosCompetencia(int compId)
+        {
+            DataTable resultadosTable = new DataTable();
+            using (SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString))
+            {
+                cnn.Open();
+                using (SqlCommand command = new SqlCommand("obtenerResultadosCompetencia", cnn))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@CompID", compId);
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(resultadosTable);
+                    }
+                }
+            }
+            return resultadosTable;
+        }
+
+        public static void contarParticipantes(int compId, out int participantes, out int descalificados, out int abandonos)
+        {
+            using (SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString))
+            {
+                    cnn.Open();
+                    using (SqlCommand command = new SqlCommand("contarEventos", cnn))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.AddWithValue("@CompID", compId);
+
+                        SqlParameter participantesParam = new SqlParameter("@Participantes", SqlDbType.Int);
+                        participantesParam.Direction = ParameterDirection.Output;
+                        command.Parameters.Add(participantesParam);
+
+                        SqlParameter descalificadosParam = new SqlParameter("@Descalificados", SqlDbType.Int);
+                        descalificadosParam.Direction = ParameterDirection.Output;
+                        command.Parameters.Add(descalificadosParam);
+
+                        SqlParameter abandonosParam = new SqlParameter("@Abandonos", SqlDbType.Int);
+                        abandonosParam.Direction = ParameterDirection.Output;
+                        command.Parameters.Add(abandonosParam);
+
+                        command.ExecuteNonQuery();
+
+                        participantes = (int)command.Parameters["@Participantes"].Value;
+                        descalificados = (int)command.Parameters["@Descalificados"].Value;
+                        abandonos = (int)command.Parameters["@Abandonos"].Value;
+                    }
+            }
+        }
+
+        public static DateTime? ObtenerHoraInicio(int competenciaId)
+        {
+            DateTime? horaInicio = null;
+            using (SqlConnection connection = new SqlConnection(ClasesBase.Properties.Settings.Default.comdepConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("obtenerHoraInicioEvento", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@CompetenciaId", competenciaId);
+
+                SqlParameter horaInicioOuter = new SqlParameter("@HoraInicio", SqlDbType.DateTime)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                cmd.Parameters.Add(horaInicioOuter);
+
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                connection.Close();
+
+                if (horaInicioOuter.Value != DBNull.Value)
+                {
+                    horaInicio = (DateTime) horaInicioOuter.Value;
+                }
+            }
+            return horaInicio;
         }
 
         public static int AnularInscripcion(int atletaId, int competenciaId)

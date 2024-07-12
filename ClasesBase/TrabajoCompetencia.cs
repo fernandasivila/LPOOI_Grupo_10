@@ -38,6 +38,33 @@ namespace ClasesBase
             }
         }
 
+        public static void ObtenerCategoriaDisciplina(int compId, out string categoria, out string disciplina)
+        {
+
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                cnn.Open();
+                using (SqlCommand command = new SqlCommand("obtenerCategoriaDisciplina", cnn))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@CompID", compId);
+
+                    SqlParameter categoriaParam = new SqlParameter("@Categoria", SqlDbType.NVarChar, 50);
+                    categoriaParam.Direction = ParameterDirection.Output;
+                    command.Parameters.Add(categoriaParam);
+
+                    SqlParameter disciplinaParam = new SqlParameter("@Disciplina", SqlDbType.NVarChar, 50);
+                    disciplinaParam.Direction = ParameterDirection.Output;
+                    command.Parameters.Add(disciplinaParam);
+
+                    command.ExecuteNonQuery();
+
+                    categoria = command.Parameters["@Categoria"].Value.ToString();
+                    disciplina = command.Parameters["@Disciplina"].Value.ToString();
+                }
+            }
+        }
         public static void BorrarCompetenciaByID(
             string competencia_id)
         {
@@ -106,7 +133,7 @@ namespace ClasesBase
                             Com_Nombre = reader.GetString(reader.GetOrdinal("Com_Nombre")),
                             Com_Descripcion = reader.IsDBNull(reader.GetOrdinal("Com_Descripcion")) ? null : reader.GetString(reader.GetOrdinal("Com_Descripcion")),
                             Com_FechaInicio = reader.GetDateTime(reader.GetOrdinal("Com_FechaInicio")),
-                            Com_FechaFin = reader.GetDateTime(reader.GetOrdinal("Com_FechaFin")),
+                            Com_FechaFin = reader.GetDateTime(reader.GetOrdinal("Com_FechaFin")).AddHours(23).AddMinutes(59),
                             Com_Estado = reader.GetString(reader.GetOrdinal("Com_Estado")),
                             Com_Organizador = reader.GetString(reader.GetOrdinal("Com_Organizador")),
                             Com_Ubicacion = reader.GetString(reader.GetOrdinal("Com_Ubicacion")),
